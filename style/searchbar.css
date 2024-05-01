@@ -1,0 +1,88 @@
+.onbox {
+    height: 100px;
+}
+
+.box {
+    max-width: 400px;
+    width: 100%;
+    min-height: 100px;
+    display: grid;
+    float: right;
+    place-items: center;
+    border-radius: 24px;
+}
+
+.search {
+    position: absolute;
+    width: 64px;
+    /* 검색상자 폭 조정 */
+    height: 64px;
+    /* 검색상자 높이 조정 */
+    border-radius: 30px;
+    /* 검색상자를 원으로 표시 */
+    padding: 10px;
+    /* 검색상자내 여백 지정 */
+    cursor: pointer;
+    /* 마우스 커서가 손가락으로 변경 */
+    background-repeat: no-repeat;
+    font-size: 24px;
+    /* 검색어 글자 크기 지정 */
+    color: transparent;
+    border: 3px solid #f74a38;
+    margin-top: 20px;
+    /* 검색상자(원) 테두리 지정 */
+
+    /* 되돌아가는 전환효과(사각형-> 원) : 폭은 300밀리 세컨 동안, 배경위치(돋보기)는 300밀리 세컨동안 전환됨 */
+    transition: width 400ms, background-position 400ms;
+    overflow: hidden;
+    /* 검색어가 상자보다 클때 내용을 숨김 */
+    background: url(../assets/pngwing.com.png) no-repeat transparent;
+    background-size: 40px;
+    /*돋보기 이미지 크기 조정 */
+    background-position: 50% 50%;
+    /* 돋보기 이미지 위치를 정가운데로 */
+}
+
+.searchbtn {
+    background-color:transparent;
+    border: none;
+    position: fixed;
+    margin-right: 210px;
+    margin-top: 17px;
+    width: 35px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+/* search 요소에 대한 hover 효과 설정 : 검색창 테두리 변경*/
+.search:hover {
+    cursor: pointer;
+    border: 3px solid rgb(241, 116, 57);
+    /* 테두리 색변경 */
+    background: url(../assets/pngwing.com.png) no-repeat transparent;
+    background-size: 40px;
+    background-position: 50% 50%;
+    /* 돋보기 이미지 위치를 정가운데로 */
+}
+
+/* 검색 상자에 포커스가 있거나 플레이스홀더가 표시되지 않을 때 */
+.search:focus,
+.search:not(:placeholder-shown) {
+    max-width: 300px;
+    width: 300px;
+    cursor: text;
+    color: #f74a38;
+    padding-left: 80px;
+    /* 검색어 표시 위치(돋보기 이미지 옆 여백 지정) */
+    outline: none;
+
+    /* 변경되는 전환효과(원->사각형) : 폭은 300밀리 세컨 동안, 배경위치(돋보기)는 300밀리 세컨동안 전환됨 */
+    transition: width 400ms, background-position 400ms;
+
+    border: 3px solid rgb(241, 116, 57);
+    /* 테두리 색변경 : hover와 동일한 색상 */
+    background: url(../assets/pngwing.com.png) no-repeat transparent;
+    background-size: 40px;
+    background-position: 10% 50%;
+    /* 돋보기 이미지 왼쪽 세로 중앙 */
+}
