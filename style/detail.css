@@ -1,0 +1,27 @@
+*{
+    background-color: black;
+    color: white;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+.detailContainer {
+    padding: 100px;
+    width: 50%;
+    text-align: center;
+}
+
+.detailPostercss {
+    height: 400px;
+    width: 300px;
+    box-shadow: 0 3px 6px white, 0 3px 6px white;
+}
+
+.translategoogle{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
