@@ -16,7 +16,6 @@ body {
 }
 
 header {
-    background-color: #f74a38;
     width: 100%;
     color: white;
     display: flex;
@@ -24,7 +23,9 @@ header {
     align-items: center;
     padding: 30px 0;
 }
-
+.title{
+    margin-right: 70%;
+}
 .movie_ContainerClass {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
