@@ -19,6 +19,7 @@ const fetch_MovieData = async () => {
     return jsonData.results;
 }
 
+
 // 영화 카드 만들기
 const create_MovieCard = (movie) => {
     const movieContainer = document.getElementById('movie_Container');
@@ -40,7 +41,11 @@ const create_MovieCard = (movie) => {
     moviePoster.src = posterURL;
     moviePoster.alt = movie.title;
 
+
+
+    movieBackDrop.classList.add('movie_backdrop');
     movieBackDrop.classList.add('movie_poster');
+
     movieBackDrop.src = backDropURL;
     movieBackDrop.alt = movie.title;
 
@@ -63,6 +68,7 @@ const create_MovieCard = (movie) => {
 
 (async () => {
     allMovies = await fetch_MovieData(); // 새로고침 시 영화 데이터를 한 번만 가져온다 
+    allMovies = await fetch_MovieVideoData(); // 새로고침 시 영화 예고편 Key를 한 번만 가져온다
     allMovies.forEach(movie => create_MovieCard(movie)); // 영화 카드 생성
 })();
 
