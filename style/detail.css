@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family: 'DoHyeon-Regular';
     src: url('../font/DoHyeon-Regular.ttf');
@@ -29,6 +30,13 @@ header {
 
 .title{
     background-color: #f74a38;
+=======
+body {
+    display: grid;
+    place-items: center;
+    background-color: black;
+    color: white;
+>>>>>>> 04ec72abdc0b6acb4bce744af0d7e697e3d25f56
 }
 
 .detailContainer {
