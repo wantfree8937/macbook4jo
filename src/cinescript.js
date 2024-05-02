@@ -1,5 +1,10 @@
 let allMovies = [];
 
+// 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
+function go_MainPage() {
+    window.location.href = "index.html";
+}
+
 // TMDB API에서 영화 제목을 가져와 배열 생성
 const fetch_MovieData = async () => {
 
@@ -13,6 +18,7 @@ const fetch_MovieData = async () => {
     const jsonData = await response.json();
     return jsonData.results;
 }
+
 
 const fetch_Movievideo = async () => {
 
@@ -34,30 +40,49 @@ const create_MovieCard = (movie) => {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie_card');
 
-    movieCard.addEventListener('click', () => {
-        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
-    });
+    // movieCard.addEventListener('click', () => {
+    //     window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
+    // });
 
     const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
     const moviePoster = document.createElement('img');
+
+    const backDropURL = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`; // 백드랍 받아오기
+    const movieBackDrop = document.createElement('img');
 
     // 영화 카드에 요소들 추가
     moviePoster.classList.add('movie_poster');
     moviePoster.src = posterURL;
     moviePoster.alt = movie.title;
 
+
+
+    movieBackDrop.classList.add('movie_backdrop');
+    movieBackDrop.classList.add('movie_poster');
+
+    movieBackDrop.src = backDropURL;
+    movieBackDrop.alt = movie.title;
+
     const movieTitle = document.createElement('div');
     movieTitle.classList.add('movie_title');
     movieTitle.textContent = movie.title;
 
+    const moviebutton = document.createElement('button');//상세페이지로 가는 버튼 추가
+    moviebutton.classList.add('movie_button');
+    moviebutton.textContent = "더보기";
+    moviebutton.addEventListener('click', () => {
+        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
+    });
+
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
+    movieCard.appendChild(moviebutton);
     movieContainer.appendChild(movieCard);
 }
 
 (async () => {
     allMovies = await fetch_MovieData(); // 새로고침 시 영화 데이터를 한 번만 가져온다 
-    allMoviesVideo = await fetch_Movievideo();
+    allMovies = await fetch_MovieVideoData(); // 새로고침 시 영화 예고편 Key를 한 번만 가져온다
     allMovies.forEach(movie => create_MovieCard(movie)); // 영화 카드 생성
 })();
 
@@ -126,60 +151,3 @@ const toggle_SearchButton = () => {
         searchButton.style.cursor = "default";
     }
 }
-
-const rssFeedUrl = 'http://www.yonhapnewstv.co.kr/category/news/headline/feed/'; // 사용할 RSS 피드의 URL
-
-// RSS 피드를 가져오는 함수
-const fetchRssFeed = async (url) => {
-    try {
-        const response = await fetch(url);
-        const xmlText = await response.text();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(xmlText, 'text/xml');
-        return xml;
-    } catch (error) {
-        console.error('Error fetching RSS feed:', error);
-        return null;
-    }
-}
-
-// 가져온 RSS 피드를 처리하는 함수
-const processRssFeed = async () => {
-    const newsContainer = document.getElementById('newsContainer');
-    newsContainer.innerHTML = ''; // 이전에 표시된 뉴스 삭제
-
-    try {
-        const rssFeed = await fetchRssFeed(rssFeedUrl);
-        if (!rssFeed) {
-            console.error('Failed to fetch RSS feed.');
-            return;
-        }
-
-        const items = rssFeed.querySelectorAll('item');
-        if (items.length === 0) {
-            console.error('No news items found in RSS feed.');
-            return;
-        }
-
-        items.forEach(item => {
-            const title = item.querySelector('title').textContent;
-            const description = item.querySelector('description').textContent;
-            const link = item.querySelector('link').textContent;
-
-            const newsItem = document.createElement('div');
-            newsItem.innerHTML = `
-                <h3>${title}</h3>
-                <p>${description}</p>
-                <a href="${link}" target="_blank">Read More</a>
-            `;
-            newsContainer.appendChild(newsItem);
-        });
-    } catch (error) {
-        console.error('Error processing RSS feed:', error);
-        newsContainer.innerHTML = '<p>Failed to process RSS feed. Please try again later.</p>';
-    }
-}
-
-
-// 페이지 로드 시 RSS 피드 가져오기
-window.onload = processRssFeed;
