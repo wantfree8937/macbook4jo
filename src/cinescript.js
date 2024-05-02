@@ -36,6 +36,8 @@ const create_MovieCard = (movie) => {
     movieTitle.classList.add('movie_title');
     movieTitle.textContent = movie.title;
 
+
+
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
     movieContainer.appendChild(movieCard);
