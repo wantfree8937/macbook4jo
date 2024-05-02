@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'DoHyeon-Regular';
     src: url('../font/DoHyeon-Regular.ttf');
@@ -16,13 +17,55 @@ body {
 }
 
 header {
-    background-color: #f74a38;
     width: 100%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0;
+}
+
+.title {
+    margin-right: 70%;
+}
+
+.titlefont {
+    color: white
+}
+
+.subtomainbutton {
+    background-color: transparent;
+    border: none;
+}
+
+.movie_button{
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border-color: rgb(100, 100, 100);
+    color: rgb(219, 219, 219);
+    text-align: center;
+    line-height: 100px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.movie_button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
 }
 
 .movie_ContainerClass {
@@ -91,7 +134,7 @@ header {
     color: black;
 }
 
-.translategoogle{
+.translategoogle {
     position: absolute;
     right: 10px;
     top: 10px;
