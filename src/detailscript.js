@@ -19,3 +19,8 @@ window.onload = async () => {
     // 영화 포스터
     document.getElementById('detailPoster').src = `https://image.tmdb.org/t/p/w500${movieData.poster_path}`;
 };
+
+// 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
+function go_MainPage() {
+    window.location.href = "index.html";
+}
