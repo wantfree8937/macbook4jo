@@ -8,23 +8,25 @@ let totalDataCount = Object.keys(fetch_MovieData.id).length; //총 데이터의 
 let dataCount = 9; //한 페이지에 나타낼 데이터 갯수
 let totalPageCount = 0;
 let currentPage = 1;
-let paginationCount = 10; //화면에 나타낼 페이징 갯수
+let perPageGroup = 10; //화면에 나타낼 페이징 갯수
 let currentPagination = 0;
+let firstPageNum = 0;
+let lastPageNum = 0;
 
 
 export const pagination = () => {
 
     //총 게시물 개수가 9개 이하면 페이징 비활성화 
-    if (totalDataCount <= dataCount) return;
+    if (totalDataCount <= dataCount ) return;
 
     //총 페이지 개수 계산. perPage는 한 페이지 당 보여줄 데이터의 갯수
     totalPageCount = Math.ceil(totalDataCount / dataCount);
     //현재 페이지에서 보여지는 페이징 그룹
-    currentPagination = Math.ceil(currentPage / paginationCount);
+    currentPagination = Math.ceil(currentPage / perPageGroup);
 
-    let lastPageNum = paginationCount * dataCount;
+    lastPageNum = perPageGroup * dataCount;
     if (lastPageNum > totalPage) lastPageNum = totalPage;
-    let firstPageNum = lastPageNum - (paginationCount - 1) <= 0 ? 1 : lastPageNum - (paginationCount - 1);
+    firstPageNum = lastPageNum - (perPageGroup - 1) <= 0 ? 1 : lastPageNum - (perPageGroup - 1);
 
 }
 
@@ -36,18 +38,24 @@ export const setPageBtn = () => {
     }
 }
 
-//페이지 버튼 클릭이벤트리스너
+//현재 페이지 활성화
 export const clickPageBtn = () => {
     allPageBtn.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-            e.target.innerHTML = btn;
-        });
+        let text = btn.querySelector(`'#${btn}page'`).innerText;
+        if (str.includes(`${btn}`)) btn.classList.add("active")
+        else btn.classList.remove("active");
     });
 }
 
-//이전, 다음 버튼 클릭이벤트리스너
-export const clickPrevNextBtn = () => {
 
+
+//버튼 클릭이벤트리스너
+export const clickBtn = () => {
+
+    currentPage = parseInt(document.querySelectorAll(".current__page .active ").innerText);
+    btn.addEventListener('click', (e) => {
+        e.target.innerHTML = btn;
+    });
     prevBtn.addEventListener('click', () => {
         if (currentPage > 1) currentPage -= 1;
     });
