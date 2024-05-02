@@ -1,3 +1,5 @@
+// 상세페이지 스크립트
+
 window.onload = async () => {
     // 영화 id 가져오기
     const urlParams = new URLSearchParams(window.location.search);
@@ -17,4 +19,3 @@ window.onload = async () => {
     // 영화 포스터
     document.getElementById('detailPoster').src = `https://image.tmdb.org/t/p/w500${movieData.poster_path}`;
 };
-
