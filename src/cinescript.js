@@ -32,10 +32,17 @@ const create_MovieCard = (movie) => {
     const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
     const moviePoster = document.createElement('img');
 
+    const backDropURL = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`; // 백드랍 받아오기
+    const movieBackDrop = document.createElement('img');
+
     // 영화 카드에 요소들 추가
     moviePoster.classList.add('movie_poster');
     moviePoster.src = posterURL;
     moviePoster.alt = movie.title;
+
+    movieBackDrop.classList.add('movie_poster');
+    movieBackDrop.src = backDropURL;
+    movieBackDrop.alt = movie.title;
 
     const movieTitle = document.createElement('div');
     movieTitle.classList.add('movie_title');

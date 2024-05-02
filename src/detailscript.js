@@ -19,6 +19,9 @@ window.onload = async () => {
     // 영화 포스터
     document.getElementById('detailPoster').src = `https://image.tmdb.org/t/p/w500${movieData.poster_path}`;
 
+    // 영화 백드랍
+    document.getElementById('detailBackDrop').src = `https://image.tmdb.org/t/p/original${movieData.backdrop_path}`;
+
     displayReviews();
 };
 
