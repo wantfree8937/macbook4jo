@@ -20,9 +20,9 @@ const create_MovieCard = (movie) => {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie_card');
 
-    movieCard.addEventListener('click', () => {
-        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
-    });
+    // movieCard.addEventListener('click', () => {
+    //     window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
+    // });
 
     const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
     const moviePoster = document.createElement('img');
@@ -36,8 +36,16 @@ const create_MovieCard = (movie) => {
     movieTitle.classList.add('movie_title');
     movieTitle.textContent = movie.title;
 
+    const moviebutton = document.createElement('button');//상세페이지로 가는 버튼 추가
+    moviebutton.classList.add('movie_button');
+    moviebutton.textContent = "더보기";
+    moviebutton.addEventListener('click', () => {
+        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
+    });
+
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
+    movieCard.appendChild(moviebutton);
     movieContainer.appendChild(movieCard);
 }
 

@@ -10,7 +10,7 @@
     color: white;
 }
 
-body{
+body {
     display: grid;
     place-items: center;
     margin:0px;
@@ -32,6 +32,7 @@ header {
 }
 
 .detailContainer {
+    margin-top: 30px;
     padding: 100px;
     width: 50%;
     text-align: center;
@@ -44,8 +45,18 @@ header {
 }
 
 .translategoogle{
-    background-color: #f74a38;
+    background-color: transparent;
     position: absolute;
     right: 10px;
     top: 10px;
+}
+
+.homeButton {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    color: black;
 }

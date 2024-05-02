@@ -1,3 +1,5 @@
+// 상세페이지 스크립트
+
 window.onload = async () => {
     // 영화 id 가져오기
     const urlParams = new URLSearchParams(window.location.search);
@@ -18,3 +20,7 @@ window.onload = async () => {
     document.getElementById('detailPoster').src = `https://image.tmdb.org/t/p/w500${movieData.poster_path}`;
 };
 
+// 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
+function go_MainPage() {
+    window.location.href = "index.html";
+}

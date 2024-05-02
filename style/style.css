@@ -59,6 +59,12 @@ header {
     margin-bottom: 10px;
 }
 
+.movie_button{
+    height:50px;
+    width:70px;
+    margin-top: 30px;
+}
+
 .populbtn {
     font-size: medium;
     margin: 35px 0 0 50px;
