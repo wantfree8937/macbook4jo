@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +13,17 @@
 
 <body>
     <!-- 번역기 -->
-    <div id="google_translate_element" class="translategoogle">
-        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        <script type="text/javascript">
-            function googleTranslateElementInit() { new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element'); }
-        </script>
-    </div>
+    <header>
+        <h1 class = "title">
+            Cine24
+        </h1>
+        <div id="google_translate_element" class="translategoogle">
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <script type="text/javascript">
+                function googleTranslateElementInit() { new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element'); }
+            </script>
+        </div>
+    </header>
     <div class="detailContainer">
         <h1 id="detailTitle"></h1>
         <img id="detailPoster" class="detailPostercss" src="" alt="Movie">
