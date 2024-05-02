@@ -3,12 +3,13 @@
     color: white;
 }
 
-body{
+body {
     display: grid;
     place-items: center;
 }
 
 .detailContainer {
+    margin-top: 30px;
     padding: 100px;
     width: 50%;
     text-align: center;
@@ -20,8 +21,18 @@ body{
     box-shadow: 0 3px 6px white, 0 3px 6px white;
 }
 
-.translategoogle{
+.translategoogle {
     position: absolute;
     right: 10px;
     top: 10px;
+}
+
+.homeButton {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    color: black;
 }
