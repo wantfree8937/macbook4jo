@@ -14,6 +14,7 @@ const fetch_MovieData = async () => {
     return jsonData.results;
 }
 
+
 // 영화 카드 만들기
 const create_MovieCard = (movie) => {
     const movieContainer = document.getElementById('movie_Container');
@@ -25,12 +26,19 @@ const create_MovieCard = (movie) => {
     });
 
     const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
+    const backDropURL = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`; // 백드롭 받아오기
     const moviePoster = document.createElement('img');
+    const movieBackDrop = document.createElement('backDrop');
 
     // 영화 카드에 요소들 추가
     moviePoster.classList.add('movie_poster');
     moviePoster.src = posterURL;
     moviePoster.alt = movie.title;
+
+
+    movieBackDrop.classList.add('movie_backdrop');
+    movieBackDrop.src = backDropURL;
+    movieBackDrop.alt = movie.title;
 
     const movieTitle = document.createElement('div');
     movieTitle.classList.add('movie_title');
@@ -45,6 +53,7 @@ const create_MovieCard = (movie) => {
 
 (async () => {
     allMovies = await fetch_MovieData(); // 새로고침 시 영화 데이터를 한 번만 가져온다 
+    allMovies = await fetch_MovieVideoData(); // 새로고침 시 영화 예고편 Key를 한 번만 가져온다
     allMovies.forEach(movie => create_MovieCard(movie)); // 영화 카드 생성
 })();
 

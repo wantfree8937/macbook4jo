@@ -10,25 +10,32 @@
     <script src="src/detailscript.js" defer></script>
 </head>
 
-<body>
-    <!-- 번역기 -->
-    <div id="google_translate_element" class="translategoogle">
-        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        <script type="text/javascript">
-            function googleTranslateElementInit() { new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element'); }
-        </script>
-    </div>
+<body> 
+
+    <img id="detailBackDrop" class="detailBackDropcss" src="" alt="Movie">
+
+
+
     <div class="detailContainer">
 
         <button onclick="go_MainPage()" class="homeButton">Home</button>
 
         <h1 id="detailTitle"></h1>
         <img id="detailPoster" class="detailPostercss" src="" alt="Movie">
+
+        
         <p><b>Rating:</b> <span id="detailRating"></span></p>
         <p><b>Popularity:</b> <span id="detailPopularity"></span></p>
         <p><b>Release Date:</b> <span id="detailRelease_date"></span></p>
         <p><b>Overview:</b></p>
         <p id="detailOverview"></p>
+
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zB0LYgoQmcs?si=MTojt12S1h-0Oj51" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+
 
         <form id="reviewForm">
             <label for="review">Review:</label><br>
