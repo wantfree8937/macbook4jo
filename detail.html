@@ -29,7 +29,18 @@
         <p><b>Release Date:</b> <span id="detailRelease_date"></span></p>
         <p><b>Overview:</b></p>
         <p id="detailOverview"></p>
+
+        <form id="reviewForm">
+            <label for="review">Review:</label><br>
+            <textarea id="review" name="review" rows="4" cols="50"></textarea><br>
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="button" onclick="submitReview()">Submit</button>
+        </form>
     </div>
+    <div id="reviewContainer"></div>
 </body>
 
 </html>
