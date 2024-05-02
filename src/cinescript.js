@@ -1,5 +1,10 @@
 let allMovies = [];
 
+// 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
+function go_MainPage() {
+    window.location.href = "index.html";
+}
+
 // TMDB API에서 영화 제목을 가져와 배열 생성
 const fetch_MovieData = async () => {
 
