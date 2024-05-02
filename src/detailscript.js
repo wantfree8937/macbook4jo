@@ -40,6 +40,9 @@ window.onload = async () => {
     // 영화 백드롭
     document.getElementById('detailBackDrop').src = `https://image.tmdb.org/t/p/original${movieData.backdrop_path}`;
 
+    // 영화 백드랍
+    document.getElementById('detailBackDrop').src = `https://image.tmdb.org/t/p/original${movieData.backdrop_path}`;
+
     displayReviews();
 };
 

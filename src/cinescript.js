@@ -1,5 +1,10 @@
 let allMovies = [];
 
+// 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
+function go_MainPage() {
+    window.location.href = "index.html";
+}
+
 // TMDB API에서 영화 제목을 가져와 배열 생성
 const fetch_MovieData = async () => {
 
@@ -21,14 +26,15 @@ const create_MovieCard = (movie) => {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie_card');
 
-    movieCard.addEventListener('click', () => {
-        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
-    });
+    // movieCard.addEventListener('click', () => {
+    //     window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
+    // });
 
     const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
-    const backDropURL = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`; // 백드롭 받아오기
     const moviePoster = document.createElement('img');
-    const movieBackDrop = document.createElement('backDrop');
+
+    const backDropURL = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`; // 백드랍 받아오기
+    const movieBackDrop = document.createElement('img');
 
     // 영화 카드에 요소들 추가
     moviePoster.classList.add('movie_poster');
@@ -36,7 +42,10 @@ const create_MovieCard = (movie) => {
     moviePoster.alt = movie.title;
 
 
+
     movieBackDrop.classList.add('movie_backdrop');
+    movieBackDrop.classList.add('movie_poster');
+
     movieBackDrop.src = backDropURL;
     movieBackDrop.alt = movie.title;
 
@@ -44,10 +53,16 @@ const create_MovieCard = (movie) => {
     movieTitle.classList.add('movie_title');
     movieTitle.textContent = movie.title;
 
-
+    const moviebutton = document.createElement('button');//상세페이지로 가는 버튼 추가
+    moviebutton.classList.add('movie_button');
+    moviebutton.textContent = "더보기";
+    moviebutton.addEventListener('click', () => {
+        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
+    });
 
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
+    movieCard.appendChild(moviebutton);
     movieContainer.appendChild(movieCard);
 }
 
