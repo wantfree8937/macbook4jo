@@ -1,3 +1,5 @@
+import pagination from './pagination.js';
+
 let allMovies = [];
 
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
@@ -6,7 +8,7 @@ function go_MainPage() {
 }
 
 // TMDB API에서 영화 제목을 가져와 배열 생성
-const fetch_MovieData = async () => {
+export const fetch_MovieData = async () => {
 
     const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', {
         method: 'GET',
@@ -84,6 +86,7 @@ const create_MovieCard = (movie) => {
     allMovies = await fetch_MovieData(); // 새로고침 시 영화 데이터를 한 번만 가져온다 
     allMovies = await fetch_MovieVideoData(); // 새로고침 시 영화 예고편 Key를 한 번만 가져온다
     allMovies.forEach(movie => create_MovieCard(movie)); // 영화 카드 생성
+    pagination();
 })();
 
 
