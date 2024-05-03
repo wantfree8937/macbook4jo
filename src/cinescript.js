@@ -1,9 +1,14 @@
 let allMovies = [];
 
+// 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
+function go_MainPage() {
+    window.location.href = "index.html";
+}
+
 // TMDB API에서 영화 제목을 가져와 배열 생성
 const fetch_MovieData = async () => {
 
-    const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', {
+    const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&page=1', {
         method: 'GET',
         headers: {
             accept: 'application/json',
@@ -20,9 +25,9 @@ const create_MovieCard = (movie) => {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie_card');
 
-    movieCard.addEventListener('click', () => {
-        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
-    });
+    // movieCard.addEventListener('click', () => {
+    //     window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
+    // });
 
     const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
     const moviePoster = document.createElement('img');
@@ -43,10 +48,16 @@ const create_MovieCard = (movie) => {
     movieTitle.classList.add('movie_title');
     movieTitle.textContent = movie.title;
 
-
+    const moviebutton = document.createElement('button');//상세페이지로 가는 버튼 추가
+    moviebutton.classList.add('movie_button');
+    moviebutton.textContent = "더보기";
+    moviebutton.addEventListener('click', () => {
+        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
+    });
 
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
+    movieCard.appendChild(moviebutton);
     movieContainer.appendChild(movieCard);
 }
 
