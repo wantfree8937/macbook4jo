@@ -1,4 +1,4 @@
-import pagination from './pagination.js';
+// import pagination from './pagination.js';
 
 let allMovies = [];
 
@@ -8,7 +8,7 @@ function go_MainPage() {
 }
 
 // TMDB API에서 영화 제목을 가져와 배열 생성
-export const fetch_MovieData = async () => {
+const fetch_MovieData = async () => {
 
     const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&page=1', {
         method: 'GET',
@@ -18,9 +18,22 @@ export const fetch_MovieData = async () => {
         }
     });
     const jsonData = await response.json();
-    console.log(jsonData)
     return jsonData.results;
 }
+
+// export const fetch_MovieData = async () => {
+
+//     const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&page=1', {
+//         method: 'GET',
+//         headers: {
+//             accept: 'application/json',
+//             Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2U1NzkwNDYxZjE0Y2MwNWMxYzA0MzIwNTE4YzQ2YSIsInN1YiI6IjY2Mjc5ZTBkYjlhMGJkMDBjZGQ0NGI2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SN8whoS0_yG-gt7xue2f_CXakEcDCse_H4sgO3CmoyA'
+//         }
+//     });
+//     const jsonData = await response.json();
+//     return jsonData.results;
+// }
+
 
 
 const fetch_Movievideo = async (movie_id) => {
@@ -145,7 +158,7 @@ const create_MovieCard = (movie) => {
     allMovies = await fetch_MovieData(); // 새로고침 시 영화 데이터를 한 번만 가져온다 
     // allMovies = await fetch_MovieVideoData(); // 새로고침 시 영화 예고편 Key를 한 번만 가져온다
     allMovies.forEach(movie => create_MovieCard(movie)); // 영화 카드 생성
-    pagination();
+    // pagination();
 })();
 
 
