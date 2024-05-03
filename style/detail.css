@@ -23,9 +23,14 @@ body {
     height: 50px;
     background-color: white;
     color: black;
+<<<<<<< HEAD
+    z-index: 2;
+=======
     cursor: pointer;
+>>>>>>> a9d62801e87672cc13fc8c73582d3da9e5fc7a7d
 }
-.detail_top{
+
+.detail_top {
     background-image: url("movieBackDrop");
     padding-bottom: 10px;
     width: 100%;
@@ -34,7 +39,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.detail_bottom{
+
+.detail_bottom {
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
@@ -42,17 +48,22 @@ body {
     flex-direction: row;
     align-items: center;
 }
-.detail_bottom_movie{
+
+.detail_bottom_movie {
     width: 35%;
     display: flex;
     flex-direction: column;
     padding: 15px, 15px, 15px, 15px;
+    margin: 50px,auto,50px,auto;
 }
-.detail_bottom_review{
+
+.detail_bottom_review {
     width: 40%;
     padding-left: 30px;
+    margin: 50px,auto,50px,auto;
 }
-.movie_review_card{
+
+.movie_review_card {
     padding-left: 10px;
     background-color: rgba(0, 255, 255, 0.171);
     color: blueviolet;
@@ -64,7 +75,7 @@ body {
     border-radius: 10px;
 }
 
-.detailBackDropcss{
+.detailBackDropcss {
     width: 100%;
     height: 550px;
     position: absolute;
@@ -72,3 +83,14 @@ body {
     z-index: 0;
     filter: brightness(50%)
 }
+<<<<<<< HEAD
+.text_input_area{
+    background-color: rgba(0, 255, 255, 0.041);
+}
+.review_card_button{
+    border-radius: 15px;
+    border-color: blanchedalmond;
+    margin-bottom: 10px;
+}
+=======
+>>>>>>> a9d62801e87672cc13fc8c73582d3da9e5fc7a7d
