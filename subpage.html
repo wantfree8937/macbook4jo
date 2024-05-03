@@ -8,8 +8,8 @@
     <link href="style/style.css" rel="stylesheet">
     <link href="style/searchbar.css" rel="stylesheet">
     <title>Cine24</title>
-    <script src="src/cinescript.js" defer></script>
     <script src="src/pagination.js" defer></script>
+    <script src="src/cinescript.js" defer></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
         <button class="oldbtn" onclick="old_Sort()">오래된순</button>
     </header>
     <div class="onbox">
-        
+
         <form class="box" onsubmit="search_Movie(event)">
             <input type="text" class="search" id="search_input" placeholder="" oninput="toggle_SearchButton()" />
             <button type="submit" class="searchbtn" id="search_button" disabled></button>
