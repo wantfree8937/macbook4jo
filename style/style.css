@@ -52,6 +52,10 @@ header {
   cursor: pointer;
 }
 
+.movie_button:hover {
+  background-color: black;
+}
+
 .movie_button::before {
   content: "";
   position: absolute;
@@ -67,9 +71,14 @@ header {
   background-color: white;
 }
 
-.movie_ContainerClass {
+.movie_button:hover::before {
+  border-color: white;
+  background-color: #fd5639;
+}
+
+/* .movie_ContainerClass {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
 }
 
@@ -85,6 +94,43 @@ header {
   user-select: none;
   display: table;
   text-align: center;
+} */
+
+.movie_ContainerClass {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.movie_card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  margin: 20px;
+  padding: 20px;
+  height: 550px;
+  width: 350px;
+  justify-self: center;
+  background-image: url(../assets/white-product-backdrop-wall.jpg);
+  border-radius: 10px;
+  user-select: none;
+  display: table;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .movie_ContainerClass {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .movie_ContainerClass {
+    grid-template-columns: 1fr;
+  }
+
+  .movie_card {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .movie_poster {
@@ -144,28 +190,28 @@ header {
 }
 
 .news-item {
-    cursor: pointer;
-    margin-bottom: 20px;
-    width: 100%;
-    border: 3px solid black; /* 테두리 색상을 투명으로 설정 */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transition: background-color 0.3s ease; /* 호버 시 효과를 부드럽게 전환 */
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 3px solid black; /* 테두리 색상을 투명으로 설정 */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: background-color 0.3s ease; /* 호버 시 효과를 부드럽게 전환 */
 }
 
 .news-item:hover {
-    background-color: #9ca9d1a4; /* 호버 시 배경색 변경 */
+  background-color: #9ca9d1a4; /* 호버 시 배경색 변경 */
 }
 
 .news-container {
-    width: 50%; 
-    height: 400px; 
-    position: absolute;
-    left: 25%; 
-    bottom: 10%; 
-    overflow-y: auto;
-    background-color: white;
-    border: 3px solid rgb(0, 0, 0); 
-    border-radius: 5px; 
-    padding: 10px; 
+  width: 50%;
+  height: 400px;
+  position: absolute;
+  left: 25%;
+  bottom: 10%;
+  overflow-y: auto;
+  background-color: white;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
 }
