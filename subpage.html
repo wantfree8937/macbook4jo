@@ -9,6 +9,7 @@
     <link href="style/searchbar.css" rel="stylesheet">
     <title>Cine24</title>
     <script src="src/cinescript.js" defer></script>
+    <script src="src/pagination.js" defer></script>
 </head>
 
 <body>
@@ -31,6 +32,13 @@
         </form>
     </div>
     <section id="movie_Container" class="movie_ContainerClass"></section>
+    <section class = "pagination__container">
+        <div class="btn__first" id="page" onclick="clickBtnEvent()">처음</div>
+        <div class="btn__prev" id="page" onclick="clickBtnEvent()">이전</div>
+        <div class="group__page" id="tuple"><span id="current__page"></span></div>
+        <div class="btn__next" id="page" onclick="clickBtnEvent()">다음</div>
+        <div class="btn__end" id="page" onclick="clickBtnEvent()">마지막</div>
+    </section>
 </body>
 
 </html>
