@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/searchbar.css" rel="stylesheet">
+    <title>Cine24</title>
+    <script src="src/pagination.js" defer></script>
+    <script src="src/cinescript.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="title" > 
+            <button class="subtomainbutton"onclick="go_MainPage()">
+            <h1 class="titlefont">
+                Cine24
+            </h1>
+            </button>
+        </div>
+        <button class="populbtn" onclick="popular_Sort()">인기순</button>
+        <button class="oldbtn" onclick="old_Sort()">오래된순</button>
+    </header>
+    <div class="onbox">
+
+        <form class="box" onsubmit="search_Movie(event)">
+            <input type="text" class="search" id="search_input" placeholder="" oninput="toggle_SearchButton()" />
+            <button type="submit" class="searchbtn" id="search_button" disabled></button>
+        </form>
+    </div>
+    <section id="movie_Container" class="movie_ContainerClass"></section>
+    <section class = "pagination__container">
+        <div class="btn__first" id="page" onclick="clickBtnEvent()">처음</div>
+        <div class="btn__prev" id="page" onclick="clickBtnEvent()">이전</div>
+        <div class="group__page" id="tuple"><span id="current__page"></span></div>
+        <div class="btn__next" id="page" onclick="clickBtnEvent()">다음</div>
+        <div class="btn__end" id="page" onclick="clickBtnEvent()">마지막</div>
+    </section>
+</body>
+
+</html>
