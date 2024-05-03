@@ -236,6 +236,7 @@ const fetchNewsFromRss = async () => {
         const data = await response.json();
 
         if (data.status === 'ok') {
+            
             displayNews(data.items);
         } else {
             alert('RSS 피드를 가져오는 데 문제가 발생했습니다.');
