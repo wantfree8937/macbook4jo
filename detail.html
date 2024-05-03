@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/detail.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style/detail.css" rel="stylesheet" />
     <title>detail Movie</title>
     <script src="src/detailscript.js" defer></script>
-</head>
+  </head>
 
+<<<<<<< HEAD
 <body>
     
     <div class="detailContainer">
@@ -18,70 +18,94 @@
         <div class="detail_top">
             <h1 id="detailTitle"></h1>
             <img id="detailPoster" class="detailPostercss" src="" alt="Movie">
+=======
+  <body>
+    <button onclick="go_MainPage()" class="homeButton">Home</button>
+    <div class="detailContainer">
+      <!-- 상세페이지 상단 -->
+      <!-- <img id="detailBackDrop" class="detailBackDropcss" src="" alt="Movie"> -->
+      <div class="detail_top">
+        <h1 id="detailTitle"></h1>
+        <img id="detailPoster" class="detailPostercss" src="" alt="Movie" />
+      </div>
+      <!-- 상세페이지 하단 -->
+      <div class="detail_bottom">
+        <div class="detail_bottom_movie">
+          <!-- 예고편 유튜브 영상 -->
+          <div>
+            <iframe
+              id="detailMovieVod"
+              width="560"
+              height="315"
+              src=""
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- 설명영역 -->
+          <p><b>Rating:</b> <span id="detailRating"></span></p>
+          <p><b>Popularity:</b> <span id="detailPopularity"></span></p>
+          <p><b>Release Date:</b> <span id="detailRelease_date"></span></p>
+          <p><b>Overview:</b></p>
+          <p id="detailOverview"></p>
+>>>>>>> d3ad47e69dd62d2902430fa259bfba258797dfa5
         </div>
-        <!-- 상세페이지 하단 -->
-        <div class="detail_bottom">
-            <div class="detail_bottom_movie">
-                <!-- 예고편 유튜브 영상 -->
-                <div>
-                    <h1>예고편 유튜브 영상</h1>
-                </div>
-                <!-- 설명영역 -->
-                <p><b>Rating:</b> <span id="detailRating"></span></p>
-                <p><b>Popularity:</b> <span id="detailPopularity"></span></p>
-                <p><b>Release Date:</b> <span id="detailRelease_date"></span></p>
-                <p><b>Overview:</b></p>
-                <p id="detailOverview"></p>
+        <div class="detail_bottom_review">
+          <form
+            id="reviewForm"
+            style="text-align: left; margin-bottom: 100px; margin-top: 50px"
+          >
+            <div>
+              <label for="review">리뷰 작성하기</label><br />
+              <textarea
+                id="review"
+                name="review"
+                class="text_input_area"
+                style="resize: none; width: 100%; height: 100px"
+              ></textarea
+              ><br />
             </div>
-            <div class="detail_bottom_review">
-                <form id="reviewForm">
-                    <label for="review">Review:</label><br>
-                    <textarea id="review" name="review" rows="4" cols="50"></textarea><br>
-                    <label for="author">Author:</label><br>
-                    <input type="text" id="author" name="author"><br>
-                    <label for="password">Password:</label><br>
-                    <input type="password" id="password" name="password"><br><br>
-                    <button type="button" onclick="submitReview()">Submit</button>
-                </form>
-                <!-- 작성된 리뷰 영역 -->
-                <div>
-                    <div class="movie_review_card">
-                        <div class="review-body">
-                            <h2 class="review-title">review title</h2>
-                            <p class="review-text">This is my review. This is my review. This is my review. This is my
-                                review. This is my review. This is my review.</p>
-                            <p class="review-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="movie_review_card">
-                        <div class="review-body">
-                            <h2 class="review-title">review title</h2>
-                            <p class="review-text">This is my review. This is my review. This is my review. This is my
-                                review. This is my review. This is my review.</p>
-                            <p class="review-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="movie_review_card">
-                        <div class="review-body">
-                            <h2 class="review-title">review title</h2>
-                            <p class="review-text">This is my review. This is my review. This is my review. This is my
-                                review. This is my review. This is my review.</p>
-                            <p class="review-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div style="display: flex; flex-direction: row">
+              <div>
+                <input
+                  type="text"
+                  id="author"
+                  class="text_input_area"
+                  name="author"
+                  placeholder="이름 또는 닉네임"
+                  width="35%"
+                /><br />
+              </div>
+              <div>
+                <input
+                  type="password"
+                  id="password"
+                  class="text_input_area"
+                  name="password"
+                  placeholder="password"
+                  width="35%"
+                /><br /><br />
+              </div>
             </div>
+            <button
+              type="button"
+              style="background-color: rgba(0, 255, 255, 0.13)"
+              onclick="submitReview()"
+            >
+              Submit
+            </button>
+          </form>
+          <!-- 작성된 리뷰 영역 -->
+          <div id="reviewContainer"></div>
         </div>
+<<<<<<< HEAD
+=======
+      </div>
+>>>>>>> d3ad47e69dd62d2902430fa259bfba258797dfa5
     </div>
-    <div id="reviewContainer"></div>
-    <img id="detailBackDrop" class="detailBackDropcss" src="" alt="Movie">
-</body>
-
+    <img id="detailBackDrop" class="detailBackDropcss" src="" alt="Movie" />
+  </body>
 </html>

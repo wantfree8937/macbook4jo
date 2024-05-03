@@ -132,24 +132,9 @@ const create_MovieCard = (movie) => {
         window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
     });
 
-    // 유튜브로 이동하는 버튼 추가
-    const youtubeButton = document.createElement('button');
-    youtubeButton.classList.add('movie_button');
-    youtubeButton.textContent = "유튜브로 이동";
-    youtubeButton.addEventListener('click', async () => {
-        const videos = await fetch_Movievideo(movie.id);
-        if (videos && videos.length > 0) {
-            const youtubeKey = videos[0].key;
-            window.location.href = `https://www.youtube.com/watch?v=${youtubeKey}`;
-        } else {
-            alert("해당 영화의 유튜브 비디오가 없습니다.");
-        }
-    });
-
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
     movieCard.appendChild(moviebutton);
-    movieCard.appendChild(youtubeButton); // 유튜브 버튼 추가
     movieContainer.appendChild(movieCard);
 }
 
@@ -239,18 +224,16 @@ const fetchNewsFromRss = async () => {
             
             displayNews(data.items);
         } else {
-            alert('RSS 피드를 가져오는 데 문제가 발생했습니다.');
+            console.error('RSS 피드를 가져오는 데 문제가 발생했습니다.');
         }
     } catch (error) {
         console.error('Error fetching RSS feed:', error);
-        alert('RSS 피드를 가져오는 데 문제가 발생했습니다.');
     }
 };
 
 // 뉴스를 화면에 표시하는 함수
 const displayNews = (items) => {
     const newsContainer = document.getElementById('newsContainer');
-    newsContainer.innerHTML = ''; // 기존에 표시된 뉴스 삭제
 
     items.forEach(item => {
         const newsItem = document.createElement('div');
@@ -280,5 +263,22 @@ const displayNews = (items) => {
     });
 };
 
+<<<<<<< HEAD
 // 페이지 로드 시 뉴스 가져오기
 window.addEventListener('load', fetchNewsFromRss);
+=======
+// 특정 구역 스크롤로 뉴스 가져오기
+const newsContainer = document.getElementById('newsContainer');
+newsContainer.addEventListener('scroll', () => {
+    const scrollPosition = newsContainer.scrollTop;
+    const containerHeight = newsContainer.clientHeight;
+    const contentHeight = newsContainer.scrollHeight;
+
+    if (scrollPosition + containerHeight >= contentHeight) {
+        fetchNewsFromRss();
+    }
+});
+
+// 페이지 로드 시 초기 뉴스 가져오기
+fetchNewsFromRss();
+>>>>>>> d3ad47e69dd62d2902430fa259bfba258797dfa5
