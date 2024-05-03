@@ -132,24 +132,9 @@ const create_MovieCard = (movie) => {
         window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
     });
 
-    // 유튜브로 이동하는 버튼 추가
-    const youtubeButton = document.createElement('button');
-    youtubeButton.classList.add('movie_button');
-    youtubeButton.textContent = "유튜브로 이동";
-    youtubeButton.addEventListener('click', async () => {
-        const videos = await fetch_Movievideo(movie.id);
-        if (videos && videos.length > 0) {
-            const youtubeKey = videos[0].key;
-            window.location.href = `https://www.youtube.com/watch?v=${youtubeKey}`;
-        } else {
-            alert("해당 영화의 유튜브 비디오가 없습니다.");
-        }
-    });
-
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
     movieCard.appendChild(moviebutton);
-    movieCard.appendChild(youtubeButton); // 유튜브 버튼 추가
     movieContainer.appendChild(movieCard);
 }
 

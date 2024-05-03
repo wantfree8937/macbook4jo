@@ -1,5 +1,5 @@
 // import { fetch_MovieData } from './cinescript.js';
-//총 데이터 개수
+// 총 데이터 개수
 // let totalDataCount = Object.keys(fetch_MovieData.id).length;
 
 // 버튼 클릭이벤트
@@ -80,6 +80,7 @@
 //     });
 // };
 
+// 버튼 클릭이벤트 즉시실행
 const clickBtnEvent = () => {
     document.querySelector('btn__first').addEventListener('click', () => {
         changePage("first");
@@ -100,6 +101,7 @@ const clickBtnEvent = () => {
         setPagination(e.target.value);
     });
 }
+
 
 // 각 페이지버튼 상태변화
 const changePage = (page) => {
