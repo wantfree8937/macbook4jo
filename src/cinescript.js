@@ -20,6 +20,20 @@ const fetch_MovieData = async () => {
 }
 
 
+const fetch_Movievideo = async () => {
+
+    const response = await fetch('https://api.themoviedb.org/3/movie/movie_id/videos?language=en-US', {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2U1NzkwNDYxZjE0Y2MwNWMxYzA0MzIwNTE4YzQ2YSIsInN1YiI6IjY2Mjc5ZTBkYjlhMGJkMDBjZGQ0NGI2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SN8whoS0_yG-gt7xue2f_CXakEcDCse_H4sgO3CmoyA'
+        }
+    });
+    const jsonData = await response.json();
+    return jsonData.results;
+}
+
+
 // 영화 카드 만들기
 const create_MovieCard = (movie) => {
     const movieContainer = document.getElementById('movie_Container');
@@ -72,6 +86,7 @@ const create_MovieCard = (movie) => {
     allMovies.forEach(movie => create_MovieCard(movie)); // 영화 카드 생성
 })();
 
+
 const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받는다
 
     ev.preventDefault(); // form에 의한 새로고침을 막음
@@ -82,14 +97,14 @@ const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받�
     movieContainer.innerHTML = '';
 
     // 검색된 영화 목록 생성
-    const Moviefilter = allMovies.filter(movie => 
+    const Moviefilter = allMovies.filter(movie =>
         movie.title.toLowerCase().includes(document.getElementById('search_input').value.toLowerCase())
     );
 
     Moviefilter.forEach(movie => {
         create_MovieCard(movie);
     });
-    
+
     return false; // form에 의한 새로고침을 막음
 }
 
@@ -124,10 +139,10 @@ const old_Sort = () => {
 
 // 투명 검색 버튼 활성화/비활성화
 const toggle_SearchButton = () => {
-    
+
     const searchInput = document.getElementById('search_input');
     const searchButton = document.getElementById('search_button');
-    
+
     if (searchInput.value !== '') {
         searchButton.disabled = false;
         searchButton.style.cursor = "pointer";
