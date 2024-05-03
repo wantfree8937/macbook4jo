@@ -1,43 +1,43 @@
 @font-face {
     font-family: "DoHyeon-Regular";
     src: url("../font/DoHyeon-Regular.ttf");
-  }
-  
-  * {
+}
+
+* {
     font-family: "DoHyeon-Regular";
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+}
+
+body {
     background-color: rgba(0, 0, 0, 0.267);
     width: 100%;
-  }
-  
-  header {
+}
+
+header {
     width: 100%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0;
-  }
-  
-  .title {
+}
+
+.title {
     margin-right: 70%;
-  }
-  
-  .titlefont {
+}
+
+.titlefont {
     color: white;
-  }
-  
-  .subtomainbutton {
+}
+
+.subtomainbutton {
     background-color: transparent;
     border: none;
-  }
-  
-  .movie_button {
+}
+
+.movie_button {
     position: relative;
     display: inline-block;
     margin-top: 30px;
@@ -50,9 +50,9 @@
     line-height: 100px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .movie_button::before {
+}
+
+.movie_button::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -65,15 +65,15 @@
     border-style: solid;
     border-color: black;
     background-color: white;
-  }
-  
-  .movie_ContainerClass {
+}
+
+.movie_ContainerClass {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-  }
-  
-  .movie_card {
+}
+
+.movie_card {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
     margin: 20px;
     padding: 20px;
@@ -85,23 +85,23 @@
     user-select: none;
     display: table;
     text-align: center;
-  }
-  
-  .movie_poster {
+}
+
+.movie_poster {
     box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
     margin-top: 20px;
     height: 350px;
     width: 250px;
-  }
-  
-  .movie_title {
+}
+
+.movie_title {
     color: black;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .populbtn {
+}
+
+.populbtn {
     font-size: medium;
     margin: 35px 0 0 50px;
     width: 80px;
@@ -110,9 +110,9 @@
     background-color: #fd5639;
     color: white;
     cursor: pointer;
-  }
-  
-  .oldbtn {
+}
+
+.oldbtn {
     font-size: medium;
     margin: 35px 0 0 30px;
     width: 80px;
@@ -121,51 +121,73 @@
     background-color: #fd5639;
     color: white;
     cursor: pointer;
-  }
-  
-  .populbtn:hover {
+}
+
+.populbtn:hover {
     background-color: white;
     color: black;
-  }
-  
-  .oldbtn:hover {
+}
+
+.oldbtn:hover {
     background-color: white;
     color: black;
-  }
-  
-  .translategoogle {
+}
+
+.translategoogle {
     position: absolute;
     right: 10px;
     top: 10px;
-  }
-  
-  .subtomainbutton {
+}
+
+.subtomainbutton {
     cursor: pointer;
-  }
-  
-  .news-item {
-      cursor: pointer;
-      margin-bottom: 20px;
-      width: 100%;
-      border: 3px solid black; /* 테두리 색상을 투명으로 설정 */
-      padding-top: 5px;
-      padding-bottom: 5px;
-      transition: background-color 0.3s ease; /* 호버 시 효과를 부드럽게 전환 */
-  }
-  
-  .news-item:hover {
-      background-color: #9ca9d1a4; /* 호버 시 배경색 변경 */
-  }
-  
-  .news-container {
-      width: 50%; 
-      height: 400px; 
-      position: absolute;
-      left: 25%; 
-      bottom: 10%; 
-      overflow-y: auto;
-      background-color: white;
-      border: 3px solid rgb(0, 0, 0); 
-      border-radius: 5px; 
-      padding: 10px; 
-  }
+}
+
+.PosterSlideContainer {
+    height:350px;
+    justify-content: flex-start;
+
+}
+.MainToSubButton{
+    height:30px;
+    width: 80px;
+    background-color: red;
+    margin-right: 25%;
+    float:right;
+}
+.PosterSlideBox{
+    margin-left: 25%;
+    width: 50%;
+    height: 350px;
+    background-color: aqua;
+}
+
+.news-item {
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 3px solid black;
+    /* 테두리 색상을 투명으로 설정 */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: background-color 0.3s ease;
+    /* 호버 시 효과를 부드럽게 전환 */
+}
+
+.news-item:hover {
+    background-color: #9ca9d1a4;
+    /* 호버 시 배경색 변경 */
+}
+
+.news-container {
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    left: 25%;
+    bottom: 10%;
+    overflow-y: auto;
+    background-color: white;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px;
+}
