@@ -4,7 +4,6 @@ let totalDataCount = Object.keys(fetch_MovieData.id).length;
 
 // 버튼 클릭이벤트
 export const clickBtnEvent = () => {
-
     document.querySelector('btn__first').addEventListener('click', () => {
         changePage("first");
     });
@@ -19,7 +18,7 @@ export const clickBtnEvent = () => {
         if (currentPage < totalPageCount) currentPage += 1;
         changePage("next");
     });
-    document.querySelectorAll(".current__page").addEventListener("click", (e) => {
+    document.querySelectorAll("#current__page").addEventListener("click", (e) => {
         console.log(e.target.value);
         setPagination(e.target.value);
     });
@@ -28,7 +27,7 @@ export const clickBtnEvent = () => {
 // 각 페이지버튼 상태변화
 export const changePage = (page) => {
 
-    let pageStatus = parseInt(document.querySelectorAll(".current__page .active ").innerText);
+    let pageStatus = parseInt(document.querySelectorAll(".active ").innerText);
 
     if (page === "first") page = "1";
     else if (page === "end") page = totalPageCount;
@@ -60,23 +59,23 @@ export const setPagination = (page) => {
     //현재페이지 튜플의 시작번호
     let startPage = lastPage - (perPageGroup - 1) <= 0 ? 1 : lastPage - (perPageGroup - 1);
 
-    initializeBtn(startPage, lastPage);
-
+    initializeBtn(startPage, lastPage, paginationGroup);
 }
 
 //초기화
-export const initializeBtn = (startPage, lastPage) => {
-    let div = document.querySelector('btn__page').innerHTML = "";
+export const initializeBtn = (startPage, lastPage, paginationGroup) => {
+    let pageGroup = document.querySelector('#tuple').innerHTML = "";
     for (let i = startPage; i <= lastPage; i++){
-        div.innerHTML += `<span class='${i}page' id='page' >${i}</span>`;
+        if(pageGroup.classList.toggle() == false) pageGroup.classList.add(paginationGroup);
+        pageGroup.innerHTML += `<span class='${i}page' id='current__page' >${i}</span>`;
     }
 }
 
 //현재 페이지버튼 활성화
 export const currentPageActive = () => {
-    document.querySelector('btn__page').forEach((item) => {
+    document.querySelector('group__page').forEach((item) => {
         let text = item.querySelector(`'.${item}page'`).innerText;
-        if (text.includes(`${item}`)) item.classList.add("active")
+        if (text.includes(`${item}`)) item.classList.add("active");
         else item.classList.remove("active");
     });
 };
