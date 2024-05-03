@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.267);
     width: 100%;
 }
 
@@ -138,4 +138,14 @@ header {
     position: absolute;
     right: 10px;
     top: 10px;
+}
+
+.subtomainbutton{
+    cursor: pointer;
+}
+
+.news-item {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
