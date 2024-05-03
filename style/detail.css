@@ -23,6 +23,10 @@ body {
     height: 50px;
     background-color: white;
     color: black;
+<<<<<<< HEAD
+=======
+    cursor: pointer;
+>>>>>>> b1c43217e40387d3c9d14ca4e645e22a0e1f89c6
 }
 .detail_top{
     background-image: url("movieBackDrop");
@@ -70,4 +74,8 @@ body {
     top: 0px;
     z-index: 0;
     filter: brightness(50%)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b1c43217e40387d3c9d14ca4e645e22a0e1f89c6
