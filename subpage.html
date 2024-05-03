@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/searchbar.css" rel="stylesheet">
+    <title>Cine24</title>
+    <script src="src/cinescript.js" defer></script>
+</head>
+<!-- 수정사항테스트 -->
+<body>
+    <header>
+        <div class="title" > 
+            <button class="subtomainbutton"onclick="go_MainPage()">
+            <h1 class="titlefont">
+                Cine24
+            </h1>
+            </button>
+        </div>
+        <button class="populbtn" onclick="popular_Sort()">인기순</button>
+        <button class="oldbtn" onclick="old_Sort()">오래된순</button>
+    </header>
+    <div class="onbox">
+        
+        <form class="box" onsubmit="search_Movie(event)">
+            <input type="text" class="search" id="search_input" placeholder="" oninput="toggle_SearchButton()" />
+            <button type="submit" class="searchbtn" id="search_button" disabled></button>
+        </form>
+    </div>
+    <section id="movie_Container" class="movie_ContainerClass"></section>
+</body>
+
+</html>
