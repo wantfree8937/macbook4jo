@@ -52,6 +52,15 @@ header {
     cursor: pointer;
 }
 
+.movie_button:hover {
+    background-color: black;
+}
+
+.movie_button:hover::before {
+    border-color: white;
+    background-color: #fd5639;
+}
+
 .movie_button::before {
     content: "";
     position: absolute;
@@ -69,7 +78,7 @@ header {
 
 .movie_ContainerClass {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
 }
 
@@ -81,7 +90,7 @@ header {
     width: 350px;
     justify-self: center;
     background-image: url(../assets/white-product-backdrop-wall.jpg);
-    border-radius: 10px;
+    border-radius: 20px;
     user-select: none;
     display: table;
     text-align: center;
@@ -161,7 +170,6 @@ header {
     height: 350px;
     background-color: aqua;
 }
-
 .news-item {
     cursor: pointer;
     margin-bottom: 20px;
@@ -190,4 +198,27 @@ header {
     border: 3px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    /* 좌우 간격 조절 */
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.144);
+}
+
+#pagination {
+    text-align: center;
+    /* 가운데 정렬 */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
