@@ -224,18 +224,16 @@ const fetchNewsFromRss = async () => {
         if (data.status === 'ok') {
             displayNews(data.items);
         } else {
-            alert('RSS 피드를 가져오는 데 문제가 발생했습니다.');
+            console.error('RSS 피드를 가져오는 데 문제가 발생했습니다.');
         }
     } catch (error) {
         console.error('Error fetching RSS feed:', error);
-        alert('RSS 피드를 가져오는 데 문제가 발생했습니다.');
     }
 };
 
 // 뉴스를 화면에 표시하는 함수
 const displayNews = (items) => {
     const newsContainer = document.getElementById('newsContainer');
-    newsContainer.innerHTML = ''; // 기존에 표시된 뉴스 삭제
 
     items.forEach(item => {
         const newsItem = document.createElement('div');
@@ -265,5 +263,17 @@ const displayNews = (items) => {
     });
 };
 
-// 페이지 로드 시 뉴스 가져오기
-window.addEventListener('load', fetchNewsFromRss);
+// 특정 구역 스크롤로 뉴스 가져오기
+const newsContainer = document.getElementById('newsContainer');
+newsContainer.addEventListener('scroll', () => {
+    const scrollPosition = newsContainer.scrollTop;
+    const containerHeight = newsContainer.clientHeight;
+    const contentHeight = newsContainer.scrollHeight;
+
+    if (scrollPosition + containerHeight >= contentHeight) {
+        fetchNewsFromRss();
+    }
+});
+
+// 페이지 로드 시 초기 뉴스 가져오기
+fetchNewsFromRss();
