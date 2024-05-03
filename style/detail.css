@@ -23,11 +23,8 @@ body {
     height: 50px;
     background-color: white;
     color: black;
-<<<<<<< HEAD
     z-index: 2;
-=======
     cursor: pointer;
->>>>>>> a9d62801e87672cc13fc8c73582d3da9e5fc7a7d
 }
 
 .detail_top {
@@ -83,7 +80,6 @@ body {
     z-index: 0;
     filter: brightness(50%)
 }
-<<<<<<< HEAD
 .text_input_area{
     background-color: rgba(0, 255, 255, 0.041);
 }
@@ -92,5 +88,3 @@ body {
     border-color: blanchedalmond;
     margin-bottom: 10px;
 }
-=======
->>>>>>> a9d62801e87672cc13fc8c73582d3da9e5fc7a7d
