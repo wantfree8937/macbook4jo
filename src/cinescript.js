@@ -164,6 +164,7 @@ const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받�
     Moviefilter.forEach(movie => {
         create_MovieCard(movie);
     });
+
     return false; // form에 의한 새로고침을 막음
 }
 
@@ -221,7 +222,6 @@ const fetchNewsFromRss = async () => {
         const data = await response.json();
 
         if (data.status === 'ok') {
-            
             displayNews(data.items);
         } else {
             console.error('RSS 피드를 가져오는 데 문제가 발생했습니다.');
@@ -263,10 +263,6 @@ const displayNews = (items) => {
     });
 };
 
-<<<<<<< HEAD
-// 페이지 로드 시 뉴스 가져오기
-window.addEventListener('load', fetchNewsFromRss);
-=======
 // 특정 구역 스크롤로 뉴스 가져오기
 const newsContainer = document.getElementById('newsContainer');
 newsContainer.addEventListener('scroll', () => {
@@ -281,4 +277,3 @@ newsContainer.addEventListener('scroll', () => {
 
 // 페이지 로드 시 초기 뉴스 가져오기
 fetchNewsFromRss();
->>>>>>> d3ad47e69dd62d2902430fa259bfba258797dfa5

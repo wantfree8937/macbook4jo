@@ -1,90 +1,90 @@
 body {
-  display: grid;
-  place-items: center;
-  margin: 0px;
-}
-
-.detailContainer {
-  text-align: center;
-  z-index: 1;
-}
-
-.detailPostercss {
-  height: 400px;
-  width: 300px;
-  box-shadow: 0 3px 6px white, 0 3px 6px white;
-}
-
-.homeButton {
-  position: absolute;
-  left: 30px;
-  top: 30px;
-  width: 100px;
-  height: 50px;
-  background-color: white;
-  color: black;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.detail_top {
-  background-image: url("movieBackDrop");
-  padding-bottom: 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.detail_bottom {
-  margin-top: 100px;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-}
-
-.detail_bottom_movie {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  padding: 15px, 15px, 15px, 15px;
-  margin: 50px, auto, 50px, auto;
-}
-
-.detail_bottom_review {
-  width: 40%;
-  padding-left: 30px;
-  margin: 50px, auto, 50px, auto;
-}
-
-.movie_review_card {
-  padding-left: 10px;
-  background-color: rgba(0, 255, 255, 0.171);
-  color: blueviolet;
-  box-shadow: 5px 5px 15px 3px rgba(4, 0, 255, 0.527);
-  text-align: left;
-  margin-top: 20px;
-  align-items: center;
-  border: 2px groove rgba(217, 247, 81, 0.548);
-  border-radius: 10px;
-}
-
-.detailBackDropcss {
-  width: 100%;
-  height: 550px;
-  position: absolute;
-  top: 0px;
-  z-index: 0;
-  filter: brightness(50%);
-}
-.text_input_area {
-  background-color: rgba(0, 255, 255, 0.041);
-}
-.review_card_button {
-  border-radius: 15px;
-  border-color: blanchedalmond;
-  margin-bottom: 10px;
-}
+    display: grid;
+    place-items: center;
+    margin: 0px;
+  }
+  
+  .detailContainer {
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .detailPostercss {
+    height: 400px;
+    width: 300px;
+    box-shadow: 0 3px 6px white, 0 3px 6px white;
+  }
+  
+  .homeButton {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .detail_top {
+    background-image: url("movieBackDrop");
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .detail_bottom {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .detail_bottom_movie {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px, 15px, 15px, 15px;
+    margin: 50px, auto, 50px, auto;
+  }
+  
+  .detail_bottom_review {
+    width: 40%;
+    padding-left: 30px;
+    margin: 50px, auto, 50px, auto;
+  }
+  
+  .movie_review_card {
+    padding-left: 10px;
+    background-color: rgba(0, 255, 255, 0.171);
+    color: blueviolet;
+    box-shadow: 5px 5px 15px 3px rgba(4, 0, 255, 0.527);
+    text-align: left;
+    margin-top: 20px;
+    align-items: center;
+    border: 2px groove rgba(217, 247, 81, 0.548);
+    border-radius: 10px;
+  }
+  
+  .detailBackDropcss {
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    filter: brightness(50%);
+  }
+  .text_input_area {
+    background-color: rgba(0, 255, 255, 0.041);
+  }
+  .review_card_button {
+    border-radius: 15px;
+    border-color: blanchedalmond;
+    margin-bottom: 10px;
+  }
