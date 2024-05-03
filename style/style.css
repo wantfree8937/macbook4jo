@@ -1,151 +1,171 @@
-
 @font-face {
-    font-family: 'DoHyeon-Regular';
-    src: url('../font/DoHyeon-Regular.ttf');
+  font-family: "DoHyeon-Regular";
+  src: url("../font/DoHyeon-Regular.ttf");
 }
 
 * {
-    font-family: 'DoHyeon-Regular';
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: "DoHyeon-Regular";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.267);
-    width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  width: 100%;
 }
 
 header {
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
 }
 
 .title {
-    margin-right: 70%;
+  margin-right: 70%;
 }
 
 .titlefont {
-    color: white
+  color: white;
 }
 
 .subtomainbutton {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
-.movie_button{
-    position: relative;
-    display: inline-block;
-    margin-top: 30px;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    border-color: rgb(100, 100, 100);
-    color: rgb(219, 219, 219);
-    text-align: center;
-    line-height: 100px;
-    font-size: 16px;
-    cursor: pointer;
+.movie_button {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border-color: rgb(100, 100, 100);
+  color: rgb(219, 219, 219);
+  text-align: center;
+  line-height: 100px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .movie_button::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    background-color: white;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
 }
 
 .movie_ContainerClass {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
 
 .movie_card {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-    margin: 20px;
-    padding: 20px;
-    height: 550px;
-    width: 350px;
-    justify-self: center;
-    background-image: url(../assets/white-product-backdrop-wall.jpg);
-    border-radius: 10px;
-    user-select: none;
-    display: table;
-    text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  margin: 20px;
+  padding: 20px;
+  height: 550px;
+  width: 350px;
+  justify-self: center;
+  background-image: url(../assets/white-product-backdrop-wall.jpg);
+  border-radius: 10px;
+  user-select: none;
+  display: table;
+  text-align: center;
 }
 
 .movie_poster {
-    box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
-    margin-top: 20px;
-    height: 350px;
-    width: 250px;
+  box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
+  margin-top: 20px;
+  height: 350px;
+  width: 250px;
 }
 
 .movie_title {
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .populbtn {
-    font-size: medium;
-    margin: 35px 0 0 50px;
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #fd5639;
-    color: white;
-    cursor: pointer;
+  font-size: medium;
+  margin: 35px 0 0 50px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fd5639;
+  color: white;
+  cursor: pointer;
 }
 
 .oldbtn {
-    font-size: medium;
-    margin: 35px 0 0 30px;
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #fd5639;
-    color: white;
-    cursor: pointer;
+  font-size: medium;
+  margin: 35px 0 0 30px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fd5639;
+  color: white;
+  cursor: pointer;
 }
 
 .populbtn:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .oldbtn:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .translategoogle {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
-.subtomainbutton{
-    cursor: pointer;
+.subtomainbutton {
+  cursor: pointer;
 }
 
 .news-item {
     cursor: pointer;
-    margin-top: 20px;
     margin-bottom: 20px;
+    width: 100%;
+    border: 3px solid black; /* 테두리 색상을 투명으로 설정 */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: background-color 0.3s ease; /* 호버 시 효과를 부드럽게 전환 */
+}
+
+.news-item:hover {
+    background-color: #9ca9d1a4; /* 호버 시 배경색 변경 */
+}
+
+.news-container {
+    width: 50%; 
+    height: 400px; 
+    position: absolute;
+    left: 25%; 
+    bottom: 10%; 
+    overflow-y: auto;
+    background-color: white;
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 5px; 
+    padding: 10px; 
 }
