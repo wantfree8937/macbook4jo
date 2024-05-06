@@ -204,3 +204,39 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.movie_ContainerMain {
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+}
+
+.carousel-container {
+    width: 1000px;
+    height: 350px;
+    margin-left: 400px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    width: 1000px;
+    right: 200px;
+    position: absolute;
+}
+
+.poster {
+    width: 200px;
+    height: 300px;
+    transition: transform 1s ease-in-out; /* 이동 애니메이션 추가 */
+}
+
+/* 버튼 위치 */
+.btn__prev {
+    margin-top: 300px;
+    margin-left: 450px;
+}
+
+/* button {
+    margin-top: 10px;
+}  */
