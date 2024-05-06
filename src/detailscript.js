@@ -30,16 +30,25 @@ window.onload = async () => {
     "detailBackDrop"
   ).src = `https://image.tmdb.org/t/p/original${movieData.backdrop_path}`;
 
+  // 영화 백드랍
+  document.getElementById(
+    "detailBackDrop"
+  ).src = `https://image.tmdb.org/t/p/original${movieData.backdrop_path}`;
+  console.log(movieId);
+
   // 영화 Trailer Key 추출 및 YouTube iFrame
   const movieVod = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US&api_key=c5fe0771fbdf49a3f798ca176b3e7b69`
   );
+
   const movieVodData = await movieVod.json();
-  const firstVideoKey = movieVodData.results[0].key;
   const trailerVideoKey = movieVodData.results.find(
     (video) => video.type === "Trailer"
   )?.key;
 
+  document.getElementById(
+    "detailMovieVod"
+  ).src = `https://www.youtube.com/embed/${trailerVideoKey}`;
   document.getElementById(
     "detailMovieVod"
   ).src = `https://www.youtube.com/embed/${trailerVideoKey}`;
