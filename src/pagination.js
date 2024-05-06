@@ -1,160 +1,94 @@
-// import { fetch_MovieData } from './cinescript.js';
-// 총 데이터 개수
-// let totalDataCount = Object.keys(fetch_MovieData.id).length;
+import { fetch_MovieData } from './movieFetchfile.js';
 
-// 버튼 클릭이벤트
-// export const clickBtnEvent = () => {
-//     document.querySelector('btn__first').addEventListener('click', () => {
-//         changePage("first");
-//     });
-//     document.querySelector('btn__end').addEventListener('click', () => {
-//         changePage("end");
-//     });
-//     document.querySelector('btn__prev').addEventListener('click', () => {
-//         if (currentPage > 1) currentPage -= 1;
-//         changePage("prev");
-//     });
-//     document.querySelector('btn__next').addEventListener('click', () => {
-//         if (currentPage < totalPageCount) currentPage += 1;
-//         changePage("next");
-//     });
-//     document.querySelectorAll("#current__page").addEventListener("click", (e) => {
-//         console.log(e.target.value);
-//         setPagination(e.target.value);
-//     });
-// }
+let currentPage = 1; // 현재 페이지
+let totalPageCount; // 총 페이지 개수
+let totalDataCount; // 총 데이터 개수
 
-// // 각 페이지버튼 상태변화
-// export const changePage = (page) => {
+// 페이지네이션 설정
+export const setPagination = (page, totalDataCount, movies) => {
+    let dataCount = 5; // 한 페이지에 나타낼 데이터 개수
 
-//     let pageStatus = parseInt(document.querySelectorAll(".active ").innerText);
+    currentPage = page;
 
-//     if (page === "first") page = "1";
-//     else if (page === "end") page = totalPageCount;
-//     else if (page === "prev") page = (pageStatus - 1) < 1 ? pageStatus : (pageStatus - 1);
-//     else if (page === "next") page = (pageStatus + 1) < totalPageCount ? totalPageCount : (pageStatus + 1);
+    // 총 페이지 개수 계산
+    totalPageCount = Math.ceil(totalDataCount / dataCount);
 
-//     if (pageStatus != page) setPagination(page);
-// }
-
-
-// export const setPagination = (page) => {
-
-//     let dataCount = 9; //한 페이지에 나타낼 데이터 개수
-//     let perPageGroup = 10; //화면에 나타낼 페이징 갯수
-//     let firstPage = 1; //페이지가 렌더링되면 첫 페이지부터
-
-//     if (page == null || page == 0) page = firstPage;
-//     //총 게시물 개수가 9개 이하면 페이징 비활성화 
-//     if (totalDataCount <= dataCount ) return;
-//     //총 페이지 개수 계산. perPage는 한 페이지 당 보여줄 데이터의 갯수
-//     let totalPageCount = Math.ceil(totalDataCount / dataCount);
-//     //페이징그룹
-//     let paginationGroup = Math.ceil(currentPage / perPageGroup);
-//     //현재페이지 튜플의 끝 번호
-//     let lastPage = paginationGroup * perPageGroup; 
-//     if (lastPage > totalPageCount) lastPage = totalPageCount;
-//     //현재페이지 튜플 위치
-//     let currentPage = lastPage - 4;
-//     //현재페이지 튜플의 시작번호
-//     let startPage = lastPage - (perPageGroup - 1) <= 0 ? 1 : lastPage - (perPageGroup - 1);
-
-//     initializeBtn(startPage, lastPage, paginationGroup);
-// }
-
-// //초기화
-// export const initializeBtn = (startPage, lastPage, paginationGroup) => {
-//     let pageGroup = document.querySelector('#tuple').innerHTML = "";
-//     for (let i = startPage; i <= lastPage; i++){
-//         if(pageGroup.classList.toggle() == false) pageGroup.classList.add(paginationGroup);
-//         pageGroup.innerHTML += `<span class='${i}page' id='current__page' >${i}</span>`;
-//     }
-// }
-
-// //현재 페이지버튼 활성화
-// export const currentPageActive = () => {
-//     document.querySelector('group__page').forEach((item) => {
-//         let text = item.querySelector(`'.${item}page'`).innerText;
-//         if (text.includes(`${item}`)) item.classList.add("active");
-//         else item.classList.remove("active");
-//     });
-// };
-
-// 버튼 클릭이벤트 즉시실행
-const clickBtnEvent = () => {
-    document.querySelector('btn__first').addEventListener('click', () => {
-        changePage("first");
-    });
-    document.querySelector('btn__end').addEventListener('click', () => {
-        changePage("end");
-    });
-    document.querySelector('btn__prev').addEventListener('click', () => {
-        if (currentPage > 1) currentPage -= 1;
-        changePage("prev");
-    });
-    document.querySelector('btn__next').addEventListener('click', () => {
-        if (currentPage < totalPageCount) currentPage += 1;
-        changePage("next");
-    });
-    document.querySelectorAll("#current__page").addEventListener("click", (e) => {
-        console.log(e.target.value);
-        setPagination(e.target.value);
-    });
+    // 영화 포스터 표시
+    displayMoviePosters(currentPage, totalDataCount, movies);
 }
 
+// 영화 포스터 표시 함수
+const displayMoviePosters = (currentPage, totalDataCount, movies) => {
+    let dataCount = 5; // 한 페이지에 나타낼 데이터 개수
 
-// 각 페이지버튼 상태변화
-const changePage = (page) => {
+    // 시작 인덱스와 끝 인덱스 계산
+    let startIdx = (currentPage - 1) * dataCount;
+    let endIdx = Math.min(startIdx + dataCount, totalDataCount);
 
-    let pageStatus = parseInt(document.querySelectorAll(".active ").innerText);
+    let movieContainer = document.getElementById('movie_Container');
+    movieContainer.innerHTML = ""; // 기존 내용 지우기
 
-    if (page === "first") page = "1";
-    else if (page === "end") page = totalPageCount;
-    else if (page === "prev") page = (pageStatus - 1) < 1 ? pageStatus : (pageStatus - 1);
-    else if (page === "next") page = (pageStatus + 1) < totalPageCount ? totalPageCount : (pageStatus + 1);
+    // 현재 페이지에 해당하는 영화 포스터만 표시
+    for (let i = startIdx; i < endIdx; i++) {
+        const posterURL = `https://image.tmdb.org/t/p/w500${movies[i].poster_path}`; // 포스터 URL
 
-    if (pageStatus != page) setPagination(page);
-}
+        const moviePoster = document.createElement('img');
+        moviePoster.classList.add('movie_poster');
+        moviePoster.src = posterURL;
+        moviePoster.alt = movies[i].title;
 
-
-const setPagination = (page) => {
-
-    let dataCount = 9; //한 페이지에 나타낼 데이터 개수
-    let perPageGroup = 10; //화면에 나타낼 페이징 갯수
-    let firstPage = 1; //페이지가 렌더링되면 첫 페이지부터
-
-    if (page == null || page == 0) page = firstPage;
-    //총 게시물 개수가 9개 이하면 페이징 비활성화 
-    if (totalDataCount <= dataCount) return;
-    //총 페이지 개수 계산. perPage는 한 페이지 당 보여줄 데이터의 갯수
-    let totalPageCount = Math.ceil(totalDataCount / dataCount);
-    //페이징그룹
-    let paginationGroup = Math.ceil(currentPage / perPageGroup);
-    //현재페이지 튜플의 끝 번호
-    let lastPage = paginationGroup * perPageGroup;
-    if (lastPage > totalPageCount) lastPage = totalPageCount;
-    //현재페이지 튜플 위치
-    let currentPage = lastPage - 4;
-    //현재페이지 튜플의 시작번호
-    let startPage = lastPage - (perPageGroup - 1) <= 0 ? 1 : lastPage - (perPageGroup - 1);
-
-    initializeBtn(startPage, lastPage, paginationGroup);
-}
-
-//초기화
-const initializeBtn = (startPage, lastPage, paginationGroup) => {
-    let pageGroup = document.querySelector('#tuple').innerHTML = "";
-    for (let i = startPage; i <= lastPage; i++) {
-        if (pageGroup.classList.toggle() == false) pageGroup.classList.add(paginationGroup);
-        pageGroup.innerHTML += `<span class='${i}page' id='current__page' >${i}</span>`;
+        movieContainer.appendChild(moviePoster); // 영화 포스터 추가
     }
 }
 
-//현재 페이지버튼 활성화
-const currentPageActive = () => {
-    document.querySelector('group__page').forEach((item) => {
-        let text = item.querySelector(`'.${item}page'`).innerText;
-        if (text.includes(`${item}`)) item.classList.add("active");
-        else item.classList.remove("active");
+// 총 데이터 개수
+try {
+    const data = await fetch_MovieData(1);
+    let totalDataCount = data.length;
+    console.log(totalDataCount);
+    setPagination(1, totalDataCount, data);
+} catch (error) {
+    console.error('Error fetching movie data:', error);
+}
+
+// 버튼 클릭이벤트
+export const clickBtnEvent = () => {
+    document.querySelector('.btn__prev').addEventListener('click', () => {
+        if (currentPage > 1) currentPage -= 1;
+        changePage("prev");
     });
-};
+    document.querySelector('.btn__next').addEventListener('click', () => {
+        if (currentPage < totalPageCount) currentPage += 1;
+        changePage("next");
+    });
+}
+
+// 각 페이지버튼 상태변화
+export const changePage = (page) => {
+    if (page === "prev") page = currentPage - 1;
+    else if (page === "next") page = currentPage + 1;
+
+    if (currentPage != page) setPagination(page);
+}
+
+// 페이지 로드 시 영화 데이터 표시
+window.addEventListener('load', async () => {
+    try {
+        const data = await fetch_MovieData(1);
+        totalDataCount = data.length;
+
+        // 데이터를 가져온 후 setPagination 호출
+        setPagination(1, totalDataCount, data);
+    } catch (error) {
+        console.error('Error fetching and displaying movies:', error);
+    }
+});
+
+// 버튼 클릭 이벤트 설정
+document.querySelector('.btn__prev').addEventListener('click', () => {
+    changePage("prev");
+});
+
+document.querySelector('.btn__next').addEventListener('click', () => {
+    changePage("next");
+});
