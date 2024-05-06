@@ -41,23 +41,18 @@ body {
   margin-top: 100px;
   margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
-  align-items: center;
 }
 
 .detail_bottom_movie {
   width: 35%;
   display: flex;
   flex-direction: column;
-  padding: 15px, 15px, 15px, 15px;
-  margin: 50px, auto, 50px, auto;
 }
 
 .detail_bottom_review {
   width: 40%;
-  padding-left: 30px;
-  margin: 50px, auto, 50px, auto;
 }
 
 .movie_review_card {
@@ -80,8 +75,12 @@ body {
   z-index: 0;
   filter: brightness(50%);
 }
+.review_input_area{
+    background-color: rgba(0, 255, 255, 0.041);
+}
 .text_input_area {
   background-color: rgba(0, 255, 255, 0.041);
+  font-size: medium;
 }
 .review_card_button {
   border-radius: 15px;
