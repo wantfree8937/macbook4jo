@@ -1,18 +1,17 @@
-
 @font-face {
-    font-family: 'DoHyeon-Regular';
-    src: url('../font/DoHyeon-Regular.ttf');
+    font-family: "DoHyeon-Regular";
+    src: url("../font/DoHyeon-Regular.ttf");
 }
 
 * {
-    font-family: 'DoHyeon-Regular';
+    font-family: "DoHyeon-Regular";
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.267);
     width: 100%;
 }
 
@@ -30,7 +29,7 @@ header {
 }
 
 .titlefont {
-    color: white
+    color: white;
 }
 
 .subtomainbutton {
@@ -38,7 +37,7 @@ header {
     border: none;
 }
 
-.movie_button{
+.movie_button {
     position: relative;
     display: inline-block;
     margin-top: 30px;
@@ -51,6 +50,15 @@ header {
     line-height: 100px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.movie_button:hover {
+    background-color: black;
+}
+
+.movie_button:hover::before {
+    border-color: white;
+    background-color: #fd5639;
 }
 
 .movie_button::before {
@@ -70,7 +78,7 @@ header {
 
 .movie_ContainerClass {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
 }
 
@@ -82,7 +90,7 @@ header {
     width: 350px;
     justify-self: center;
     background-image: url(../assets/white-product-backdrop-wall.jpg);
-    border-radius: 10px;
+    border-radius: 20px;
     user-select: none;
     display: table;
     text-align: center;
@@ -139,3 +147,85 @@ header {
     right: 10px;
     top: 10px;
 }
+
+.subtomainbutton {
+    cursor: pointer;
+}
+
+.news-item {
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 3px solid black;
+    /* 테두리 색상을 투명으로 설정 */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: background-color 0.3s ease;
+    /* 호버 시 효과를 부드럽게 전환 */
+}
+
+.news-item:hover {
+    background-color: #9ca9d1a4;
+    /* 호버 시 배경색 변경 */
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    /* 좌우 간격 조절 */
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.144);
+}
+
+#pagination {
+    text-align: center;
+    /* 가운데 정렬 */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.movie_ContainerMain {
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+}
+
+.carousel-container {
+    width: 1200px;
+    height: 350px;
+    margin-left: 440px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    width: 1200px;
+    height: 300px;
+    right: 240px;
+    position: absolute;
+}
+
+.carouselPoster {
+    width: 200px;
+    height: 300px;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+}
+
+/* 버튼 위치 */
+.btn__prev {
+    margin-top: 310px;
+    margin-left: 450px;
+}
+
+/* button {
+    margin-top: 10px;
+}  */

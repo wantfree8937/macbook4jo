@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "DoHyeon-Regular";
+    src: url("../font/DoHyeon-Regular.ttf");
+}
+
+* {
+    font-family: "DoHyeon-Regular";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.267);
+    width: 100%;
+    height: 1200px;
+    position: relative;
+}
+
+header {
+    top: 50px;
+    position: absolute;
+    color: white;
+}
+
+.news-item {
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 3px solid black;
+    /* 테두리 색상을 투명으로 설정 */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: background-color 0.3s ease;
+    /* 호버 시 효과를 부드럽게 전환 */
+}
+
+.news-item:hover {
+    background-color: #9ca9d1a4;
+    /* 호버 시 배경색 변경 */
+}
+
+.news-container {
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    left: 25%;
+    margin-top: 750px;
+    overflow-y: auto;
+    background-color: white;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.carousel-container {
+    width: 1200px;
+    height: 400px;
+    top: 300px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.carousel {
+    margin-top: 30px;
+    display: flex;
+    width: 1200px;
+    height: 300px;
+    right: 240px;
+    position: absolute;
+}
+
+.carouselPoster {
+    width: 200px;
+    height: 300px;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+}
+
+/* 버튼 위치 */
+.btn__prev {
+    margin-top: 340px;
+    margin-left: 570px;
+}
+.subpage_btn {
+    float: right;
+    margin-right: 20px;
+}
