@@ -57,14 +57,21 @@ header {
 
 .carousel-container {
     width: 1200px;
-    height: 400px;
+    height: 350px;
     top: 300px;
-    overflow-x: hidden;
     position: relative;
 }
 
+.wrap {
+    width: 1200px;
+    height: 350px;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+
 .carousel {
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     width: 1200px;
     height: 300px;
@@ -81,10 +88,45 @@ header {
 
 /* 버튼 위치 */
 .btn__prev {
-    margin-top: 340px;
-    margin-left: 570px;
+    position: absolute;
+    left: -90px;
+    top: 65px;
+    height: 250px;
 }
+
+.btn__prev:hover {
+    cursor: pointer;
+}
+
+.btn__next {
+    position: absolute;
+    right: -90px;
+    top: 40px;
+    transform: scaleX(-1);
+    top: 65px;
+    height: 250px;
+}
+
+.btn__next:hover {
+    cursor: pointer;
+}
+
+
 .subpage_btn {
     float: right;
     margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100px;
+    background-color: #dd604a;
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 1px;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.subpage_btn:hover {
+    background-color: #da4227;
+    color: rgb(233, 233, 233);
 }
