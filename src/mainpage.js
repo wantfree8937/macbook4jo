@@ -6,6 +6,7 @@ function go_SubPage() {
     console.log("btn");
     window.location.href ="subpage.html";
 }
+
 document.querySelector('.subpage_btn').addEventListener('click', () => {
     go_SubPage();
 });

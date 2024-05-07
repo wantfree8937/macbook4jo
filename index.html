@@ -12,44 +12,37 @@
     <script type="module" src="src/carousel.js" defer></script>
   </head>
 
-  <body>
-    <body>
-      <header>
-        <div class="title">
-          <h1>Cine24</h1>
+<body>
+    <header>
+        <div class="title_group">
+            <img class="title_1" src="assets/logo.png" alt="logo">
+            <div class="title_2">
+                <h2>씨네24</h2>
+            </div>
         </div>
-        <div class="title">
-          <h1>Cine24</h1>
-        </div>
-      </header>
-      <div class="carousel-container">
-        <button class="subpage_btn">
-          <h2>전체보기</h2>
-        </button>
+    </header>
+    <button class="subpage_btn">
+        <h2>전체보기</h2>
+    </button>
+    <div class="carousel-container">
         <div class="wrap">
           <div class="carousel"></div>
         </div>
-        <img
-          class="btn__prev"
-          src="assets/arrow.png"
-          onmouseout="this.src='assets/arrow.png'"
-          onmouseover="this.src='assets/arrow-hover.png'"
-          alt="Prev"
-        />
-        <img
-          class="btn__next"
-          src="assets/arrow.png"
-          onmouseout="this.src='assets/arrow.png'"
-          onmouseover="this.src='assets/arrow-hover.png'"
-          alt="next"
-        />
-      </div>
-      <div id="newsContainer" class="news-container">
-        <!-- 뉴스가 표시될 좁은 구역 -->
-        <!-- 뉴스가 표시될 좁은 구역 -->
-        <!-- 뉴스가 표시될 좁은 구역 -->
-        <!-- 뉴스가 표시될 좁은 구역 -->
-      </div>
-    </body>
-  </body>
+        <img class="btn__prev" src="assets/arrow.png" onmouseout="this.src='assets/arrow.png'"
+            onmouseover="this.src='assets/arrow-hover.png'" alt="Prev">
+        <img class="btn__next" src="assets/arrow.png" onmouseout="this.src='assets/arrow.png'"
+            onmouseover="this.src='assets/arrow-hover.png'" alt="next">
+    </div>
+    <div class="bottom_container">
+        <img class="wazak" src="assets/와작.jpg" alt="wazak">
+        <div class="news_group">
+            <h2 class="new_title">
+                <영화뉴스>
+            </h2>
+            <div id="newsContainer" class="news-container">
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

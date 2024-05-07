@@ -11,18 +11,59 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  background-color: #184275;
-  width: 100%;
-  height: 1200px;
-  position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #1e4575;;
+    width: 100%;
+    height: 1200px;
+    position: relative;
 }
 
 header {
-  top: 50px;
-  position: absolute;
-  color: white;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.title_1 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+}
+
+.title_2 {
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+.title_group{
+    margin-top: 30px;
+    margin-left: 40%;
+}
+
+.bottom_container{
+    top: 60%;
+    position: absolute;
+    display: flex;
+    width: 100%
+}
+
+.wazak {
+    width: 320px;
+    height: 400px;
+    margin-left: 18%;
+    margin-top: 35px;
+    position: relative;
+}
+
+.new_title{
+    position: absolute;
+    margin-left: 4%;
+    color: white;
+    letter-spacing: 3px;
 }
 
 .news-item {
@@ -43,16 +84,15 @@ header {
 }
 
 .news-container {
-  width: 50%;
-  height: 400px;
-  position: absolute;
-  left: 25%;
-  margin-top: 750px;
-  overflow-y: auto;
-  background-color: white;
-  border: 3px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  padding: 10px;
+    width: 68%;
+    height: 400px;
+    margin-top: 35px;
+    margin-left: 5%;
+    overflow-y: auto;
+    background-color: white;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .carousel-container {
@@ -70,12 +110,11 @@ header {
 }
 
 .carousel {
-  margin-top: 40px;
-  display: flex;
-  width: 1200px;
-  height: 300px;
-  right: 240px;
-  position: absolute;
+    display: flex;
+    width: 1200px;
+    height: 300px;
+    right: 240px;
+    position: absolute;
 }
 
 .carouselPoster {
@@ -87,10 +126,10 @@ header {
 
 /* 버튼 위치 */
 .btn__prev {
-  position: absolute;
-  left: -90px;
-  top: 65px;
-  height: 250px;
+    position: absolute;
+    left: -90px;
+    top: 30px;
+    height: 250px;
 }
 
 .btn__prev:hover {
@@ -98,12 +137,11 @@ header {
 }
 
 .btn__next {
-  position: absolute;
-  right: -90px;
-  top: 40px;
-  transform: scaleX(-1);
-  top: 65px;
-  height: 250px;
+    position: absolute;
+    right: -90px;
+    transform: scaleX(-1);
+    top: 30px;
+    height: 250px;
 }
 
 .btn__next:hover {
@@ -111,17 +149,19 @@ header {
 }
 
 .subpage_btn {
-  float: right;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  width: 100px;
-  background-color: #dd604a;
-  color: white;
-  border-radius: 5px;
-  font-size: 13px;
-  padding: 1px;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    position: absolute;
+    margin-left: 1000px;
+    margin-top: 250px;
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    background-color: #dd604a;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 1px;
+    border: 0;
+    letter-spacing: 1.5px;
 }
 
 .subpage_btn:hover {
