@@ -69,7 +69,7 @@ function clickNextButton() {
 
 // 자동 슬라이드 기능 시작 함수
 function startAutoSlide() {
-    autoSlideInterval = setInterval(clickNextButton, 5000); // 5초에 한 번씩 다음 버튼 클릭
+    autoSlideInterval = setInterval(clickNextButton, 3000); // 5초에 한 번씩 다음 버튼 클릭
 }
 
 // 자동 슬라이드 기능 정지 함수

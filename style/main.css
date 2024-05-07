@@ -84,3 +84,7 @@ header {
     margin-top: 340px;
     margin-left: 570px;
 }
+.subpage_btn {
+    float: right;
+    margin-right: 20px;
+}

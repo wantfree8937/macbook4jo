@@ -2,7 +2,7 @@ import { fetch_MovieData, create_MovieCard } from './movieFetchfile.js';
 
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
 function go_MainPage() {
-    window.location.href = "index.html";
+    window.location.href ="index.html";
 }
 
 const search_Movie = async (ev) => {
