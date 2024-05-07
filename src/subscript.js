@@ -1,7 +1,5 @@
 import { fetch_MovieData, create_MovieCard } from './movieFetchfile.js';
 
-let allMovies = [];
-
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
 function go_MainPage() {
     window.location.href = "index.html";
@@ -15,6 +13,8 @@ const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받�
 
     // 이전에 표시된 영화 카드들 삭제
     movieContainer.innerHTML = '';
+
+    
 
     // 검색된 영화 목록 생성
     const Moviefilter = allMovies.filter(movie =>
@@ -72,7 +72,6 @@ const toggle_SearchButton = () => {
     }
 }
 
-const itemsPerPage = 20; // 페이지당 항목 수
 const totalPages = 5; // 전체 페이지 수
 let currentPage = 1; // 현재 페이지
 
@@ -129,7 +128,6 @@ const scrollToTop = () => {
 
 const updatePagination = () => {
     // 전체 페이지 수를 계산
-    const totalPageCount = Math.ceil(allMovies.length / itemsPerPage);
     renderPagination(); // 페이지네이션 렌더링
 };
 

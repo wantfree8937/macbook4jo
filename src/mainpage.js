@@ -49,17 +49,5 @@ const displayNews = (items) => {
     });
 };
 
-// 특정 구역 스크롤로 뉴스 가져오기
-const newsContainer = document.getElementById('newsContainer');
-newsContainer.addEventListener('scroll', () => {
-    const scrollPosition = newsContainer.scrollTop;
-    const containerHeight = newsContainer.clientHeight;
-    const contentHeight = newsContainer.scrollHeight;
-
-    if (scrollPosition + containerHeight >= contentHeight) {
-        fetchNewsFromRss();
-    }
-});
-
 // 페이지 로드 시 초기 뉴스 가져오기
 fetchNewsFromRss();
