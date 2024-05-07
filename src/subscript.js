@@ -1,77 +1,8 @@
-// import pagination from './pagination.js';
-
-let allMovies = [];
+import { fetch_MovieData, create_MovieCard } from './movieFetchfile.js';
 
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
 function go_MainPage() {
     window.location.href = "index.html";
-}
-
-// TMDB API에서 영화 제목을 가져와 배열 생성
-const fetch_MovieData = async (page) => {
-
-    const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&page=${page}`, {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2U1NzkwNDYxZjE0Y2MwNWMxYzA0MzIwNTE4YzQ2YSIsInN1YiI6IjY2Mjc5ZTBkYjlhMGJkMDBjZGQ0NGI2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SN8whoS0_yG-gt7xue2f_CXakEcDCse_H4sgO3CmoyA'
-        }
-    });
-    const jsonData = await response.json();
-    return jsonData.results;
-}
-
-const fetch_Movievideo = async (movie_id) => {
-
-    const response = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}/videos?language=ko-KR`, {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2U1NzkwNDYxZjE0Y2MwNWMxYzA0MzIwNTE4YzQ2YSIsInN1YiI6IjY2Mjc5ZTBkYjlhMGJkMDBjZGQ0NGI2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SN8whoS0_yG-gt7xue2f_CXakEcDCse_H4sgO3CmoyA'
-        }
-    });
-    const jsonData = await response.json();
-    return jsonData.results;
-}
-
-// 영화 카드 만들기
-const create_MovieCard = (movie) => {
-    const movieContainer = document.getElementById('movie_Container');
-    const movieCard = document.createElement('div');
-    movieCard.classList.add('movie_card');
-
-    const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
-    const moviePoster = document.createElement('img');
-
-    const backDropURL = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`; // 백드랍 받아오기
-    const movieBackDrop = document.createElement('img');
-
-    // 영화 카드에 요소들 추가
-    moviePoster.classList.add('movie_poster');
-    moviePoster.src = posterURL;
-    moviePoster.alt = movie.title;
-
-    movieBackDrop.classList.add('movie_backdrop');
-    movieBackDrop.classList.add('movie_poster');
-
-    movieBackDrop.src = backDropURL;
-    movieBackDrop.alt = movie.title;
-
-    const movieTitle = document.createElement('div');
-    movieTitle.classList.add('movie_title');
-    movieTitle.textContent = movie.title;
-
-    const moviebutton = document.createElement('button');//상세페이지로 가는 버튼 추가
-    moviebutton.classList.add('movie_button');
-    moviebutton.textContent = "더보기";
-    moviebutton.addEventListener('click', () => {
-        window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
-    });
-
-    movieCard.appendChild(movieTitle);
-    movieCard.appendChild(moviePoster);
-    movieCard.appendChild(moviebutton);
-    movieContainer.appendChild(movieCard);
 }
 
 const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받는다
@@ -82,6 +13,8 @@ const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받�
 
     // 이전에 표시된 영화 카드들 삭제
     movieContainer.innerHTML = '';
+
+    
 
     // 검색된 영화 목록 생성
     const Moviefilter = allMovies.filter(movie =>
@@ -139,7 +72,6 @@ const toggle_SearchButton = () => {
     }
 }
 
-const itemsPerPage = 20; // 페이지당 항목 수
 const totalPages = 5; // 전체 페이지 수
 let currentPage = 1; // 현재 페이지
 
@@ -196,10 +128,8 @@ const scrollToTop = () => {
 
 const updatePagination = () => {
     // 전체 페이지 수를 계산
-    totalPageCount = Math.ceil(allMovies.length / itemsPerPage);
     renderPagination(); // 페이지네이션 렌더링
 };
-
 
 // 최초 페이지 로드 시 초기화 및 페이지네이션 렌더링
 window.addEventListener('load', async () => {
