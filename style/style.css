@@ -169,20 +169,6 @@ header {
     /* 호버 시 배경색 변경 */
 }
 
-.news-container {
-    width: 50%;
-    height: 400px;
-    position: absolute;
-    left: 25%;
-    margin-top: 100px;
-    margin-bottom: 500px;
-    overflow-y: auto;
-    background-color: white;
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    padding: 10px;
-}
-
 .button {
     padding: 10px 20px;
     font-size: 16px;

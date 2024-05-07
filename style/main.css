@@ -57,13 +57,14 @@ header {
 
 .carousel-container {
     width: 1200px;
-    height: 350px;
+    height: 400px;
     top: 300px;
     overflow-x: hidden;
     position: relative;
 }
 
 .carousel {
+    margin-top: 30px;
     display: flex;
     width: 1200px;
     height: 300px;
@@ -80,6 +81,10 @@ header {
 
 /* 버튼 위치 */
 .btn__prev {
-    margin-top: 310px;
+    margin-top: 340px;
     margin-left: 570px;
+}
+.subpage_btn {
+    float: right;
+    margin-right: 20px;
 }

@@ -2,9 +2,11 @@ import { fetch_MovieData, create_MovieCard } from './movieFetchfile.js';
 
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
 function go_MainPage() {
-    window.location.href = "index.html";
+    window.location.href ="index.html";
 }
-
+document.querySelector('.subtomainbutton').addEventListener('click', () => {
+    go_MainPage();
+});
 const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받는다
 
     ev.preventDefault(); // form에 의한 새로고침을 막음
