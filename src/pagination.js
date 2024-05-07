@@ -57,9 +57,6 @@ export const clickBtnEvent = () => {
         if (currentPage > 1) currentPage -= 1;
         changePage("prev");
     });
-<<<<<<< HEAD
-};
-=======
     document.querySelector('.btn__next').addEventListener('click', () => {
         if (currentPage < totalPageCount) currentPage += 1;
         changePage("next");
@@ -95,4 +92,3 @@ document.querySelector('.btn__prev').addEventListener('click', () => {
 document.querySelector('.btn__next').addEventListener('click', () => {
     changePage("next");
 });
->>>>>>> 93dd6d572d4c1ecfcde18d7ed1521fd788aa7220
