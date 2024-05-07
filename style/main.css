@@ -1,13 +1,13 @@
 @font-face {
-    font-family: "DoHyeon-Regular";
-    src: url("../font/DoHyeon-Regular.ttf");
+  font-family: "DoHyeon-Regular";
+  src: url("../font/DoHyeon-Regular.ttf");
 }
 
 * {
-    font-family: "DoHyeon-Regular";
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: "DoHyeon-Regular";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -67,20 +67,20 @@ header {
 }
 
 .news-item {
-    cursor: pointer;
-    margin-bottom: 20px;
-    width: 100%;
-    border: 3px solid black;
-    /* 테두리 색상을 투명으로 설정 */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transition: background-color 0.3s ease;
-    /* 호버 시 효과를 부드럽게 전환 */
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 3px solid black;
+  /* 테두리 색상을 투명으로 설정 */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: background-color 0.3s ease;
+  /* 호버 시 효과를 부드럽게 전환 */
 }
 
 .news-item:hover {
-    background-color: #9ca9d1a4;
-    /* 호버 시 배경색 변경 */
+  background-color: #9ca9d1a4;
+  /* 호버 시 배경색 변경 */
 }
 
 .news-container {
@@ -96,17 +96,17 @@ header {
 }
 
 .carousel-container {
-    width: 1200px;
-    height: 350px;
-    top: 300px;
-    position: relative;
+  width: 1200px;
+  height: 350px;
+  top: 300px;
+  position: relative;
 }
 
 .wrap {
-    width: 1200px;
-    height: 350px;
-    overflow-x: hidden;
-    position: absolute;
+  width: 1200px;
+  height: 350px;
+  overflow-x: hidden;
+  position: absolute;
 }
 
 .carousel {
@@ -118,10 +118,10 @@ header {
 }
 
 .carouselPoster {
-    width: 200px;
-    height: 300px;
-    margin: 0 20px 0 20px;
-    cursor: pointer;
+  width: 200px;
+  height: 300px;
+  margin: 0 20px 0 20px;
+  cursor: pointer;
 }
 
 /* 버튼 위치 */
@@ -133,7 +133,7 @@ header {
 }
 
 .btn__prev:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn__next {
@@ -145,9 +145,8 @@ header {
 }
 
 .btn__next:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 .subpage_btn {
     position: absolute;
@@ -166,6 +165,6 @@ header {
 }
 
 .subpage_btn:hover {
-    background-color: #da4227;
-    color: rgb(233, 233, 233);
+  background-color: #da4227;
+  color: rgb(233, 233, 233);
 }
