@@ -2,6 +2,7 @@ body {
   display: grid;
   place-items: center;
   margin: 0px;
+  background-color: #184275;
 }
 
 .detailContainer {

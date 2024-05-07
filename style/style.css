@@ -152,23 +152,6 @@ header {
     cursor: pointer;
 }
 
-.news-item {
-    cursor: pointer;
-    margin-bottom: 20px;
-    width: 100%;
-    border: 3px solid black;
-    /* 테두리 색상을 투명으로 설정 */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transition: background-color 0.3s ease;
-    /* 호버 시 효과를 부드럽게 전환 */
-}
-
-.news-item:hover {
-    background-color: #9ca9d1a4;
-    /* 호버 시 배경색 변경 */
-}
-
 .button {
     padding: 10px 20px;
     font-size: 16px;
@@ -195,35 +178,6 @@ header {
 .movie_ContainerMain {
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
-}
-
-.carousel-container {
-    width: 1200px;
-    height: 350px;
-    margin-left: 440px;
-    overflow-x: hidden;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    width: 1200px;
-    height: 300px;
-    right: 240px;
-    position: absolute;
-}
-
-.carouselPoster {
-    width: 200px;
-    height: 300px;
-    margin: 0 20px 0 20px;
-    cursor: pointer;
-}
-
-/* 버튼 위치 */
-.btn__prev {
-    margin-top: 310px;
-    margin-left: 450px;
 }
 
 /* button {
