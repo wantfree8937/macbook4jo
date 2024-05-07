@@ -174,7 +174,8 @@ header {
     height: 400px;
     position: absolute;
     left: 25%;
-    bottom: 10%;
+    margin-top: 100px;
+    margin-bottom: 500px;
     overflow-y: auto;
     background-color: white;
     border: 3px solid rgb(0, 0, 0);
@@ -204,3 +205,41 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.movie_ContainerMain {
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+}
+
+.carousel-container {
+    width: 1200px;
+    height: 350px;
+    margin-left: 440px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    width: 1200px;
+    height: 300px;
+    right: 240px;
+    position: absolute;
+}
+
+.carouselPoster {
+    width: 200px;
+    height: 300px;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+}
+
+/* 버튼 위치 */
+.btn__prev {
+    margin-top: 310px;
+    margin-left: 450px;
+}
+
+/* button {
+    margin-top: 10px;
+}  */
