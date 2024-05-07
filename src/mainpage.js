@@ -1,6 +1,15 @@
 // RSS 피드 URL
 const rssFeedUrl = 'https://api.newswire.co.kr/rss/industry/1206';
 
+//서브페이지로 이동하는 함수 
+function go_SubPage() {
+    console.log("btn");
+    window.location.href ="subpage.html";
+}
+document.querySelector('.subpage_btn').addEventListener('click', () => {
+    go_SubPage();
+});
+
 // 뉴스를 가져와서 화면에 표시하는 함수
 const fetchNewsFromRss = async () => {
     try {

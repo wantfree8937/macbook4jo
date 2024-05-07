@@ -1,5 +1,8 @@
 import { fetch_MovieData } from './movieFetchfile.js';
 
+// 자동 슬라이드 기능 변수
+let autoSlideInterval;
+
 // 영화 데이터를 가져와서 포스터를 생성하고 캐러셀에 추가하는 함수
 async function fetchMovieDataAndRender(page) {
     try {
@@ -59,5 +62,28 @@ const nextBtn = document.querySelector('.btn__next');
 prevBtn.addEventListener('click', () => translateContainer(1));
 nextBtn.addEventListener('click', () => translateContainer(-1));
 
-// 페이지 로드 시 초기화 함수 호출
+// 다음 버튼을 클릭하는 함수
+function clickNextButton() {
+    nextBtn.click();
+}
+
+// 자동 슬라이드 기능 시작 함수
+function startAutoSlide() {
+    autoSlideInterval = setInterval(clickNextButton, 3000); // 5초에 한 번씩 다음 버튼 클릭
+}
+
+// 자동 슬라이드 기능 정지 함수
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval); // setInterval로 호출한 함수 실행을 멈춤
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const carouselContainer = document.querySelector('.carousel-container');
+
+    carouselContainer.addEventListener('mouseover', stopAutoSlide);
+    carouselContainer.addEventListener('mouseout', startAutoSlide);
+});
+
+// 페이지 로드 시 초기화 함수 호출과 함께 자동 슬라이드 기능 시작
 fetchMovieDataAndRender(1);
+startAutoSlide();
