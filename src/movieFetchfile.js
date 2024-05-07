@@ -24,14 +24,13 @@ export const fetch_Movievideo = async (movie_id) => {
     const jsonData = await response.json();
     return jsonData.results;
 }
-console.log("페치");
+
 // 영화 카드 만들기
 export const create_MovieCard = (movie) => {
     const movieContainer = document.getElementById('movie_Container');
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie_card');
 
-    const movieLight = document.createElement('div');
 
     const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
     const moviePoster = document.createElement('img');
@@ -44,7 +43,7 @@ export const create_MovieCard = (movie) => {
     moviePoster.src = posterURL;
     moviePoster.alt = movie.title;
 
-    movieLight.classList.add('movie_light');
+    
 
     movieBackDrop.classList.add('movie_backdrop');
     movieBackDrop.classList.add('movie_poster');
@@ -62,6 +61,21 @@ export const create_MovieCard = (movie) => {
     moviebutton.addEventListener('click', () => {
         window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
     });
+
+    const movieLight = document.createElement('div');
+    movieLight.classList.add('movie_light');
+    const movieLights = document.querySelector('.movie_light');
+
+    
+    // moviebutton.addEventListener('mouseenter', () => {
+    //     console.log("패치");
+    //     // movieLights.classList.remove('movie_light');
+    //     movieLights.classList.replace('movie_light','movie_light_on');
+    // });
+
+    // // movieButton.addEventListener('mouseleave', () => {
+    // //     movieLights.classList.replace('movie_light_on','movie_light');
+    // // });
 
     movieCard.appendChild(movieLight);
     movieCard.appendChild(movieTitle);
