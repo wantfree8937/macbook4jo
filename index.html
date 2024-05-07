@@ -21,14 +21,15 @@
             </h1>
         </div>
     </header>
-    
     <div class="carousel-container">
         <button class="subpage_btn">
-            <h2>상세보기</h2>
+            <h2>전체보기</h2>
         </button>
-        <div class="carousel"></div>
-        <button class="btn__prev">Prev</button>
-        <button class="btn__next">Next</button>
+        <div class="wrap">
+            <div class="carousel"></div>
+        </div>
+        <img class="btn__prev" src="assets/arrow.png" onmouseout="this.src='assets/arrow.png'" onmouseover="this.src='assets/arrow-hover.png'" alt="Prev">
+        <img class="btn__next" src="assets/arrow.png" onmouseout="this.src='assets/arrow.png'" onmouseover="this.src='assets/arrow-hover.png'" alt="next">
     </div>
     <div id="newsContainer" class="news-container">
         <!-- 뉴스가 표시될 좁은 구역 -->
