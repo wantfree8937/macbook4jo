@@ -51,13 +51,11 @@ body {
   width: 35%;
   display: flex;
   flex-direction: column;
-  background-color: rebeccapurple;
   padding: 10px;
 }
 
 .detail_bottom_review {
   width: 40%;
-  background-color: green;
 }
 
 .movie_review_card {
@@ -82,12 +80,14 @@ body {
 }
 .review_input_area{
     background-color: rgba(0, 255, 255, 0.041);
+    border-radius: 15px;
 }
 .text_input_area {
   background-color: rgba(0, 255, 255, 0.041);
   font-size: medium;
   height: 20px;
   width: 100px;
+  border-radius: 15px;
 }
 .review_card_button {
   border-radius: 15px;
