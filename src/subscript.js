@@ -12,7 +12,7 @@ const search_Movie = async (ev) => {
 
     try {
         let allMovies = [];
-        for (let i = 1; i <= 5; i++) { // 1부터 5페이지까지의 데이터 가져오기
+        for (let i = 1; i <= 200; i++) { // 1부터 400페이지까지의 데이터 가져오기
             const movies = await fetch_MovieData(i); // 각 페이지의 영화 데이터 가져오기
             allMovies = allMovies.concat(movies); // 현재 페이지의 영화를 allMovies 배열에 추가
         }
@@ -60,7 +60,7 @@ const toggle_SearchButton = () => {
     }
 };
 
-const totalPages = 400; // 전체 페이지 수
+const totalPages = 200; // 전체 페이지 수
 let currentPage = 1; // 현재 페이지
 
 // 페이지별 영화 데이터를 가져와 화면에 렌더링하는 함수

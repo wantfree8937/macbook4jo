@@ -13,7 +13,7 @@ body {
 .detailPostercss {
   height: 400px;
   width: 300px;
-  box-shadow: 0 3px 6px white, 0 3px 6px white;
+  box-shadow: 0 3px 6px rgb(255, 255, 255), 0 3px 6px white;
 }
 
 .homeButton {
@@ -37,11 +37,12 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  -webkit-text-stroke: 0.8px black;
   text-shadow: 2px 2px 0 black;
 }
 
 .detail_bottom {
-  margin-top: 100px;
+  margin-top: 130px;
   margin-bottom: 50px;
   display: flex;
   justify-content: space-evenly;
@@ -52,17 +53,37 @@ body {
   width: 35%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  background-color: #0a1b31;
+  padding: 15px 15px 25px 15px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0px 0px 25px 5px white;
+}
+
+#reviewForm {
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+  padding: 15px 15px 10px 10px;
 }
 
 .detail_bottom_review {
   width: 40%;
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0px 0px 20px 5px white;
+  background-color: #0a1b31;
 }
 
 .movie_review_card {
   padding-left: 10px;
   background-color: rgba(0, 255, 255, 0.171);
-  color: blueviolet;
+  color: white;
+  /* color: blueviolet; */
   box-shadow: 5px 5px 15px 3px rgba(4, 0, 255, 0.527);
   text-align: left;
   margin-top: 20px;
@@ -78,17 +99,17 @@ body {
   top: 0px;
   z-index: 0;
   filter: brightness(50%);
+  box-shadow: 0 20px 50px rgb(0, 0, 0);
 }
-.review_input_area{
-    background-color: rgba(0, 255, 255, 0.041);
-    border-radius: 15px;
+.review_input_area {
+  background-color: rgba(0, 255, 255, 0.041);
 }
 .text_input_area {
   background-color: rgba(0, 255, 255, 0.041);
   font-size: medium;
   height: 20px;
-  width: 100px;
-  border-radius: 15px;
+  width: 120px;
+  color: white;
 }
 .review_card_button {
   border-radius: 15px;

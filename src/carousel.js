@@ -49,18 +49,15 @@ function reorganizeEl(selectedBtn) {
     }
 }
 
+const prevBtn = document.querySelector('.btn__prev');
+const nextBtn = document.querySelector('.btn__next');
+
 // 디테일 페이지로 이동하는 함수
 function goToDetailPage(movieId) {
     // 디테일 페이지 URL을 생성하고 이동
     const detailPageURL = `detail.html?id=${movieId}`;
     window.location.href = detailPageURL;
 }
-
-// 이전, 다음 버튼 이벤트 리스너 추가
-const prevBtn = document.querySelector('.btn__prev');
-const nextBtn = document.querySelector('.btn__next');
-prevBtn.addEventListener('click', () => translateContainer(1));
-nextBtn.addEventListener('click', () => translateContainer(-1));
 
 // 다음 버튼을 클릭하는 함수
 function clickNextButton() {
@@ -69,7 +66,7 @@ function clickNextButton() {
 
 // 자동 슬라이드 기능 시작 함수
 function startAutoSlide() {
-    autoSlideInterval = setInterval(clickNextButton, 3000); // 5초에 한 번씩 다음 버튼 클릭
+    autoSlideInterval = setInterval(clickNextButton, 3000); // 3초에 한 번씩 다음 버튼 클릭
 }
 
 // 자동 슬라이드 기능 정지 함수
@@ -78,10 +75,14 @@ function stopAutoSlide() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const carouselContainer = document.querySelector('.carousel-container');
+    const carouselContainer = document.querySelector('.carousel-container'); 
 
+    prevBtn.addEventListener('mouseover', stopAutoSlide);
+    nextBtn.addEventListener('mouseover', stopAutoSlide);
     carouselContainer.addEventListener('mouseover', stopAutoSlide);
     carouselContainer.addEventListener('mouseout', startAutoSlide);
+    prevBtn.addEventListener('click', () => translateContainer(1));
+    nextBtn.addEventListener('click', () => translateContainer(-1));
 });
 
 // 페이지 로드 시 초기화 함수 호출과 함께 자동 슬라이드 기능 시작
