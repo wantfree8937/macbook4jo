@@ -37,7 +37,7 @@ header {
     border: none;
 }
 
-.movie_button {
+.movie_button{
     position: relative;
     display: inline-block;
     margin-top: 30px;
@@ -74,6 +74,17 @@ header {
     border-style: solid;
     border-color: black;
     background-color: white;
+}
+
+.movie_light{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.movie_light:hover {
+    background-color: rgb(0, 255, 85);
 }
 
 .movie_ContainerClass {

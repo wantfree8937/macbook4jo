@@ -2,7 +2,7 @@ import { fetch_MovieData, create_MovieCard } from './movieFetchfile.js';
 
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
 function go_MainPage() {
-    window.location.href ="index.html";
+    window.location.href = "index.html";
 }
 document.querySelector('.subtomainbutton').addEventListener('click', () => {
     go_MainPage();
@@ -16,7 +16,7 @@ const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받�
     // 이전에 표시된 영화 카드들 삭제
     movieContainer.innerHTML = '';
 
-    
+
 
     // 검색된 영화 목록 생성
     const Moviefilter = allMovies.filter(movie =>
@@ -29,6 +29,22 @@ const search_Movie = async (ev) => { // 이벤트 객체를 매개변수로 받�
 
     return false; // form에 의한 새로고침을 막음
 }
+
+console.log("서브");
+// const movieButton = document.querySelector('.movie_button');
+// const movieLights = document.querySelector('.movie_light');
+
+// movieButton.addEventListener('mouseenter', () => {
+//     movieLights.forEach(light => {
+//         light.style.backgroundColor = 'green';
+//     });
+// });
+
+// movieButton.addEventListener('mouseleave', () => {
+//   movieLights.forEach(light => {
+//     light.style.backgroundColor = 'white';
+//   });
+// });
 
 // // 인기순 정렬
 // const popular_Sort = () => {
