@@ -13,7 +13,7 @@
 body {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: #184275;
     width: 100%;
     height: 1200px;
     position: relative;
