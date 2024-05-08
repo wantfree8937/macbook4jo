@@ -244,6 +244,6 @@ header {
     justify-content: center;
 }
 
-/* button {
-    margin-top: 10px;
-}  */
+.active{
+    color:#fd5639;
+}
