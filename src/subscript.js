@@ -99,10 +99,10 @@ const renderMovies = (movies) => {
 };
 
 // 페이지네이션을 렌더링하는 함수
-const renderPagination = () => {
+    function renderPagination() {
     const paginationContainer = document.getElementById('pagination');
     paginationContainer.innerHTML = ''; // 기존에 표시된 페이지네이션 초기화
-
+    
     const numPagesToShow = 5; // 한 번에 표시할 페이지 수
     const totalPagesToShow = Math.min(totalPages, numPagesToShow); // 표시할 페이지 수와 전체 페이지 수 중 작은 값 선택
 
@@ -122,10 +122,10 @@ const renderPagination = () => {
             currentPage = 1;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         });
         paginationContainer.appendChild(firstButton);
     }
-
 
     // 이전 버튼 생성
     const prevButton = document.createElement('button');
@@ -136,6 +136,7 @@ const renderPagination = () => {
             currentPage--;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         }
     });
     paginationContainer.appendChild(prevButton);
@@ -152,6 +153,7 @@ const renderPagination = () => {
             currentPage = i;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         });
         paginationContainer.appendChild(button);
     }
@@ -165,6 +167,7 @@ const renderPagination = () => {
             currentPage++;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         }
     });
     paginationContainer.appendChild(nextButton);
@@ -178,10 +181,10 @@ const renderPagination = () => {
             currentPage = totalPages;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         });
         paginationContainer.appendChild(lastButton);
     }
-
 };
 
 // 화면 맨 위로 스크롤하는 함수
@@ -199,9 +202,13 @@ const updatePagination = () => {
 
 // 최초 페이지 로드 시 초기화 및 페이지네이션 렌더링
 window.addEventListener('load', async () => {
+    let currentPage = localStorage.getItem('currentPage'); // localStorage에서 currentPage 가져오기
+    currentPage = currentPage ? parseInt(currentPage, 10) : 1; // currentPage가 null이거나 undefined인 경우, 즉 오류가 발생할 경우 기본값을 1로 설정
     await fetchAndRenderMovies(currentPage); // 페이지별 영화 데이터 가져와서 렌더링
 });
-
+function saveCurrentPage(currentPage) {
+    localStorage.setItem('currentPage', currentPage.toString()); // currentPage를 문자열로 변환하여 localStorage에 저장
+}
 document.addEventListener('DOMContentLoaded', function () {
     const homeButton = document.querySelector('.subtomainbutton');
     const searchButton = document.getElementById('search_button');
