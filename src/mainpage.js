@@ -3,9 +3,11 @@ const rssFeedUrl = 'https://api.newswire.co.kr/rss/industry/1206';
 
 //서브페이지로 이동하는 함수 
 function go_SubPage() {
+    localStorage.setItem('currentPage', '1');
     console.log("btn");
     window.location.href ="subpage.html";
 }
+
 document.querySelector('.subpage_btn').addEventListener('click', () => {
     go_SubPage();
 });

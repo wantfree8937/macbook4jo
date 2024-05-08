@@ -2,48 +2,68 @@ import { fetch_MovieData, create_MovieCard } from './movieFetchfile.js';
 
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
 function go_MainPage() {
-    window.location.href ="index.html";
+    window.location.href = "index.html";
+}
+//검색 api를 호출하는 함수
+async function fetch_SearchData(searchQuery, page) {
+    const url = `https://api.themoviedb.org/3/search/movie?include_adult=true&language=ko-KR&page=${page}&query=${searchQuery}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYmZjYTAyM2VkNzE2NzlkOWFkODg4MDk0MzNkZTZjNyIsInN1YiI6IjY2MmYwYTYwYzNhYTNmMDEyYmZkOWUzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bTN_n03CEEcVclme6e9JtZLVbcB583M3z371ECvNldM'
+        }
+    };
+
+    const response = await fetch(url, options);
+    const data = await response.json();
+    return data.results; // 결과 데이터만 반환
 }
 
 const search_Movie = async (ev) => {
     ev.preventDefault(); // form에 의한 새로고침을 막음
-
     const searchInput = document.getElementById('search_input').value.toLowerCase();
+    const movieContainer = document.getElementById('movie_Container'); // id: movie_Container의 요소를 가져옴
 
+    // 이전에 표시된 영화 카드들 삭제
+    movieContainer.innerHTML = '';
     try {
-        let allMovies = [];
-        for (let i = 1; i <= 5; i++) { // 1부터 5페이지까지의 데이터 가져오기
-            const movies = await fetch_MovieData(i); // 각 페이지의 영화 데이터 가져오기
-            allMovies = allMovies.concat(movies); // 현재 페이지의 영화를 allMovies 배열에 추가
-        }
-        const filteredMovies = allMovies.filter(movie => movie.title.toLowerCase().includes(searchInput));
-        renderMovies(filteredMovies);
+        // 검색어와 페이지를 인자로 하여 검색 API 호출
+        const movies = await fetch_SearchData(searchInput, 1); // 여기서는 첫 번째 페이지만 가져옴
+        renderMovies(movies); // 검색 결과를 렌더링
     } catch (error) {
         console.error('Error fetching and rendering movies:', error);
     }
 };
 
 // // 인기순 정렬
-// const popular_Sort = async () => {
-//     try {
-//         const movies = await fetch_MovieData(currentPage); // 현재 페이지의 영화 데이터 가져오기
-//         const sortedMovies = movies.slice().sort((a, b) => b.popularity - a.popularity);
-//         renderMovies(sortedMovies);
-//     } catch (error) {
-//         console.error('Error sorting movies by popularity:', error);
-//     }
-// };
+// const popular_Sort = () => {
+
+//     const movieContainer = document.getElementById('movie_Container');
+
+//     movieContainer.innerHTML = '';
+
+//     // 영화 인기도로 오름차순 정렬
+//     const sortedMovies = allMovies.slice().sort((a, b) => b.popularity - a.popularity);
+
+//     sortedMovies.forEach(movie => {
+//         create_MovieCard(movie);
+//     });
+// }
 
 // // 오래된순 정렬
-// const old_Sort = async () => {
-//     try {
-//         const movies = await fetch_MovieData(currentPage); // 현재 페이지의 영화 데이터 가져오기
-//         const sortedMovies = movies.slice().sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
-//         renderMovies(sortedMovies);
-//     } catch (error) {
-//         console.error('Error sorting movies by release date:', error);
-//     }
-// };
+// const old_Sort = () => {
+//     const movieContainer = document.getElementById('movie_Container');
+
+//     movieContainer.innerHTML = '';
+
+//     // 영화 날짜로 내림차순 정렬
+//     const sortMovie = allMovies.slice().sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
+
+//     sortMovie.forEach(movie => {
+//         create_MovieCard(movie);
+//     });
+// }
 
 // 투명 검색 버튼 활성화/비활성화
 const toggle_SearchButton = () => {
@@ -58,9 +78,9 @@ const toggle_SearchButton = () => {
         searchButton.disabled = true;
         searchButton.style.cursor = "default";
     }
-};
+}
 
-const totalPages = 400; // 전체 페이지 수
+const totalPages = 200; // 전체 페이지 수
 let currentPage = 1; // 현재 페이지
 
 // 페이지별 영화 데이터를 가져와 화면에 렌더링하는 함수
@@ -88,10 +108,10 @@ const renderMovies = (movies) => {
 };
 
 // 페이지네이션을 렌더링하는 함수
-const renderPagination = () => {
+    function renderPagination() {
     const paginationContainer = document.getElementById('pagination');
     paginationContainer.innerHTML = ''; // 기존에 표시된 페이지네이션 초기화
-
+    
     const numPagesToShow = 5; // 한 번에 표시할 페이지 수
     const totalPagesToShow = Math.min(totalPages, numPagesToShow); // 표시할 페이지 수와 전체 페이지 수 중 작은 값 선택
 
@@ -111,10 +131,10 @@ const renderPagination = () => {
             currentPage = 1;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         });
         paginationContainer.appendChild(firstButton);
     }
-
 
     // 이전 버튼 생성
     const prevButton = document.createElement('button');
@@ -125,6 +145,7 @@ const renderPagination = () => {
             currentPage--;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         }
     });
     paginationContainer.appendChild(prevButton);
@@ -133,7 +154,7 @@ const renderPagination = () => {
     for (let i = startPage; i <= endPage; i++) {
         const button = document.createElement('button');
         button.textContent = i;
-        button.classList.add('button');
+        button.classList.add('button'); // 스타일링된 버튼 클래스 추가
         if (i === currentPage) {
             button.classList.add('active');
         }
@@ -141,10 +162,10 @@ const renderPagination = () => {
             currentPage = i;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         });
         paginationContainer.appendChild(button);
     }
-
     // 다음 버튼 생성
     const nextButton = document.createElement('button');
     nextButton.textContent = '다음';
@@ -154,6 +175,7 @@ const renderPagination = () => {
             currentPage++;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         }
     });
     paginationContainer.appendChild(nextButton);
@@ -167,10 +189,10 @@ const renderPagination = () => {
             currentPage = totalPages;
             fetchAndRenderMovies(currentPage);
             scrollToTop();
+            saveCurrentPage(currentPage);
         });
         paginationContainer.appendChild(lastButton);
     }
-
 };
 
 // 화면 맨 위로 스크롤하는 함수
@@ -188,9 +210,13 @@ const updatePagination = () => {
 
 // 최초 페이지 로드 시 초기화 및 페이지네이션 렌더링
 window.addEventListener('load', async () => {
+    let currentPage = localStorage.getItem('currentPage'); // localStorage에서 currentPage 가져오기
+    currentPage = currentPage ? parseInt(currentPage, 10) : 1; // currentPage가 null이거나 undefined인 경우, 즉 오류가 발생할 경우 기본값을 1로 설정
     await fetchAndRenderMovies(currentPage); // 페이지별 영화 데이터 가져와서 렌더링
 });
-
+function saveCurrentPage(currentPage) {
+    localStorage.setItem('currentPage', currentPage.toString()); // currentPage를 문자열로 변환하여 localStorage에 저장
+}
 document.addEventListener('DOMContentLoaded', function () {
     const homeButton = document.querySelector('.subtomainbutton');
     const searchButton = document.getElementById('search_button');
@@ -204,3 +230,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // selectedPopul.addEventListener('click', popular_Sort);
     // selectedOld.addEventListener('click', old_Sort);
 });
+
