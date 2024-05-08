@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/main.css" rel="stylesheet">
-    <link href="style/searchbar.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style/main.css" rel="stylesheet" />
+    <link href="style/searchbar.css" rel="stylesheet" />
     <title>Cine24</title>
     <!-- <script type="module" src="src/pagination.js" defer></script> -->
     <script type="module" src="src/mainpage.js" defer></script>
     <script type="module" src="src/carousel.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="title">
-            <h1>
-                Cine24
-            </h1>
-        </div>
+      <div class="title_group">
+        <img class="title_1" src="assets/CINE24_LOGO.png" alt="logo" />
+        <img class="title_2" src="assets/CINE24_TITLE.png" alt="title"></img>
+      </div>
     </header>
-    
+    <button class="subpage_btn">
+      <h2>전체보기</h2>
+    </button>
     <div class="carousel-container">
-        <button class="subpage_btn">
-            <h2>상세보기</h2>
-        </button>
+      <div class="wrap">
         <div class="carousel"></div>
-        <button class="btn__prev">Prev</button>
-        <button class="btn__next">Next</button>
+      </div>
+      <img
+        class="btn__prev"
+        src="assets/arrow.png"
+        onmouseout="this.src='assets/arrow.png'"
+        onmouseover="this.src='assets/arrow-hover.png'"
+        alt="Prev"
+      />
+      <img
+        class="btn__next"
+        src="assets/arrow.png"
+        onmouseout="this.src='assets/arrow.png'"
+        onmouseover="this.src='assets/arrow-hover.png'"
+        alt="next"
+      />
     </div>
-    <div id="newsContainer" class="news-container">
-        <!-- 뉴스가 표시될 좁은 구역 -->
+    <div class="bottom_container">
+      <img
+        class="wazak"
+        src="assets/와작1.jpg"
+        onmouseout="this.src='assets/와작1.jpg'"
+        onmouseover="this.src='assets/와작2.png'"
+        alt="wazak"
+      />
+      <div class="news_group">
+        <h2 class="new_title"><영화뉴스></h2>
+        <div id="newsContainer" class="news-container"></div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

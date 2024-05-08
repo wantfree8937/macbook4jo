@@ -1,90 +1,180 @@
 @font-face {
-    font-family: "DoHyeon-Regular";
-    src: url("../font/DoHyeon-Regular.ttf");
+  font-family: "DoHyeon-Regular";
+  src: url("../font/DoHyeon-Regular.ttf");
 }
 
 * {
-    font-family: "DoHyeon-Regular";
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: "DoHyeon-Regular";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    background-color: #184275;
-    width: 100%;
-    height: 1200px;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #1e4575;
+  width: 100%;
+  height: 1200px;
+  position: relative;
 }
 
 header {
-    top: 50px;
-    position: absolute;
-    color: white;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  margin-left: -150px;
+}
+
+.title_1 {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+}
+
+/* .title_2 {
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  margin-left: 150px;
+  margin-top: 30px;
+} */
+
+.title_2 {
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 30px;
+  width: 314px;
+  height: 89px;
+}
+
+.title_group {
+  margin-top: 30px;
+  margin-left: 40%;
+}
+
+.bottom_container {
+  top: 60%;
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+
+.wazak {
+  width: 320px;
+  height: 400px;
+  margin-left: 18%;
+  margin-top: 35px;
+  position: relative;
+  background-image: ("assets/와작.jpg");
+}
+
+.new_title {
+  position: absolute;
+  margin-left: 4%;
+  color: white;
+  letter-spacing: 3px;
 }
 
 .news-item {
-    cursor: pointer;
-    margin-bottom: 20px;
-    width: 100%;
-    border: 3px solid black;
-    /* 테두리 색상을 투명으로 설정 */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transition: background-color 0.3s ease;
-    /* 호버 시 효과를 부드럽게 전환 */
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 3px solid black;
+  /* 테두리 색상을 투명으로 설정 */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: background-color 0.3s ease;
+  /* 호버 시 효과를 부드럽게 전환 */
 }
 
 .news-item:hover {
-    background-color: #9ca9d1a4;
-    /* 호버 시 배경색 변경 */
+  background-color: #9ca9d1a4;
+  /* 호버 시 배경색 변경 */
 }
 
 .news-container {
-    width: 50%;
-    height: 400px;
-    position: absolute;
-    left: 25%;
-    margin-top: 750px;
-    overflow-y: auto;
-    background-color: white;
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    padding: 10px;
+  width: 68%;
+  height: 400px;
+  margin-top: 35px;
+  margin-left: 5%;
+  overflow-y: auto;
+  background-color: white;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .carousel-container {
-    width: 1200px;
-    height: 400px;
-    top: 300px;
-    overflow-x: hidden;
-    position: relative;
+  width: 1200px;
+  height: 350px;
+  top: 300px;
+  position: relative;
+}
+
+.wrap {
+  width: 1200px;
+  height: 350px;
+  overflow-x: hidden;
+  position: absolute;
 }
 
 .carousel {
-    margin-top: 30px;
-    display: flex;
-    width: 1200px;
-    height: 300px;
-    right: 240px;
-    position: absolute;
+  display: flex;
+  width: 1200px;
+  height: 300px;
+  right: 240px;
+  position: absolute;
 }
 
 .carouselPoster {
-    width: 200px;
-    height: 300px;
-    margin: 0 20px 0 20px;
-    cursor: pointer;
+  width: 200px;
+  height: 300px;
+  margin: 0 20px 0 20px;
+  cursor: pointer;
 }
 
 /* 버튼 위치 */
 .btn__prev {
-    margin-top: 340px;
-    margin-left: 570px;
+  position: absolute;
+  left: -90px;
+  top: 30px;
+  height: 250px;
 }
+
+.btn__prev:hover {
+  cursor: pointer;
+}
+
+.btn__next {
+  position: absolute;
+  right: -90px;
+  transform: scaleX(-1);
+  top: 30px;
+  height: 250px;
+}
+
+.btn__next:hover {
+  cursor: pointer;
+}
+
 .subpage_btn {
-    float: right;
-    margin-right: 20px;
+  position: absolute;
+  margin-left: 1000px;
+  margin-top: 250px;
+  cursor: pointer;
+  width: 120px;
+  height: 35px;
+  background-color: #dd604a;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 1px;
+  border: 0;
+  letter-spacing: 1.5px;
+}
+
+.subpage_btn:hover {
+  background-color: #da4227;
+  color: rgb(233, 233, 233);
 }

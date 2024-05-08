@@ -12,23 +12,26 @@
     <script type="module" src="src/subscript.js" defer></script>
 </head>
 
-<body>
-    <header>
-        <div class="title" > 
-            <button class="subtomainbutton">
-            <h1 class="titlefont">
-                Cine24
-            </h1>
-            </button>
+  <body>
+    <body>
+      <header>
+        <div class="title">
+          <button class="subtomainbutton">
+            <h1 class="titlefont">Cine24</h1>
+          </button>
         </div>
         <!-- <button class="populbtn">인기순</button>
         <button class="oldbtn">오래된순</button> -->
-    </header>
-    <div class="onbox">
-
+      </header>
+      <div class="onbox">
         <form class="box" onsubmit="search_Movie(event)">
-            <input type="text" class="search" id="search_input" placeholder=""/>
-            <button type="submit" class="searchbtn" id="search_button" disabled></button>
+          <input type="text" class="search" id="search_input" placeholder="" />
+          <button
+            type="submit"
+            class="searchbtn"
+            id="search_button"
+            disabled
+          ></button>
         </form>
     </div>
     <section id="movie_Container" class="movie_ContainerClass"></section>
