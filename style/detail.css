@@ -11,18 +11,22 @@ body {
 }
 
 .detailPostercss {
+  position: absolute;
   height: 400px;
   width: 300px;
   box-shadow: 0 3px 6px rgb(255, 255, 255), 0 3px 6px white;
 }
-
+.detailtitle{
+  position: absolute;
+  top:10px;
+}
 .homeButton {
   position: absolute;
   left: 30px;
   top: 30px;
-  width: 100px;
-  height: 50px;
-  background-color: white;
+  width: 157px;
+  height: 44px;
+  /* background-color: white; */
   color: black;
   z-index: 2;
   cursor: pointer;
@@ -30,8 +34,8 @@ body {
 
 .detail_top {
   background-image: url("movieBackDrop");
-  padding-bottom: 10px;
   width: 100%;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,6 +43,8 @@ body {
   color: white;
   -webkit-text-stroke: 0.8px black;
   text-shadow: 2px 2px 0 black;
+  position: relative;
+  overflow: hidden;
 }
 
 .detail_bottom {
@@ -95,7 +101,7 @@ body {
 
 .detailBackDropcss {
   width: 100%;
-  height: 550px;
+  height: 600px;
   position: absolute;
   top: 0px;
   z-index: 0;

@@ -53,13 +53,23 @@ try {
 
 // 버튼 클릭이벤트
 export const clickBtnEvent = () => {
-    document.querySelector('.btn__prev').addEventListener('click', () => {
+    document.querySelector('btn__first').addEventListener('click', () => {
+        changePage("first");
+    });
+    document.querySelector('btn__end').addEventListener('click', () => {
+        changePage("end");
+    });
+    document.querySelector('btn__prev').addEventListener('click', () => {
         if (currentPage > 1) currentPage -= 1;
         changePage("prev");
     });
     document.querySelector('.btn__next').addEventListener('click', () => {
         if (currentPage < totalPageCount) currentPage += 1;
         changePage("next");
+    });
+    document.querySelectorAll("#current__page").addEventListener("click", (e) => {
+        console.log(e.target.value);
+        setPagination(e.target.value);
     });
 }
 

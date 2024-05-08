@@ -10,12 +10,17 @@
   </head>
 
   <body>
-    <button onclick="go_MainPage()" class="homeButton">Home</button>
+    <!-- <button onclick="go_MainPage()" class="homeButton">Home</button> -->
+    <!-- <button onclick="go_MainPage()" class="homeButton"> -->
+      <img onclick="go_MainPage()" class="homeButton" src="assets/CINE24_TITLE_TRANSPARENCY.png" alt=""></img>
+    
+    </button>
+
     <div class="detailContainer">
       <!-- 상세페이지 상단 -->
       <!-- <img id="detailBackDrop" class="detailBackDropcss" src="" alt="Movie"> -->
       <div class="detail_top">
-        <h1 id="detailTitle"></h1>
+        <h1 id="detailTitle" class="detailtitle"></h1>
         <img id="detailPoster" class="detailPostercss" src="" alt="Movie" />
       </div>
       <!-- 상세페이지 하단 -->
@@ -45,7 +50,12 @@
         <div class="detail_bottom_review">
           <form
             id="reviewForm"
-            style="text-align: left; margin-bottom: 100px; margin: 30px; padding: 30px;"
+            style="
+              text-align: left;
+              margin-bottom: 100px;
+              margin: 30px;
+              padding: 30px;
+            "
           >
             <div>
               <label for="review">리뷰 작성하기</label><br />
@@ -112,6 +122,6 @@
         </div>
       </div>
     </div>
-    <img id="detailBackDrop" class="detailBackDropcss" src="" alt="Movie" />
+    <img id="detailBackDrop" class="detailBackDropcss"/>
   </body>
 </html>
