@@ -46,11 +46,6 @@ window.onload = async () => {
     (video) => video.type === "Trailer"
   )?.key;
 
-  const movieVodData = await movieVod.json();
-  const trailerVideoKey = movieVodData.results.find(
-    (video) => video.type === "Trailer"
-  )?.key;
-
   document.getElementById(
     "detailMovieVod"
   ).src = `https://www.youtube.com/embed/${trailerVideoKey}?mute=1&autoplay=1`;
