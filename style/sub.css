@@ -111,14 +111,13 @@ header {
 
 .movie_button:hover~.movie_poster {
     
-    transform: scale(1.2);
+    transform: translateX(-120px) scale(1.2);
     /* 크기를 1.2배로 확대 */
     z-index: 1;
     /* 다른 요소 위로 올라오게 함 */
     box-shadow: 0 10px 10px rgba(8, 8, 8, 0.932), 0 10px 10px rgba(8, 8, 8, 0.932);
     /* 그림자 효과 */
-    /* transform: translate(-200px); */
-    transform-origin: 700px 200px;
+    
 }
 
 /*후레쉬 요소의 기본 스타일 */
