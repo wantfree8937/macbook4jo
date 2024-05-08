@@ -2,7 +2,7 @@ body {
   display: grid;
   place-items: center;
   margin: 0px;
-  background-color: #184275;
+  background-color: #1e4575;
 }
 
 .detailContainer {
@@ -90,6 +90,7 @@ body {
   align-items: center;
   border: 2px groove rgba(217, 247, 81, 0.548);
   border-radius: 10px;
+  margin-right: 20px;
 }
 
 .detailBackDropcss {
@@ -103,6 +104,8 @@ body {
 }
 .review_input_area {
   background-color: rgba(0, 255, 255, 0.041);
+  border: 1px groove rgba(127, 255, 212, 0.377);
+  border-radius: 10px;
 }
 .text_input_area {
   background-color: rgba(0, 255, 255, 0.041);
@@ -110,6 +113,8 @@ body {
   height: 20px;
   width: 120px;
   color: white;
+  border: groove 1px rgba(127, 255, 212, 0.377);
+  border-radius: 10px;
 }
 .review_card_button {
   border-radius: 15px;
