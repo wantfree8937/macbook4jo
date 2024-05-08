@@ -1,13 +1,13 @@
 @font-face {
-    font-family: "DoHyeon-Regular";
-    src: url("../font/DoHyeon-Regular.ttf");
+  font-family: "DoHyeon-Regular";
+  src: url("../font/DoHyeon-Regular.ttf");
 }
 
 * {
-    font-family: "DoHyeon-Regular";
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: "DoHyeon-Regular";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -16,20 +16,20 @@ body {
 }
 
 header {
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
 }
 
 .title {
-    margin-right: 70%;
+  margin-right: 70%;
 }
 
 .titlefont {
-    color: white;
+  color: white;
 }
 
 .sub_title1 {
@@ -50,225 +50,216 @@ header {
 }
 
 .subtomainbutton {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 .movie_button {
-    position: absolute;
-    display: inline-block;
-    margin-top: 30px;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    border-color: rgb(100, 100, 100);
-    color: rgb(219, 219, 219);
-    text-align: center;
-    line-height: 100px;
-    font-size: 16px;
-    top: 74%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  margin-top: 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border-color: rgb(100, 100, 100);
+  color: rgb(219, 219, 219);
+  text-align: center;
+  line-height: 100px;
+  font-size: 16px;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  cursor: pointer;
 }
 
-
 .movie_button:hover {
-    background-color: black;
+  background-color: black;
 }
 
 .movie_button:hover::before {
-    border-color: white;
-    background-color: #fd5639;
+  border-color: white;
+  background-color: #fd5639;
 }
 
 .movie_button::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    background-color: white;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
 }
 
 .movie_ContainerClass {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
 }
 
 .movie_card {
-    position: relative;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-    margin: 20px;
-    padding: 20px;
-    height: 550px;
-    width: 350px;
-    justify-self: center;
-    background-image: url(../assets/white-product-backdrop-wall.jpg);
-    border-radius: 20px;
-    user-select: none;
-    display: table;
-    text-align: center;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  margin: 20px;
+  padding: 20px;
+  height: 550px;
+  width: 350px;
+  justify-self: center;
+  background-image: url(../assets/white-product-backdrop-wall.jpg);
+  border-radius: 20px;
+  user-select: none;
+  display: table;
+  text-align: center;
 }
 
-.movie_button:hover~.movie_flash {
-    background-color: #39d339;
+.movie_button:hover ~ .movie_flash {
+  background-color: #39d339;
 }
 
 .movie_button:hover ~ .movie_title {
-    color: red;
+  color: red;
 }
 
-.movie_button:hover~.movie_poster {
-    
-    transform: scale(1.2);
-    /* 크기를 1.2배로 확대 */
-    z-index: 1;
-    /* 다른 요소 위로 올라오게 함 */
-    box-shadow: 0 10px 10px rgba(8, 8, 8, 0.932), 0 10px 10px rgba(8, 8, 8, 0.932);
-    /* 그림자 효과 */
-    /* transform: translate(-200px); */
-    transform-origin: 700px 200px;
+.movie_button:hover ~ .movie_poster {
+  transform: scale(1.2);
+  /* 크기를 1.2배로 확대 */
+  z-index: 1;
+  /* 다른 요소 위로 올라오게 함 */
+  box-shadow: 0 10px 10px rgba(8, 8, 8, 0.932), 0 10px 10px rgba(8, 8, 8, 0.932);
+  /* 그림자 효과 */
+  /* transform: translate(-200px); */
+  transform-origin: 700px 200px;
 }
 
 /*후레쉬 요소의 기본 스타일 */
 .movie_flash {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
-    /* 검은색 배경 */
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  /* 검은색 배경 */
 }
 
 .movie_ContainerClass {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
 }
 
 .movie_card {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-    margin: 20px;
-    padding: 20px;
-    height: 550px;
-    width: 350px;
-    justify-self: center;
-    background-image: url(../assets/white-product-backdrop-wall.jpg);
-    border-radius: 20px;
-    user-select: none;
-    display: table;
-    text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  margin: 20px;
+  padding: 20px;
+  height: 550px;
+  width: 350px;
+  justify-self: center;
+  background-image: url(../assets/white-product-backdrop-wall.jpg);
+  border-radius: 20px;
+  user-select: none;
+  display: table;
+  text-align: center;
 }
 
 .movie_poster {
-    position: absolute;
-    box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
-    height: 350px;
-    width: 250px;
-    top: 8%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    transition: all 0.6s ease;
+  position: absolute;
+  box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
+  height: 350px;
+  width: 250px;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all 0.6s ease;
 }
 
 .movie_title {
-    position: absolute;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    width: 230px;
-    top: 4%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  width: 230px;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .populbtn {
-    font-size: medium;
-    margin: 35px 0 0 50px;
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #fd5639;
-    color: white;
-    cursor: pointer;
+  font-size: medium;
+  margin: 35px 0 0 50px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fd5639;
+  color: white;
+  cursor: pointer;
 }
 
 .oldbtn {
-    font-size: medium;
-    margin: 35px 0 0 30px;
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #fd5639;
-    color: white;
-    cursor: pointer;
+  font-size: medium;
+  margin: 35px 0 0 30px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fd5639;
+  color: white;
+  cursor: pointer;
 }
 
 .populbtn:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .oldbtn:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .translategoogle {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .subtomainbutton {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.39);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 5px;
-    /* 좌우 간격 조절 */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.39);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  /* 좌우 간격 조절 */
 }
 
 .button:hover {
-    background-color: rgba(0, 0, 0, 0.144);
+  background-color: rgba(0, 0, 0, 0.144);
 }
 
 #pagination {
-    text-align: center;
-    /* 가운데 정렬 */
-    margin-top: 20px;
-    margin-bottom: 20px;
+  text-align: center;
+  /* 가운데 정렬 */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .movie_ContainerMain {
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
 }
 
 /* button {
     margin-top: 10px;
-<<<<<<< HEAD
 }  */
-.active{
-  color: rgb(149, 255, 107);
-}
-=======
-}  */
->>>>>>> d7d284cd55ba7c7c1c30da5ef45ba8487dbd48cc
