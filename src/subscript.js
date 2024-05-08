@@ -4,21 +4,6 @@ import { fetch_MovieData, create_MovieCard } from './movieFetchfile.js';
 function go_MainPage() {
     window.location.href ="index.html";
 }
-//검색 api를 호출하는 함수
-async function fetch_SearchData(searchQuery, page) {
-    const url = `https://api.themoviedb.org/3/search/movie?include_adult=true&language=ko-KR&page=${page}&query=${searchQuery}`;
-    const options = {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYmZjYTAyM2VkNzE2NzlkOWFkODg4MDk0MzNkZTZjNyIsInN1YiI6IjY2MmYwYTYwYzNhYTNmMDEyYmZkOWUzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bTN_n03CEEcVclme6e9JtZLVbcB583M3z371ECvNldM'
-        }
-    };
-
-    const response = await fetch(url, options);
-    const data = await response.json();
-    return data.results; // 결과 데이터만 반환
-}
 
 const search_Movie = async (ev) => {
     ev.preventDefault(); // form에 의한 새로고침을 막음
@@ -26,9 +11,13 @@ const search_Movie = async (ev) => {
     const searchInput = document.getElementById('search_input').value.toLowerCase();
 
     try {
-        // 검색어와 페이지를 인자로 하여 검색 API 호출
-        const movies = await fetch_SearchData(searchInput, 1); // 여기서는 첫 번째 페이지만 가져옴
-        renderMovies(movies); // 검색 결과를 렌더링
+        let allMovies = [];
+        for (let i = 1; i <= 200; i++) { // 1부터 400페이지까지의 데이터 가져오기
+            const movies = await fetch_MovieData(i); // 각 페이지의 영화 데이터 가져오기
+            allMovies = allMovies.concat(movies); // 현재 페이지의 영화를 allMovies 배열에 추가
+        }
+        const filteredMovies = allMovies.filter(movie => movie.title.toLowerCase().includes(searchInput));
+        renderMovies(filteredMovies);
     } catch (error) {
         console.error('Error fetching and rendering movies:', error);
     }
