@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "DoHyeon-Regular";
-  src: url("../font/DoHyeon-Regular.ttf");
+    font-family: "DoHyeon-Regular";
+    src: url("../font/DoHyeon-Regular.ttf");
 }
 
 * {
-  font-family: "DoHyeon-Regular";
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    font-family: "DoHyeon-Regular";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -16,75 +16,105 @@ body {
 }
 
 header {
-  width: 100%;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
 }
 
 .title {
-  margin-right: 70%;
+    margin-right: 70%;
 }
 
 .titlefont {
-  color: white;
+    color: white;
 }
 
 .subtomainbutton {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
 .movie_button {
-  position: relative;
-  display: inline-block;
-  margin-top: 30px;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border-color: rgb(100, 100, 100);
-  color: rgb(219, 219, 219);
-  text-align: center;
-  line-height: 100px;
-  font-size: 16px;
-  cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border-color: rgb(100, 100, 100);
+    color: rgb(219, 219, 219);
+    text-align: center;
+    line-height: 100px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 
 .movie_button:hover {
-  background-color: black;
+    background-color: black;
 }
 
 .movie_button:hover::before {
-  border-color: white;
-  background-color: #fd5639;
+    border-color: white;
+    background-color: #fd5639;
 }
 
 .movie_button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
-  background-color: white;
-}
-.movie_light{
-    width: 10px;
-    height: 10px;
-    background-color: white;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
 }
 
-.movie_light:hover {
-    background-color: rgb(0, 255, 85);
+.movie_ContainerClass {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+.movie_card {
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+    margin: 20px;
+    padding: 20px;
+    height: 550px;
+    width: 350px;
+    justify-self: center;
+    background-image: url(../assets/white-product-backdrop-wall.jpg);
+    border-radius: 20px;
+    user-select: none;
+    display: table;
+    text-align: center;
+}
+
+.movie_button:hover ~ .movie_flash {
+    background-color: #39d339; 
+} 
+
+ .movie_button:hover ~ .movie_title{
+    color:red;
+ }
+
+/*후레쉬 요소의 기본 스타일 */
+.movie_flash {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: black; 
+    border-radius: 50%; /* 검은색 배경 */
 }
 
 .movie_ContainerClass {
@@ -105,123 +135,90 @@ header {
     user-select: none;
     display: table;
     text-align: center;
-
-}
-
-.movie_card:hover {
-    transform: translate(10px, -10px); 
-}
-
-.movie_card:hover div:first-child{
-    background-color: green;
-}
-
-.movie_card:hover div{
-    color:#fd5639;
-}
-
-.movie_ContainerClass {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-}
-
-.movie_card {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-  margin: 20px;
-  padding: 20px;
-  height: 550px;
-  width: 350px;
-  justify-self: center;
-  background-image: url(../assets/white-product-backdrop-wall.jpg);
-  border-radius: 20px;
-  user-select: none;
-  display: table;
-  text-align: center;
 }
 
 .movie_poster {
-  box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
-  margin-top: 20px;
-  height: 350px;
-  width: 250px;
+    box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
+    margin-top: 20px;
+    height: 350px;
+    width: 250px;
 }
 
 .movie_title {
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .populbtn {
-  font-size: medium;
-  margin: 35px 0 0 50px;
-  width: 80px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #fd5639;
-  color: white;
-  cursor: pointer;
+    font-size: medium;
+    margin: 35px 0 0 50px;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #fd5639;
+    color: white;
+    cursor: pointer;
 }
 
 .oldbtn {
-  font-size: medium;
-  margin: 35px 0 0 30px;
-  width: 80px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #fd5639;
-  color: white;
-  cursor: pointer;
+    font-size: medium;
+    margin: 35px 0 0 30px;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #fd5639;
+    color: white;
+    cursor: pointer;
 }
 
 .populbtn:hover {
-  background-color: white;
-  color: black;
+    background-color: white;
+    color: black;
 }
 
 .oldbtn:hover {
-  background-color: white;
-  color: black;
+    background-color: white;
+    color: black;
 }
 
 .translategoogle {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 
 .subtomainbutton {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.39);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0 5px;
-  /* 좌우 간격 조절 */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    /* 좌우 간격 조절 */
 }
 
 .button:hover {
-  background-color: rgba(0, 0, 0, 0.144);
+    background-color: rgba(0, 0, 0, 0.144);
 }
 
 #pagination {
-  text-align: center;
-  /* 가운데 정렬 */
-  margin-top: 20px;
-  margin-bottom: 20px;
+    text-align: center;
+    /* 가운데 정렬 */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .movie_ContainerMain {
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
 }
 
 /* button {

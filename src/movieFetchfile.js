@@ -43,8 +43,6 @@ export const create_MovieCard = (movie) => {
     moviePoster.src = posterURL;
     moviePoster.alt = movie.title;
 
-
-
     movieBackDrop.classList.add('movie_backdrop');
     movieBackDrop.classList.add('movie_poster');
 
@@ -62,13 +60,21 @@ export const create_MovieCard = (movie) => {
         window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
     });
 
-    const movieLight = document.createElement('div');
-    movieLight.classList.add('movie_light');
-    const movieLights = document.querySelector('.movie_light');
+    const movieFlash = document.createElement('div');
+    movieFlash.classList.add('movie_flash');
+ 
 
-    movieCard.appendChild(movieLight);
-    movieCard.appendChild(movieTitle);
+     // 카드에 후레쉬 추가
+    
     movieCard.appendChild(moviePoster);
     movieCard.appendChild(moviebutton);
+    movieCard.appendChild(movieFlash);   
+    movieCard.appendChild(movieTitle);
     movieContainer.appendChild(movieCard);
+
+    // const movie_cards = document.querySelector('.movie_card')
+    // movie_cards.addEventListener('mousemove', function () {
+    //     console.log("yugi");
+    //     movie_cards.style = 'transform:translate(10px,-10px)'
+    // })
 }
