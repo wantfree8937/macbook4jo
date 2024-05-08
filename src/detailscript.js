@@ -212,6 +212,7 @@ function editReview(key) {
     displayReviews(); // 수정 후 리뷰 목록을 갱신하여 업데이트
 }
 
+// 이스터에그_상세페이지 포스터 누르면 움직이도록
 const ball = document.querySelector('.detailPostercss');
 const container = document.querySelector('.detail_top');
 
