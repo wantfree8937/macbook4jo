@@ -83,13 +83,6 @@ header {
     border-radius: 50%;
 }
 
-/* .movie_light_on{
-    width: 10px;
-    height: 10px;
-    background-color: green;
-    border-radius: 50%;
-} */
-
 .movie_light:hover {
     background-color: rgb(0, 255, 85);
 }
@@ -112,10 +105,19 @@ header {
     user-select: none;
     display: table;
     text-align: center;
+
+}
+
+.movie_card:hover {
+    transform: translate(10px, -10px); 
 }
 
 .movie_card:hover div:first-child{
     background-color: green;
+}
+
+.movie_card:hover div{
+    color:#fd5639;
 }
 
 .movie_poster {

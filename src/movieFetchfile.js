@@ -13,7 +13,7 @@ export const fetch_MovieData = async (page) => {
 }
 
 export const fetch_Movievideo = async (movie_id) => {
- 
+
     const response = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}/videos?language=ko-KR`, {
         method: 'GET',
         headers: {
@@ -43,7 +43,7 @@ export const create_MovieCard = (movie) => {
     moviePoster.src = posterURL;
     moviePoster.alt = movie.title;
 
-    
+
 
     movieBackDrop.classList.add('movie_backdrop');
     movieBackDrop.classList.add('movie_poster');
@@ -65,17 +65,6 @@ export const create_MovieCard = (movie) => {
     const movieLight = document.createElement('div');
     movieLight.classList.add('movie_light');
     const movieLights = document.querySelector('.movie_light');
-
-    
-    // moviebutton.addEventListener('mouseenter', () => {
-    //     console.log("패치");
-    //     // movieLights.classList.remove('movie_light');
-    //     movieLights.classList.replace('movie_light','movie_light_on');
-    // });
-
-    // // movieButton.addEventListener('mouseleave', () => {
-    // //     movieLights.classList.replace('movie_light_on','movie_light');
-    // // });
 
     movieCard.appendChild(movieLight);
     movieCard.appendChild(movieTitle);
