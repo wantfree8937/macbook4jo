@@ -11,8 +11,8 @@
 }
 
 body {
-    background-color: #1e4575;
-    width: 100%;
+  background-color: #1e4575;
+  width: 100%;
 }
 
 header {
@@ -30,6 +30,23 @@ header {
 
 .titlefont {
   color: white;
+}
+
+.sub_title1 {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 100px;
+  height: 100px;
+}
+
+.sub_title2 {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 157px;
+  height: 44px;
+  margin-left: 30;
 }
 
 .subtomainbutton {
