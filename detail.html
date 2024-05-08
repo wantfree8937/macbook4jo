@@ -12,8 +12,8 @@
   <body>
     <!-- <button onclick="go_MainPage()" class="homeButton">Home</button> -->
     <!-- <button onclick="go_MainPage()" class="homeButton"> -->
-      <img onclick="go_MainPage()" class="homeButton" src="assets/CINE24_TITLE_TRANSPARENCY.png" alt=""></img>
-    
+      <img onclick="go_MainPage()" class="homeButton" src="assets/CINE24_TITLE_TRANSPARENCY.png" onmouseout="src='assets/CINE24_TITLE_TRANSPARENCY.png'"
+      onmouseover="this.src='assets/CINE24_TITLE_TRANSPARENCY_HOVER.png'" alt=""></img>
     </button>
 
     <div class="detailContainer">
@@ -33,7 +33,6 @@
               width="100%"
               height="400px"
               src=""
-              title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -41,20 +40,16 @@
             ></iframe>
           </div>
           <!-- 설명영역 -->
-          <p><b>Rating:</b> <span id="detailRating"></span></p>
-          <p><b>Popularity:</b> <span id="detailPopularity"></span></p>
-          <p><b>Release Date:</b> <span id="detailRelease_date"></span></p>
-          <p><b>Overview:</b></p>
+          <p><b>순위 :</b> <span id="detailRating"></span></p>
+          <p><b>인기도 :</b> <span id="detailPopularity"></span></p>
+          <p><b>개봉일 :</b> <span id="detailRelease_date"></span></p>
+          <p><b>줄거리</b></p>
           <p id="detailOverview" style="width: 80%; margin: 0 auto 0 auto"></p>
         </div>
         <div class="detail_bottom_review">
           <form
             id="reviewForm"
-            style="
-              text-align: left;
-              margin-bottom: 100px;
-              margin: 30px;
-              padding: 30px;
+            style="text-align: left; margin-bottom: 100px; margin: 30px; padding: 30px;
             "
           >
             <div>
@@ -68,7 +63,8 @@
                   width: 100%;
                   height: 100px;
                   font-size: larger;
-                  color: white;
+                  color: black;
+                  background-color:rgba(3, 31, 31, 0.171);
                 "
               ></textarea
               ><br />
@@ -80,7 +76,7 @@
                   flex-direction: row;
                   justify-content: space-evenly;
                   width: 100%;
-                  color: white;
+                  color: black;
                 "
               >
                 <input
@@ -101,12 +97,8 @@
                 />
               </div>
               <div>
-                <button
+                <button clas="submit"
                   type="button"
-                  style="
-                    background-color: rgba(0, 255, 255, 0.13);
-                    color: white;
-                  "
                   onclick="submitReview()"
                 >
                   Submit
