@@ -92,3 +92,4 @@ document.querySelector('.btn__prev').addEventListener('click', () => {
 document.querySelector('.btn__next').addEventListener('click', () => {
     changePage("next");
 });
+console.log(currentPage);
