@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #6e7172;
+  background-color: #1e4575;
   width: 100%;
 }
 
@@ -38,7 +38,7 @@ header {
 }
 
 .movie_button {
-  position: relative;
+  position: absolute;
   display: inline-block;
   margin-top: 30px;
   width: 90px;
@@ -49,16 +49,19 @@ header {
   text-align: center;
   line-height: 100px;
   font-size: 16px;
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, 0%);
   cursor: pointer;
 }
 
+
 .movie_button:hover {
-  background-color: black;
+  filter: brightness(70%);
 }
 
 .movie_button:hover::before {
-  border-color: white;
-  background-color: #fd5639;
+  filter: brightness(70%);
 }
 
 .movie_button::before {
@@ -87,7 +90,7 @@ header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
   margin: 20px;
   padding: 20px;
-  height: 550px;
+  height: 600px;
   width: 350px;
   justify-self: center;
   background-image: url(../assets/white-product-backdrop-wall.jpg);
@@ -97,24 +100,65 @@ header {
   text-align: center;
 }
 
-.movie_poster {
-  box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
-  margin-top: 20px;
-  height: 350px;
-  width: 250px;
-  transition: tranforms 0.3s ease, box-shadow 0.3s ease;
+.movie_button:hover~.movie_flash {
+  background-color: #39d339;
 }
 
-/* 버튼에 호버할 때 포스터 크기를 조정하는 스타일 */
-.movie_card:hover ~ .movie_poster {
-  transform: scale(1.1); /* 포스터 확대 */
+.movie_button:hover~.movie_title {
+  color: #ff5031;
+}
+
+.movie_button:hover~.movie_poster {
+
+  transform: translateX(-125px) scale(1.1);
+  /* 크기를 1.2배로 확대 */
+  z-index: 1;
+  /* 다른 요소 위로 올라오게 함 */
+  box-shadow: 0 10px 10px rgba(8, 8, 8, 0.932), 0 10px 10px rgba(8, 8, 8, 0.932);
+  /* 그림자 효과 */
+  filter: brightness(105%);
+}
+
+/*후레쉬 요소의 기본 스타일 */
+.movie_flash {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  /* 검은색 배경 */
+}
+
+.movie_ContainerClass {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+
+.movie_poster {
+  position: absolute;
+  box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
+  height: 350px;
+  width: 250px;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all 0.6s ease;
+  filter: brightness(80%);
 }
 
 .movie_title {
+  position: absolute;
   color: black;
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
+  width: 230px;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .populbtn {
@@ -187,18 +231,8 @@ header {
   justify-content: center;
 }
 
-/* 버튼에 호버할 때 후레쉬에 초록색 불이 들어오도록 스타일 변경 */
-.movie_button:hover ~ .movie_flash {
-  background-color: #39d339; /* 초록색 배경 */
-}
-
-/* 후레쉬 요소의 기본 스타일 */
-.movie_flash {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  width: 20px;
-  height: 20px;
-  background-color: black; /* 검은색 배경 */
-  border-radius: 50%;
+.active {
+  color: #0000009c;
+  background-color: #eeeeeee5;
+  pointer-events: none;
 }

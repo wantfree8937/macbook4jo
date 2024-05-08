@@ -2,7 +2,7 @@ import { fetch_MovieData, create_MovieCard, fetch_MoviePopular } from './movieFe
 
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
 function go_MainPage() {
-    window.location.href ="index.html";
+    window.location.href = "index.html";
 }
 //검색 api를 호출하는 함수
 async function fetch_SearchData(searchQuery, page) {
@@ -22,9 +22,11 @@ async function fetch_SearchData(searchQuery, page) {
 
 const search_Movie = async (ev) => {
     ev.preventDefault(); // form에 의한 새로고침을 막음
-
     const searchInput = document.getElementById('search_input').value.toLowerCase();
+    const movieContainer = document.getElementById('movie_Container'); // id: movie_Container의 요소를 가져옴
 
+    // 이전에 표시된 영화 카드들 삭제
+    movieContainer.innerHTML = '';
     try {
         // 검색어와 페이지를 인자로 하여 검색 API 호출
         const movies = await fetch_SearchData(searchInput, 1); // 여기서는 첫 번째 페이지만 가져옴
@@ -45,15 +47,18 @@ const popular_Sort = async () => {
 };
 
 // // 오래된순 정렬
-// const old_Sort = async () => {
-//     try {
-//         const movies = await fetch_MovieData(currentPage); // 현재 페이지의 영화 데이터 가져오기
-//         const sortedMovies = movies.slice().sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
-//         renderMovies(sortedMovies);
-//     } catch (error) {
-//         console.error('Error sorting movies by release date:', error);
-//     }
-// };
+// const old_Sort = () => {
+//     const movieContainer = document.getElementById('movie_Container');
+
+//     movieContainer.innerHTML = '';
+
+//     // 영화 날짜로 내림차순 정렬
+//     const sortMovie = allMovies.slice().sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
+
+//     sortMovie.forEach(movie => {
+//         create_MovieCard(movie);
+//     });
+// }
 
 // 투명 검색 버튼 활성화/비활성화
 const toggle_SearchButton = () => {
@@ -68,7 +73,7 @@ const toggle_SearchButton = () => {
         searchButton.disabled = true;
         searchButton.style.cursor = "default";
     }
-};
+}
 
 const totalPages = 200; // 전체 페이지 수
 let currentPage = 1; // 현재 페이지
@@ -103,7 +108,7 @@ const renderPagination = () => {
     paginationContainer.innerHTML = ''; // 기존에 표시된 페이지네이션 초기화
 
     const numPagesToShow = 5; // 한 번에 표시할 페이지 수
-    const totalPagesToShow = Math.min(totalPages, numPagesToShow); // 표시할 페이지 수와 전체 페이지 수 중 작은 값 선택
+    // const totalPagesToShow = Math.min(totalPages, numPagesToShow); // 표시할 페이지 수와 전체 페이지 수 중 작은 값 선택
 
     let startPage = Math.max(currentPage - Math.floor(numPagesToShow / 2), 1); // 시작 페이지 계산
     let endPage = Math.min(startPage + numPagesToShow - 1, totalPages); // 끝 페이지 계산
@@ -125,7 +130,6 @@ const renderPagination = () => {
         paginationContainer.appendChild(firstButton);
     }
 
-
     // 이전 버튼 생성
     const prevButton = document.createElement('button');
     prevButton.textContent = '이전';
@@ -143,18 +147,18 @@ const renderPagination = () => {
     for (let i = startPage; i <= endPage; i++) {
         const button = document.createElement('button');
         button.textContent = i;
-        button.classList.add('button');
+        button.classList.add('button'); // 스타일링된 버튼 클래스 추가
         if (i === currentPage) {
             button.classList.add('active');
         }
         button.addEventListener('click', () => {
             currentPage = i;
             fetchAndRenderMovies(currentPage);
-            scrollToTop();
+            scrollToTop(); // 버튼을 누르면 화면 맨 위로 스크롤
         });
         paginationContainer.appendChild(button);
     }
-
+    
     // 다음 버튼 생성
     const nextButton = document.createElement('button');
     nextButton.textContent = '다음';
@@ -214,3 +218,4 @@ document.addEventListener('DOMContentLoaded', function () {
     selectedPopul.addEventListener('click', popular_Sort);
     // selectedOld.addEventListener('click', old_Sort);
 });
+
