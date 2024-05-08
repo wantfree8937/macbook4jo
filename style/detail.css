@@ -24,9 +24,9 @@ body {
   position: absolute;
   left: 30px;
   top: 30px;
-  width: 100px;
-  height: 50px;
-  background-color: white;
+  width: 157px;
+  height: 44px;
+  /* background-color: white; */
   color: black;
   z-index: 2;
   cursor: pointer;
