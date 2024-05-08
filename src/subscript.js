@@ -12,7 +12,7 @@ const search_Movie = async (ev) => {
 
     try {
         let allMovies = [];
-        for (let i = 1; i <= 200; i++) { // 1부터 400페이지까지의 데이터 가져오기
+        for (let i = 1; i <= totalPages; i++) { // 1부터 200페이지까지의 데이터 가져오기
             const movies = await fetch_MovieData(i); // 각 페이지의 영화 데이터 가져오기
             allMovies = allMovies.concat(movies); // 현재 페이지의 영화를 allMovies 배열에 추가
         }

@@ -11,8 +11,8 @@
 }
 
 body {
-    background-color: #1e4575;
-    width: 100%;
+  background-color: #6e7172;
+  width: 100%;
 }
 
 header {
@@ -83,6 +83,7 @@ header {
 }
 
 .movie_card {
+  position: relative;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
   margin: 20px;
   padding: 20px;
@@ -101,6 +102,12 @@ header {
   margin-top: 20px;
   height: 350px;
   width: 250px;
+  transition: tranforms 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 버튼에 호버할 때 포스터 크기를 조정하는 스타일 */
+.movie_card:hover ~ .movie_poster {
+  transform: scale(1.1); /* 포스터 확대 */
 }
 
 .movie_title {
@@ -180,6 +187,18 @@ header {
   justify-content: center;
 }
 
-/* button {
-    margin-top: 10px;
-}  */
+/* 버튼에 호버할 때 후레쉬에 초록색 불이 들어오도록 스타일 변경 */
+.movie_button:hover ~ .movie_flash {
+  background-color: #39d339; /* 초록색 배경 */
+}
+
+/* 후레쉬 요소의 기본 스타일 */
+.movie_flash {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: black; /* 검은색 배경 */
+  border-radius: 50%;
+}
