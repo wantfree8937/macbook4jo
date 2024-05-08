@@ -13,7 +13,7 @@ export const fetch_MovieData = async (page) => {
 }
 
 export const fetch_Movievideo = async (movie_id) => {
- 
+
     const response = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}/videos?language=ko-KR`, {
         method: 'GET',
         headers: {
@@ -30,6 +30,7 @@ export const create_MovieCard = (movie) => {
     const movieContainer = document.getElementById('movie_Container');
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie_card');
+
 
     const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`; // 포스터 받아오기
     const moviePoster = document.createElement('img');
@@ -59,8 +60,22 @@ export const create_MovieCard = (movie) => {
         window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
     });
 
+    const movieFlash = document.createElement('div');
+    movieFlash.classList.add('movie_flash');
+ 
+
+     // 카드에 후레쉬 추가
+    
+    
+    movieCard.appendChild(moviebutton);
+    movieCard.appendChild(movieFlash);  
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
-    movieCard.appendChild(moviebutton);
     movieContainer.appendChild(movieCard);
+
+    // const movie_cards = document.querySelector('.movie_card')
+    // movie_cards.addEventListener('mousemove', function () {
+    //     console.log("yugi");
+    //     movie_cards.style = 'transform:translate(10px,-10px)'
+    // })
 }
