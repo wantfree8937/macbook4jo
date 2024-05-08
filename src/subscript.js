@@ -22,7 +22,7 @@ async function fetch_SearchData(searchQuery, page) {
 
 const search_Movie = async (ev) => {
     ev.preventDefault(); // form에 의한 새로고침을 막음
-
+    const searchInput = document.getElementById('search_input').value.toLowerCase();
     const movieContainer = document.getElementById('movie_Container'); // id: movie_Container의 요소를 가져옴
 
     // 이전에 표시된 영화 카드들 삭제

@@ -66,10 +66,11 @@ export const create_MovieCard = (movie) => {
 
      // 카드에 후레쉬 추가
     
-    movieCard.appendChild(moviePoster);
+    
     movieCard.appendChild(moviebutton);
-    movieCard.appendChild(movieFlash);   
+    movieCard.appendChild(movieFlash);  
     movieCard.appendChild(movieTitle);
+    movieCard.appendChild(moviePoster);
     movieContainer.appendChild(movieCard);
 
     // const movie_cards = document.querySelector('.movie_card')
