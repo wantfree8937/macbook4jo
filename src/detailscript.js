@@ -36,16 +36,19 @@ window.onload = async () => {
   ).src = `https://image.tmdb.org/t/p/original${movieData.backdrop_path}`;
   console.log(movieId);
 
+  // 영화 Trailer Key 추출 및 YouTube iFrame
   const movieVod = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US&api_key=c5fe0771fbdf49a3f798ca176b3e7b69`
   );
+
   const movieVodData = await movieVod.json();
-  const firstVideoKey = movieVodData.results[0].key; // 첫 번째 비디오의 키를 추출합니다.
-  console.log(firstVideoKey); // 첫 번째 비디오의 키를 콘솔에 출력합니다.
+  const trailerVideoKey = movieVodData.results.find(
+    (video) => video.type === "Trailer"
+  )?.key;
 
   document.getElementById(
     "detailMovieVod"
-  ).src = `https://www.youtube.com/embed/${firstVideoKey}`;
+  ).src = `https://www.youtube.com/embed/${trailerVideoKey}?mute=1&autoplay=1`;
 
   displayReviews();
 };
@@ -210,3 +213,52 @@ function editReview(key) {
   alert("리뷰가 성공적으로 수정되었습니다.");
   displayReviews(); // 수정 후 리뷰 목록을 갱신하여 업데이트
 }
+
+// 이스터에그_상세페이지 포스터 누르면 움직이도록
+const ball = document.querySelector(".detailPostercss");
+const container = document.querySelector(".detail_top");
+
+let xSpeed = getRandomSpeed();
+let ySpeed = getRandomSpeed();
+let ballX = container.offsetWidth / 4;
+let ballY = container.offsetHeight / 4;
+
+let isPaused = true; // 초기값을 true로 설정
+let lastUpdateTime = performance.now();
+const updateInterval = 16.67; // 약 60fps에 해당하는 간격 (밀리초)
+let animationId = null;
+
+function getRandomSpeed() {
+  return Math.floor(Math.random() * 10) - 10;
+}
+
+function moveBall(currentTime) {
+  if (!isPaused) {
+    const elapsedTime = currentTime - lastUpdateTime;
+    if (elapsedTime >= updateInterval) {
+      const containerRect = container.getBoundingClientRect();
+      const ballRect = ball.getBoundingClientRect();
+      ballX += xSpeed;
+      ballY += ySpeed;
+      if (ballX < 0 || ballX + ballRect.width > containerRect.width) {
+        xSpeed = -xSpeed;
+      }
+      if (ballY < 0 || ballY + ballRect.height > containerRect.height) {
+        ySpeed = -ySpeed;
+      }
+      ball.style.left = ballX + "px";
+      ball.style.top = ballY + "px";
+      lastUpdateTime = currentTime;
+    }
+    animationId = requestAnimationFrame(moveBall);
+  }
+}
+
+ball.addEventListener("click", () => {
+  isPaused = !isPaused; // 클릭 시 isPaused 값을 반전시킴
+  if (!isPaused) {
+    animationId = requestAnimationFrame(moveBall);
+  } else {
+    cancelAnimationFrame(animationId);
+  }
+});

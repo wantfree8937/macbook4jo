@@ -1,0 +1,176 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "영화 보도자료 - 뉴스와이어",
+  "home_page_url": "https://www.newswire.co.kr/?md=A01&cat=1200&cat1=1206",
+  "description": "영화 보도자료 - 뉴스와이어 RSS 서비스",
+  "author": {
+    "name": "gichan2@newswire.co.kr"
+  },
+  "items": [
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=989354&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=989354&sourceType=rss",
+      "title": "광주청소년삶디자인센터, 청소년 인문학 특강 참여자 모집",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>광주청소년삶디자인센터(이하 삶디)가 5월 11일(토) 오후 1시에 삶디 미니극장에서 14세~24세 청소년을 대상으로 ‘너의 기쁨과 슬픔을 말해줘’라는 주제로 함께 영화를 보고 소그룹 토론하는 인문학 프리즘 특강을 연다.\r\n\r\n삶디 2층 커뮤니티 공간은 청소년이 인문학적 소양과 활동 역량을 기를 수 있는 거점공간으로, 2022년도부터 시민자유대학과 연계해 인문학 프로그램을 운...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>광주청소년삶디자인센터(이하 삶디)가 5월 11일(토) 오후 1시에 삶디 미니극장에서 14세~24세 청소년을 대상으로 ‘너의 기쁨과 슬픔을 말해줘’라는 주제로 함께 영화를 보고 소그룹 토론하는 인문학 프리즘 특강을 연다.\r\n\r\n삶디 2층 커뮤니티 공간은 청소년이 인문학적 소양과 활동 역량을 기를 수 있는 거점공간으로, 2022년도부터 시민자유대학과 연계해 인문학 프로그램을 운...",
+      "date_published": "2024-05-08T08:00:00.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=989103&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=989103&sourceType=rss",
+      "title": "돌비 시네마, 시원한 액션으로 특별관 흥행 예약한 5월 개봉작",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>돌비 래버러토리스(Dolby Laboratories, 이하 돌비)가 시원한 액션으로 통쾌함을 선사할 5월 개봉작 네 편 ‘스턴트맨’, ‘혹성탈출: 새로운 시대’, ‘극장판 하이큐!! 쓰레기장의 결전’, ‘퓨리오사: 매드맥스 사가’를 소개한다.\r\n\r\n코미디, 액션, 장르 풀코스 영화부터 ‘매드맥스: 분노의 도로’의 프리퀄까지 다채롭게 구성된 이번 상영작은 돌비의 프리미엄 HDR 영상 기술 ‘돌...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>돌비 래버러토리스(Dolby Laboratories, 이하 돌비)가 시원한 액션으로 통쾌함을 선사할 5월 개봉작 네 편 ‘스턴트맨’, ‘혹성탈출: 새로운 시대’, ‘극장판 하이큐!! 쓰레기장의 결전’, ‘퓨리오사: 매드맥스 사가’를 소개한다.\r\n\r\n코미디, 액션, 장르 풀코스 영화부터 ‘매드맥스: 분노의 도로’의 프리퀄까지 다채롭게 구성된 이번 상영작은 돌비의 프리미엄 HDR 영상 기술 ‘돌...",
+      "date_published": "2024-05-03T00:07:23.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988862&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988862&sourceType=rss",
+      "title": "제주삼다수, 3년 연속 전주국제영화제 공식 생수로 참여",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>제주삼다수가 5월 1일 개막하는 ‘제25회 전주국제영화제’에 공식 후원사로 참여한다. 제주삼다수는 국내 3대 영화제 중 하나인 전주국제영화제에 3년 연속 공식 생수로 지정됐다.\r\n\r\n제주삼다수는 이번 파트너십을 통해 영화 축제를 즐기는 많은 영화산업 관계자와 국내외 관객들에게 삼다수를 제공하고 제품의 품질 우수성을 알릴 계획이다. 제25회 전주국제영화제는 5월 1일부...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>제주삼다수가 5월 1일 개막하는 ‘제25회 전주국제영화제’에 공식 후원사로 참여한다. 제주삼다수는 국내 3대 영화제 중 하나인 전주국제영화제에 3년 연속 공식 생수로 지정됐다.\r\n\r\n제주삼다수는 이번 파트너십을 통해 영화 축제를 즐기는 많은 영화산업 관계자와 국내외 관객들에게 삼다수를 제공하고 제품의 품질 우수성을 알릴 계획이다. 제25회 전주국제영화제는 5월 1일부...",
+      "date_published": "2024-04-30T00:14:38.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988765&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988765&sourceType=rss",
+      "title": "몰스킨, 제25회 전주국제영화제 3년 연속 공식 스폰서 참여",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>프리미엄 라이프스타일 브랜드 몰스킨(MOLESKINE)이 오는 5월 1일부터 열흘간 열리는 ‘제25회 전주국제영화제(집행위원장 민성욱·정준호)’에 공식 스폰서로 참여하고, 스페셜 에디션을 선보인다고 밝혔다.\r\n\r\n올해로 25회를 맞이하는 이번 전주국제영화제에서는 43개국 232편의 작품을 선보이며, 88편의 월드 프리미어 작품이 공개될 예정이다. 지난 11년 동안 디지털 보편화와 더불...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>프리미엄 라이프스타일 브랜드 몰스킨(MOLESKINE)이 오는 5월 1일부터 열흘간 열리는 ‘제25회 전주국제영화제(집행위원장 민성욱·정준호)’에 공식 스폰서로 참여하고, 스페셜 에디션을 선보인다고 밝혔다.\r\n\r\n올해로 25회를 맞이하는 이번 전주국제영화제에서는 43개국 232편의 작품을 선보이며, 88편의 월드 프리미어 작품이 공개될 예정이다. 지난 11년 동안 디지털 보편화와 더불...",
+      "date_published": "2024-04-28T23:37:58.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988635&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988635&sourceType=rss",
+      "title": "‘제11회 들꽃영화상’ 본선 진출작 확정… 특별상 ‘노란문’",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>올해로 11번째를 맞는 들꽃영화상(공동 위원장 오동진, 달시 파켓)이 예선 심사를 통해 본선 엔트리를 확정했다. 들꽃영화상 운영위원회는 지난 21일 예심을 통해 2023년 2월부터 2024년 2월까지 1년간 극장에서 상영된 저예산 독립예술영화 100여 편의 작품을 대상으로 예선 심사를 진행했다.\r\n\r\n이번 제11회 들꽃영화상은 모두 15개 부문에 걸쳐 시상이 이뤄지며, 특별상은 넷플릭스에...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>올해로 11번째를 맞는 들꽃영화상(공동 위원장 오동진, 달시 파켓)이 예선 심사를 통해 본선 엔트리를 확정했다. 들꽃영화상 운영위원회는 지난 21일 예심을 통해 2023년 2월부터 2024년 2월까지 1년간 극장에서 상영된 저예산 독립예술영화 100여 편의 작품을 대상으로 예선 심사를 진행했다.\r\n\r\n이번 제11회 들꽃영화상은 모두 15개 부문에 걸쳐 시상이 이뤄지며, 특별상은 넷플릭스에...",
+      "date_published": "2024-04-26T01:00:00.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988681&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988681&sourceType=rss",
+      "title": "건국대 예술디자인대학, 무비파킹과 영상문화 전문인력 양성 위한 업무협약 체결",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>건국대 예술디자인대학과 무비파킹이 영상 제작 전문인력 양성 및 인프라 구축을 위해 상호 업무협약(MOU)을 체결했다.\r\n\r\n지난 4월 16일 건국대 예술문화관에서 열린 협약식에는 건국대 황진숙 예술디자인대학장, 최승원 매체연기학과장, 유지태 교수 등 학교 관계자와 무비파킹 배재연 대표, 성열한 실장, 남현수 대리가 참석했다.\r\n\r\n이번 협약은 영상문화 전문인력 양성을 위한 ...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>건국대 예술디자인대학과 무비파킹이 영상 제작 전문인력 양성 및 인프라 구축을 위해 상호 업무협약(MOU)을 체결했다.\r\n\r\n지난 4월 16일 건국대 예술문화관에서 열린 협약식에는 건국대 황진숙 예술디자인대학장, 최승원 매체연기학과장, 유지태 교수 등 학교 관계자와 무비파킹 배재연 대표, 성열한 실장, 남현수 대리가 참석했다.\r\n\r\n이번 협약은 영상문화 전문인력 양성을 위한 ...",
+      "date_published": "2024-04-26T00:33:55.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988569&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988569&sourceType=rss",
+      "title": "아카데미 시상식 빛낸 축하주와 한국 최고 권위 종합예술상의 만남… 디아지오 ‘돈 훌리오 1942’ 럭셔리 데킬라, 제60회 백상예술대상 공식 주류 파트너 선정",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>프리미엄 주류기업 디아지오코리아는 럭셔리 데킬라 ‘돈 훌리오 1942(Don Julio 1942)’가 ‘제60회 백상예술대상’의 공식 주류 파트너로 선정됐다고 밝혔다. 이에 따라 ‘돈 훌리오 1942’는 오는 5월 7일 서울 강남구 코엑스에서 진행되는 ‘제60회 백상예술대상’ 시상식에서 공식 축하주로 함께해 자리를 빛낼 예정이다.\r\n\r\n‘돈 훌리오 1942’는 데킬라의 본고장 멕시코에서 시작...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>프리미엄 주류기업 디아지오코리아는 럭셔리 데킬라 ‘돈 훌리오 1942(Don Julio 1942)’가 ‘제60회 백상예술대상’의 공식 주류 파트너로 선정됐다고 밝혔다. 이에 따라 ‘돈 훌리오 1942’는 오는 5월 7일 서울 강남구 코엑스에서 진행되는 ‘제60회 백상예술대상’ 시상식에서 공식 축하주로 함께해 자리를 빛낼 예정이다.\r\n\r\n‘돈 훌리오 1942’는 데킬라의 본고장 멕시코에서 시작...",
+      "date_published": "2024-04-25T01:08:11.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988536&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988536&sourceType=rss",
+      "title": "다큐멘터리 신진 제작자의 해외 진출 위한 ‘글로벌 피칭 아카데미’ 교육생 모집",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>한국전파진흥협회는 경기도청, 경기콘텐츠진흥원과 함께 다큐멘터리 해외 진출을 희망하는 독립 신진 제작자 양성을 위한 ‘글로벌 피칭 아카데미(Global Pitching Academy)’ 참가자를 모집한다.\r\n\r\n글로벌 피칭 아카데미는 기획개발 단계의 프로젝트를 보유하고, 해외영화제 피치(콘텐츠 제작자가 프로젝트의 기획 의도, 제작 계획을 잠재적 투자자에게 소개하는 것) 경험이 없는 국...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>한국전파진흥협회는 경기도청, 경기콘텐츠진흥원과 함께 다큐멘터리 해외 진출을 희망하는 독립 신진 제작자 양성을 위한 ‘글로벌 피칭 아카데미(Global Pitching Academy)’ 참가자를 모집한다.\r\n\r\n글로벌 피칭 아카데미는 기획개발 단계의 프로젝트를 보유하고, 해외영화제 피치(콘텐츠 제작자가 프로젝트의 기획 의도, 제작 계획을 잠재적 투자자에게 소개하는 것) 경험이 없는 국...",
+      "date_published": "2024-04-24T08:37:10.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988316&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988316&sourceType=rss",
+      "title": "화성시미디어센터, 초초시네마 초등학생이 만든 초단편 시네마 3편 시사회 개최",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>화성시문화재단(대표이사 김신아) 화성시미디어센터는 지난 4월 19일(금) 저녁 7시 30분 동탄복합문화센터 아르코 대연습실에서 초등학생들이 제작한 초단편 영화 시사회 ‘초초영화데이’ 행사를 개최했다. 이번 시사회는 참여 아동의 가족 및 지인들을 초대해 진행했으며, 많은 분들의 관심과 참여로 성공적으로 마무리됐다.\r\n\r\n초초영화데이는 ‘2024 겨울방학 초초영화캠프’ ...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>화성시문화재단(대표이사 김신아) 화성시미디어센터는 지난 4월 19일(금) 저녁 7시 30분 동탄복합문화센터 아르코 대연습실에서 초등학생들이 제작한 초단편 영화 시사회 ‘초초영화데이’ 행사를 개최했다. 이번 시사회는 참여 아동의 가족 및 지인들을 초대해 진행했으며, 많은 분들의 관심과 참여로 성공적으로 마무리됐다.\r\n\r\n초초영화데이는 ‘2024 겨울방학 초초영화캠프’ ...",
+      "date_published": "2024-04-22T23:35:37.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988166&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988166&sourceType=rss",
+      "title": "The 25th Jeonju International Film Festival Opens on May 1st in Jeonju, Korea",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>This May, the 25th Jeonju International Film Festival (https://eng.jeonjufest.kr/) takes place in Jeonju, the most Korean city. The festival will screen 232 independent, short, and alternative films from 43 countries.\r\n\r\nJEONJU CITY (https://tour.jeonju.go.kr/eng/index.jeonju) (Mayor Woo Beom-ki) announced that the Jeonju International Film Festival, a beloved annual tradition in Jeonju, a major Asian tourist destination celebrated for its rich history and gastronomy, will present an enhanced pr...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>This May, the 25th Jeonju International Film Festival (https://eng.jeonjufest.kr/) takes place in Jeonju, the most Korean city. The festival will screen 232 independent, short, and alternative films from 43 countries.\r\n\r\nJEONJU CITY (https://tour.jeonju.go.kr/eng/index.jeonju) (Mayor Woo Beom-ki) announced that the Jeonju International Film Festival, a beloved annual tradition in Jeonju, a major Asian tourist destination celebrated for its rich history and gastronomy, will present an enhanced pr...",
+      "date_published": "2024-04-19T02:48:16.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=988031&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=988031&sourceType=rss",
+      "title": "26회 서울국제여성영화제 ‘2024 씨네페미니즘학교’ 개강",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>26회 서울국제여성영화제(2024. 08. 22.~08. 28., 집행위원장 이숙경)가 성평등 영화강좌 ‘2024 씨네페미니즘학교’ 수강생을 모집한다.\r\n\r\n‘씨네페미니즘학교’는 영화 콘텐츠와 여성주의 비평을 접목한 서울국제여성영화제의 대표적인 교육 프로그램이다. 2012년에 처음 시작해 12년 동안 195개의 강좌를 통해 1만5000여 명의 시민과 만나며 서울국제여성영화제 뿐만 아니라 서울시를 ...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>26회 서울국제여성영화제(2024. 08. 22.~08. 28., 집행위원장 이숙경)가 성평등 영화강좌 ‘2024 씨네페미니즘학교’ 수강생을 모집한다.\r\n\r\n‘씨네페미니즘학교’는 영화 콘텐츠와 여성주의 비평을 접목한 서울국제여성영화제의 대표적인 교육 프로그램이다. 2012년에 처음 시작해 12년 동안 195개의 강좌를 통해 1만5000여 명의 시민과 만나며 서울국제여성영화제 뿐만 아니라 서울시를 ...",
+      "date_published": "2024-04-18T02:00:00.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=987848&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=987848&sourceType=rss",
+      "title": "제작사 쌈스튜디오, 중국 삼강유한미디어·유웅투자 콘텐츠 제작 유통 협력… 중국 공략 의기투합",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>드라마 제작사 쌈스튜디오(대표 최석우)가 3월 7일 중국 북경에서 영화, 중국 북경 차오양구에 위치한 삼강유한미디어/유웅투자(叁江源传媒/有熊投资, 대표 루이(娄毅))와 한국에서 유행하는 웹드라마와 숏폼 콘텐츠의 제작 및 중국 유통 업무에 대해 성공적으로 협의했다.\r\n\r\n쌈스튜디오와 삼강유한미디어/유웅투자는 양사 간 다양한 업무에 관해 서로 의견을 나누고, 웹드라마·...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>드라마 제작사 쌈스튜디오(대표 최석우)가 3월 7일 중국 북경에서 영화, 중국 북경 차오양구에 위치한 삼강유한미디어/유웅투자(叁江源传媒/有熊投资, 대표 루이(娄毅))와 한국에서 유행하는 웹드라마와 숏폼 콘텐츠의 제작 및 중국 유통 업무에 대해 성공적으로 협의했다.\r\n\r\n쌈스튜디오와 삼강유한미디어/유웅투자는 양사 간 다양한 업무에 관해 서로 의견을 나누고, 웹드라마·...",
+      "date_published": "2024-04-15T23:56:11.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=987506&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=987506&sourceType=rss",
+      "title": "돌비, 돌비 비전과 돌비 애트모스가 제공하는 최상의 시네마 경험을 더 많은 프리미엄 영화관에 확대 제공",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>몰입형 엔터테인먼트 경험의 선도 기업 돌비 래버러토리스(Dolby Laboratories, 이하 돌비)가 돌비 비전과 돌비 애트모스를 결합한 솔루션을 발표하고 전 세계 더 많은 극장과 관객에 프리미엄 영화 관람 경험을 제공한다.\r\n\r\n돌비가 새롭게 선보이는 솔루션은 돌비의 탄탄한 콘텐츠와 세계적으로 높은 인지도의 브랜드 그리고 영상과 음향 분야의 혁신 기술을 기반으로 사상 처음으로...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>몰입형 엔터테인먼트 경험의 선도 기업 돌비 래버러토리스(Dolby Laboratories, 이하 돌비)가 돌비 비전과 돌비 애트모스를 결합한 솔루션을 발표하고 전 세계 더 많은 극장과 관객에 프리미엄 영화 관람 경험을 제공한다.\r\n\r\n돌비가 새롭게 선보이는 솔루션은 돌비의 탄탄한 콘텐츠와 세계적으로 높은 인지도의 브랜드 그리고 영상과 음향 분야의 혁신 기술을 기반으로 사상 처음으로...",
+      "date_published": "2024-04-09T02:00:48.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=987421&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=987421&sourceType=rss",
+      "title": "삼성전자 ‘S24 Hours 무비 시리즈’ 유튜브 1000만 뷰 돌파",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>‘갤럭시 S24 시리즈’의 AI 기능을 주제로 한 삼성전자의 단편영화 ‘S24 Hours 무비 시리즈’가 공개 한 달 만에 유튜브 조회수 1000만 뷰를 돌파했다.\r\n\r\n‘S24 Hours 무비 시리즈’는 갤럭시 AI 기능으로 달라진 주인공의 24시간을 신선한 스토리텔링과 감각적인 영상으로 담아낸 작품이다.\r\n\r\n각각 6분으로 구성된 4개의 영상은 지난달 7일 유튜브, 인스타그램, X(옛 트위터), 페이스북 ...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>‘갤럭시 S24 시리즈’의 AI 기능을 주제로 한 삼성전자의 단편영화 ‘S24 Hours 무비 시리즈’가 공개 한 달 만에 유튜브 조회수 1000만 뷰를 돌파했다.\r\n\r\n‘S24 Hours 무비 시리즈’는 갤럭시 AI 기능으로 달라진 주인공의 24시간을 신선한 스토리텔링과 감각적인 영상으로 담아낸 작품이다.\r\n\r\n각각 6분으로 구성된 4개의 영상은 지난달 7일 유튜브, 인스타그램, X(옛 트위터), 페이스북 ...",
+      "date_published": "2024-04-08T00:54:45.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    },
+    {
+      "guid": "https://www.newswire.co.kr/newsRead.php?no=987418&sourceType=rss",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=987418&sourceType=rss",
+      "title": "화성시미디어센터 ‘2024 단편영화&다큐멘터리 제작 워크숍’ 참여단체 모집",
+      "content_html": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>화성시문화재단(대표이사 김신아) 화성시미디어센터가 4월 15일부터 29일까지 ‘단편영화&다큐멘터리 제작 워크숍’ 참여 단체를 모집한다.\r\n\r\n경기도, 화성시, 경기콘텐츠진흥원, 화성시미디어센터가 함께하는 지원사업인 이번 제작 워크숍은 기초적인 영상제작 경험이 있는 경기도민으로 구성된 팀(3인 이상)을 대상으로 단편영화&다큐멘터리 제작을 위한 전문 강사 멘토링 교...",
+      "summary": "<table border=0 align=left cellspacing=0 cellpadding=0 cellpadding=3 style='font-size:100%;font-family:arial,sans-serif'><tr><td width=80 align=center style='padding-left:6px;' valign=top><a href='https://www.newswire.co.kr/newsRead.php?no=&amp;sourceType=rss' target=nw><img src=\"https://file.newswire.co.kr/data/datafile2/thumb/.jpg\" width=\"80\" border=\"0\" /></a></td></tr></table>화성시문화재단(대표이사 김신아) 화성시미디어센터가 4월 15일부터 29일까지 ‘단편영화&다큐멘터리 제작 워크숍’ 참여 단체를 모집한다.\r\n\r\n경기도, 화성시, 경기콘텐츠진흥원, 화성시미디어센터가 함께하는 지원사업인 이번 제작 워크숍은 기초적인 영상제작 경험이 있는 경기도민으로 구성된 팀(3인 이상)을 대상으로 단편영화&다큐멘터리 제작을 위한 전문 강사 멘토링 교...",
+      "date_published": "2024-04-08T00:45:52.000Z",
+      "author": {
+        "name": "gichan2@newswire.co.kr"
+      }
+    }
+  ]
+}
