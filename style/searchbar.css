@@ -29,7 +29,7 @@
   /* 검색어 글자 크기 지정 */
   color: transparent;
   border: 3px solid #f74a38;
-  margin-top: 20px;
+  top: 60px;
   /* 검색상자(원) 테두리 지정 */
 
   /* 되돌아가는 전환효과(사각형-> 원) : 폭은 300밀리 세컨 동안, 배경위치(돋보기)는 300밀리 세컨동안 전환됨 */
@@ -48,7 +48,7 @@
   border: none;
   position: fixed;
   margin-right: 210px;
-  margin-top: 17px;
+  top: 70px;
   width: 35px;
   height: 40px;
   border-radius: 10px;

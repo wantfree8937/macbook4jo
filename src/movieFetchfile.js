@@ -1,17 +1,3 @@
-// TMDB API에서 인기순으로 영화를 가져온다
-export const fetch_MoviePopular = async () => {
-    
-    const response = await fetch(`https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=${page}`, {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2U1NzkwNDYxZjE0Y2MwNWMxYzA0MzIwNTE4YzQ2YSIsInN1YiI6IjY2Mjc5ZTBkYjlhMGJkMDBjZGQ0NGI2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SN8whoS0_yG-gt7xue2f_CXakEcDCse_H4sgO3CmoyA'
-        }
-    });
-    const jsonData = await response.json();
-    return jsonData.results;
-}
-
 // TMDB API에서 영화 제목을 가져와 배열 생성
 export const fetch_MovieData = async (page) => {
 
@@ -67,7 +53,7 @@ export const create_MovieCard = (movie) => {
     movieTitle.classList.add('movie_title');
     movieTitle.textContent = movie.title;
 
-    const moviebutton = document.createElement('button');//상세페이지로 가는 버튼 추가
+    const moviebutton = document.createElement('button'); // 상세페이지로 가는 버튼 추가
     moviebutton.classList.add('movie_button');
     moviebutton.addEventListener('click', () => {
         window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동

@@ -124,21 +124,80 @@ header {
   width: 1200px;
   height: 300px;
   right: 240px;
+  top: 30px;
   position: absolute;
 }
 
 .carouselPoster {
+  position: relative;
+  display: flex;
   width: 200px;
   height: 300px;
   margin: 0 20px 0 20px;
   cursor: pointer;
+  box-shadow: 0px 0px 10px 3px #d4d4d4;
+  transition: transform 0.3s;
+  /* 호버 효과를 위한 변환 효과 */
 }
+
+.carouselPoster:hover {
+  animation: hoverAnimation_carouselPoster 0.3s forwards;
+  /* 호버 시 애니메이션 효과 적용 */
+}
+
+@keyframes hoverAnimation_carouselPoster {
+  from {
+    transform: scale(1);
+    /* 호버 전의 크기 */
+  }
+
+  to {
+    transform: scale(1.08);
+    /* 호버 시 크기를 약간 키움 */
+    filter: brightness(50%);
+  }
+}
+
+.poster_title {
+  position: absolute;
+  text-align: center;
+  top: 210px;
+  margin-left: 20px;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* 박스 배경색 */
+  color: white;
+  padding-top: 30px;
+  font-size: 20px;
+  transition: transform 0.3s;
+  opacity: 0;
+}
+
+.carouselPoster:hover~.poster_title{
+  animation: hoverAnimation_title 0.3s forwards;
+  opacity: 1;
+}
+
+@keyframes hoverAnimation_title {
+  from {
+    transform: scale(1);
+    /* 호버 전의 크기 */
+  }
+
+  to {
+    transform: scale(1.07);
+    /* 호버 시 크기를 약간 키움 */
+    filter: brightness(100%);
+  }
+}
+
 
 /* 버튼 위치 */
 .btn__prev {
   position: absolute;
   left: -90px;
-  top: 30px;
+  top: 60px;
   height: 250px;
 }
 
@@ -150,7 +209,7 @@ header {
   position: absolute;
   right: -90px;
   transform: scaleX(-1);
-  top: 30px;
+  top: 60px;
   height: 250px;
 }
 

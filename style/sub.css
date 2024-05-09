@@ -148,6 +148,7 @@ header {
   transform: translate(-50%, 0%);
   transition: all 0.6s ease;
   filter: brightness(80%);
+  right: -10px; /* 오른쪽에 배치하여 오른쪽 그림자 생성 */
 }
 
 .movie_title {
@@ -191,12 +192,6 @@ header {
 .oldbtn:hover {
   background-color: white;
   color: black;
-}
-
-.translategoogle {
-  position: absolute;
-  right: 10px;
-  top: 10px;
 }
 
 .subtomainbutton {
