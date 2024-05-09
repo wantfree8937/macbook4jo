@@ -1,4 +1,4 @@
-import { fetch_MovieData, create_MovieCard } from './movieFetchfile.js';
+import { fetch_MovieData, create_MovieCard, fetch_MoviePopular } from './movieFetchfile.js';
 
 // 홈 버튼 클릭 시 메인 페이지로 이동하는 함수
 function go_MainPage() {
@@ -28,7 +28,6 @@ const search_Movie = async (ev) => {
     ev.preventDefault(); // form에 의한 새로고침을 막음
     const searchInput = document.getElementById('search_input').value.toLowerCase();
     const movieContainer = document.getElementById('movie_Container'); // id: movie_Container의 요소를 가져옴
-
     // 이전에 표시된 영화 카드들 삭제
     movieContainer.innerHTML = '';
     try {
@@ -93,7 +92,7 @@ const totalPages = 200; // 전체 페이지 수
 let currentPage = 1; // 현재 페이지
 
 // 페이지별 영화 데이터를 가져와 화면에 렌더링하는 함수
-const fetchAndRenderMovies = async (page) => {
+const fetchAndRenderMovies = async (page, isPopularSort = false) => {
     try {
         const movies = await fetch_MovieData(page); // 페이지 정보를 사용하여 영화 데이터를 가져옴
         renderMovies(movies);
@@ -126,7 +125,9 @@ function renderPagination() {
 
     let startPage = Math.max(currentPage - Math.floor(numPagesToShow / 2), 1); // 시작 페이지 계산
     let endPage = Math.min(startPage + numPagesToShow - 1, totalPages); // 끝 페이지 계산
-
+    console.log(startPage);
+    console.log(endPage);
+    console.log(currentPage);
     if (endPage - startPage < numPagesToShow - 1) {
         startPage = Math.max(endPage - numPagesToShow + 1, 1); // 시작 페이지 재조정
     }
@@ -167,6 +168,7 @@ function renderPagination() {
         });
         paginationContainer.appendChild(button);
     }
+
 
     // 다음 버튼 생성
     const nextButton = document.createElement('button');
@@ -231,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const homeButton = document.querySelector('.subtomainbutton');
     const searchButton = document.getElementById('search_button');
     const searchInput = document.getElementById('search_input');
-    // const selectedPopul = document.querySelector('.populbtn');
+    const selectedPopul = document.querySelector('.populbtn');
     // const selectedOld = document.querySelector('.oldbtn');
 
     homeButton.addEventListener('click', go_MainPage);

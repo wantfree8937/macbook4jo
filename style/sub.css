@@ -32,6 +32,23 @@ header {
   color: white;
 }
 
+.sub_title1 {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 100px;
+  height: 100px;
+}
+
+.sub_title2 {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 157px;
+  height: 44px;
+  margin-left: 30;
+}
+
 .subtomainbutton {
   background-color: transparent;
   border: none;
@@ -55,7 +72,6 @@ header {
   cursor: pointer;
 }
 
-
 .movie_button:hover {
   filter: brightness(70%);
 }
@@ -77,9 +93,24 @@ header {
   border-style: solid;
   border-color: black;
   background-color: white;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
 }
 
 .movie_ContainerClass {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
@@ -129,9 +160,20 @@ header {
   background-color: black;
   border-radius: 50%;
   /* 검은색 배경 */
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  /* 검은색 배경 */
 }
 
 .movie_ContainerClass {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
@@ -160,9 +202,25 @@ header {
   top: 4%;
   left: 50%;
   transform: translate(-50%, 0%);
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  width: 230px;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .populbtn {
+  font-size: medium;
+  margin: 35px 0 0 50px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fd5639;
+  color: white;
+  cursor: pointer;
   font-size: medium;
   margin: 35px 0 0 50px;
   width: 80px;
@@ -182,9 +240,19 @@ header {
   background-color: #fd5639;
   color: white;
   cursor: pointer;
+  font-size: medium;
+  margin: 35px 0 0 30px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fd5639;
+  color: white;
+  cursor: pointer;
 }
 
 .populbtn:hover {
+  background-color: white;
+  color: black;
   background-color: white;
   color: black;
 }
@@ -192,9 +260,12 @@ header {
 .oldbtn:hover {
   background-color: white;
   color: black;
+  background-color: white;
+  color: black;
 }
 
 .subtomainbutton {
+  cursor: pointer;
   cursor: pointer;
 }
 
@@ -222,6 +293,8 @@ header {
 }
 
 .movie_ContainerMain {
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
 }

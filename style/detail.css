@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "DoHyeon-Regular";
+  src: url("../font/DoHyeon-Regular.ttf");
+}
+
+* {
+  font-family: "DoHyeon-Regular";
+}
+
 body {
   display: grid;
   place-items: center;
@@ -11,18 +20,30 @@ body {
 }
 
 .detailPostercss {
+  position: absolute;
   height: 400px;
   width: 300px;
-  box-shadow: 0 3px 6px rgb(255, 255, 255), 0 3px 6px white;
+  box-shadow: 0 0px 10px rgb(255, 255, 255), 0 3px 6px white;
+  transition: transform 0.5s ease-in-out;
 }
 
+.detailPostercss:hover {
+  transform-origin: center;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.932),
+    0 0 20px rgba(255, 255, 255, 0.932);
+}
+.detailtitle{
+  position: absolute;
+  top:10px;
+}
 .homeButton {
   position: absolute;
   left: 30px;
   top: 30px;
-  width: 100px;
-  height: 50px;
-  background-color: white;
+  width: 157px;
+  height: 44px;
+  /* background-color: white; */
   color: black;
   z-index: 2;
   cursor: pointer;
@@ -30,15 +51,17 @@ body {
 
 .detail_top {
   background-image: url("movieBackDrop");
-  padding-bottom: 10px;
   width: 100%;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.1px black;
   text-shadow: 2px 2px 0 black;
+  position: relative;
+  overflow: hidden;
 }
 
 .detail_bottom {
@@ -53,20 +76,22 @@ body {
   width: 35%;
   display: flex;
   flex-direction: column;
-  background-color: #0a1b31;
   padding: 15px 15px 25px 15px;
   border-style: solid;
   border-color: white;
   border-radius: 20px;
-  color: white;
-  box-shadow: 0px 0px 25px 5px white;
+  color: black;
+  background-color: #eeeeee;
+  box-shadow: 0px 0px 25px 5px rgb(0, 0, 0);
 }
 
 #reviewForm {
   border-style: solid;
   border-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 15px 15px 10px 10px;
+  color: black;
+  border-color: #1e4575;
 }
 
 .detail_bottom_review {
@@ -74,28 +99,29 @@ body {
   border-style: solid;
   border-color: white;
   border-radius: 20px;
-  color: white;
-  box-shadow: 0px 0px 20px 5px white;
-  background-color: #0a1b31;
+  color: rgb(0, 0, 0);
+  background-color: #eeeeee;
+  box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
 }
 
 .movie_review_card {
   padding-left: 10px;
-  background-color: rgba(0, 255, 255, 0.171);
-  color: white;
+  background-color: rgba(3, 31, 31, 0.171);
+  color: black;
   /* color: blueviolet; */
-  box-shadow: 5px 5px 15px 3px rgba(4, 0, 255, 0.527);
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.527);
   text-align: left;
   margin-top: 20px;
   align-items: center;
   border: 2px groove rgba(217, 247, 81, 0.548);
+  border-color: #1e4575;
   border-radius: 10px;
   margin-right: 20px;
 }
 
 .detailBackDropcss {
   width: 100%;
-  height: 550px;
+  height: 600px;
   position: absolute;
   top: 0px;
   z-index: 0;
@@ -105,19 +131,29 @@ body {
 .review_input_area {
   background-color: rgba(0, 255, 255, 0.041);
   border: 1px groove rgba(127, 255, 212, 0.377);
+  color: black;
   border-radius: 10px;
+  border-color: #1e4575;
 }
 .text_input_area {
-  background-color: rgba(0, 255, 255, 0.041);
+  /* background-color: rgba(0, 255, 255, 0.041); */
+  background-color: rgba(3, 31, 31, 0.171);
   font-size: medium;
   height: 20px;
   width: 120px;
-  color: white;
+  color: black;
   border: groove 1px rgba(127, 255, 212, 0.377);
+  border-color: #1e4575;
   border-radius: 10px;
 }
 .review_card_button {
   border-radius: 15px;
-  border-color: blanchedalmond;
+  border-color: #1e4575;
+  border-width: 1px;
   margin-bottom: 10px;
+}
+
+.submit {
+  background-color: rgba(226, 226, 226, 0.13);
+  color: black;
 }
