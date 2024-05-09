@@ -28,6 +28,7 @@ export const fetch_MovieData = async (page) => {
 
 export const fetch_Movievideo = async (movie_id) => {
 
+
     const response = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}/videos?language=ko-KR`, {
         method: 'GET',
         headers: {
@@ -57,8 +58,7 @@ export const create_MovieCard = (movie) => {
     moviePoster.src = posterURL;
     moviePoster.alt = movie.title;
 
-    movieBackDrop.classList.add('movie_backdrop');
-    movieBackDrop.classList.add('movie_poster');
+    movieBackDrop.classList.add('movie_backdrop', 'movie_poster');
 
     movieBackDrop.src = backDropURL;
     movieBackDrop.alt = movie.title;
@@ -67,9 +67,8 @@ export const create_MovieCard = (movie) => {
     movieTitle.classList.add('movie_title');
     movieTitle.textContent = movie.title;
 
-    const moviebutton = document.createElement('button');//상세페이지로 가는 버튼 추가
+    const moviebutton = document.createElement('button'); // 상세페이지로 가는 버튼 추가
     moviebutton.classList.add('movie_button');
-    moviebutton.textContent = "더보기";
     moviebutton.addEventListener('click', () => {
         window.location.href = `detail.html?id=${movie.id}`; // 상세페이지로 이동
     });
@@ -81,10 +80,10 @@ export const create_MovieCard = (movie) => {
      // 카드에 후레쉬 추가
     
     
-    movieCard.appendChild(moviebutton);
-    movieCard.appendChild(movieFlash);  
+    movieCard.appendChild(moviebutton); 
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(moviePoster);
+    movieCard.appendChild(movieFlash); 
     movieContainer.appendChild(movieCard);
 
     // const movie_cards = document.querySelector('.movie_card')

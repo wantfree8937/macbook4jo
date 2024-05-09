@@ -20,12 +20,22 @@ function renderMoviePosters(movies) {
 
     movies.forEach(movie => {
         const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+        const poster_group = document.createElement('div');
+        poster_group.classList.add('poster_group');
+
         const posterImg = document.createElement('img');
         posterImg.classList.add('carouselPoster');
         posterImg.src = posterURL;
         posterImg.alt = movie.title;
+
+        const postertitle = document.createElement('div');
+        postertitle.classList.add('poster_title');
+        postertitle.textContent = `${movie.title}`;
+
         posterImg.addEventListener('click', () => goToDetailPage(movie.id)); // 클릭 이벤트 추가
-        carousel.appendChild(posterImg);
+        carousel.appendChild(poster_group);
+        poster_group.appendChild(posterImg);
+        poster_group.appendChild(postertitle);
     });
 }
 

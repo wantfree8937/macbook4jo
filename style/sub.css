@@ -66,22 +66,33 @@ header {
   text-align: center;
   line-height: 100px;
   font-size: 16px;
-  top: 74%;
+  top: 77%;
   left: 50%;
   transform: translate(-50%, 0%);
   cursor: pointer;
 }
 
 .movie_button:hover {
-  background-color: black;
+  filter: brightness(70%);
 }
 
 .movie_button:hover::before {
-  border-color: white;
-  background-color: #fd5639;
+  filter: brightness(70%);
 }
 
 .movie_button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
   content: "";
   position: absolute;
   top: 50%;
@@ -100,6 +111,9 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
 }
 
 .movie_card {
@@ -107,7 +121,7 @@ header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
   margin: 20px;
   padding: 20px;
-  height: 550px;
+  height: 600px;
   width: 350px;
   justify-self: center;
   background-image: url(../assets/white-product-backdrop-wall.jpg);
@@ -117,27 +131,35 @@ header {
   text-align: center;
 }
 
-.movie_button:hover ~ .movie_flash {
+.movie_button:hover~.movie_flash {
   background-color: #39d339;
 }
 
-.movie_button:hover ~ .movie_title {
-  color: red;
+.movie_button:hover~.movie_title {
+  color: #ff5031;
 }
 
 .movie_button:hover~.movie_poster {
-    
-    transform: translateX(-120px) scale(1.2);
-    /* 크기를 1.2배로 확대 */
-    z-index: 1;
-    /* 다른 요소 위로 올라오게 함 */
-    box-shadow: 0 10px 10px rgba(8, 8, 8, 0.932), 0 10px 10px rgba(8, 8, 8, 0.932);
-    /* 그림자 효과 */
-    
+
+  transform: translateX(-125px) scale(1.1);
+  /* 크기를 1.2배로 확대 */
+  z-index: 1;
+  /* 다른 요소 위로 올라오게 함 */
+  box-shadow: 0 10px 10px rgba(8, 8, 8, 0.932), 0 10px 10px rgba(8, 8, 8, 0.932);
+  /* 그림자 효과 */
+  filter: brightness(105%);
 }
 
 /*후레쉬 요소의 기본 스타일 */
 .movie_flash {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  /* 검은색 배경 */
   position: absolute;
   left: 10px;
   top: 10px;
@@ -152,34 +174,34 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
 }
 
-.movie_card {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-  margin: 20px;
-  padding: 20px;
-  height: 550px;
-  width: 350px;
-  justify-self: center;
-  background-image: url(../assets/white-product-backdrop-wall.jpg);
-  border-radius: 20px;
-  user-select: none;
-  display: table;
-  text-align: center;
-}
 
 .movie_poster {
   position: absolute;
   box-shadow: 0 3px 6px rgba(8, 8, 8, 0.932), 0 3px 6px rgba(8, 8, 8, 0.932);
   height: 350px;
   width: 250px;
-  top: 8%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, 0%);
   transition: all 0.6s ease;
+  filter: brightness(80%);
+  right: -10px; /* 오른쪽에 배치하여 오른쪽 그림자 생성 */
 }
 
 .movie_title {
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  width: 230px;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, 0%);
   position: absolute;
   color: black;
   font-size: 20px;
@@ -199,9 +221,25 @@ header {
   background-color: #fd5639;
   color: white;
   cursor: pointer;
+  font-size: medium;
+  margin: 35px 0 0 50px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fd5639;
+  color: white;
+  cursor: pointer;
 }
 
 .oldbtn {
+  font-size: medium;
+  margin: 35px 0 0 30px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fd5639;
+  color: white;
+  cursor: pointer;
   font-size: medium;
   margin: 35px 0 0 30px;
   width: 80px;
@@ -215,20 +253,19 @@ header {
 .populbtn:hover {
   background-color: white;
   color: black;
+  background-color: white;
+  color: black;
 }
 
 .oldbtn:hover {
   background-color: white;
   color: black;
-}
-
-.translategoogle {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  background-color: white;
+  color: black;
 }
 
 .subtomainbutton {
+  cursor: pointer;
   cursor: pointer;
 }
 
@@ -258,8 +295,12 @@ header {
 .movie_ContainerMain {
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
 }
 
-.active{
-    color:#fd5639;
+.active {
+  color: #0000009c;
+  background-color: #eeeeeee5;
+  pointer-events: none;
 }
